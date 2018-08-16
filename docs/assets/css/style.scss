@@ -1,8 +1,6 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 .page-header {
     background-color: #999;
     background-image: linear-gradient(#333, #CCC);
@@ -16,3 +14,6 @@
  .main-content h6 { 
     color: #888;
   }
+
+@import "{{ site.theme }}";
+
