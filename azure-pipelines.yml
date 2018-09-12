@@ -28,3 +28,19 @@ steps:
 #  inputs:
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: pack
+    versioningScheme: byPrereleaseNumber
+    majorVersion: '0'
+    minorVersion: '1'
+    patchVersion: '0'
+    
+- task: NuGetCommand@2
+  inputs:
+    command: push
+    nuGetFeedType: external
+    publishFeedCredentials: 'https://pkgs.dev.azure.com/andreaslennartz/_packaging/etlbox/nuget/v3/index.json'
+    versioningScheme: byEnvVar
+    versionEnvVar: Version
