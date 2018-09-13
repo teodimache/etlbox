@@ -160,6 +160,7 @@
     <Compile Include="Toolbox\Cube\XmlaTask.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ETLBox.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
