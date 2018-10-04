@@ -5,11 +5,14 @@ namespace ALE.ETLBox {
     public class DBSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> where TOutput : new() {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_DBSOURCE";
-        public override string TaskName => $"Dataflow: Read DB data from table: {SourceTableDefinition.Name}";
+        public override string TaskName => $"Dataflow: Read DB data from {SourceDescription}";
         public override void Execute() => ExecuteAsync();
 
         /* Public Properties */       
-        public TableDefinition SourceTableDefinition { get; set; }
+        public TableDefinition SourceTableDefinition { get; set; }        
+        public string Sql { get; set; }
+        public string SqlForRead => String.IsNullOrWhiteSpace(Sql) ? $"select {SourceTableDefinition.Columns.AsString()} from " + SourceTableDefinition.Name : Sql;
+        public string SourceDescription => String.IsNullOrWhiteSpace(Sql) ? "table " + SourceTableDefinition.Name : "custom sql";
         public ISourceBlock<TOutput> SourceBlock => this.Buffer;
 
         /* Private stuff */
@@ -24,6 +27,9 @@ namespace ALE.ETLBox {
         public DBSource(TableDefinition sourceTableDefinition) : this() {
             SourceTableDefinition = sourceTableDefinition;
         }
+        public DBSource(string sql) : this() {
+            Sql = sql;
+        }
 
         public void ExecuteAsync() {
             NLogStart();
@@ -36,11 +42,10 @@ namespace ALE.ETLBox {
             new SqlTask() {
                 DisableLogging = true,
                 DisableExtension = true,
-                Sql = $"select {SourceTableDefinition.Columns.AsString()} from " + SourceTableDefinition.Name,
+                Sql = SqlForRead,
             }.Query<TOutput>(row => Buffer.Post(row));
         }
-
- 
+         
         public void LinkTo(IDataFlowLinkTarget<TOutput> target) {
             Buffer.LinkTo(target.TargetBlock, new DataflowLinkOptions() { PropagateCompletion = true });
             NLogger.Debug(TaskName + " was linked to Target!", TaskType, "LOG", TaskHash, ControlFlow.STAGE, ControlFlow.CurrentLoadProcess?.LoadProcessKey);
