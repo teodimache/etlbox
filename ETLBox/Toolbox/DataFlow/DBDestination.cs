@@ -38,6 +38,16 @@ namespace ALE.ETLBox {
             InitObjects(DEFAULT_BATCH_SIZE);
         }
 
+        public DBDestination(string tableName) {
+            DestinationTableDefinition = TableDefinition.GetDefinitionFromTableName(tableName);
+            InitObjects(DEFAULT_BATCH_SIZE);
+        }
+
+        public DBDestination(string tableName, int batchSize) {
+            DestinationTableDefinition = TableDefinition.GetDefinitionFromTableName(tableName);
+            InitObjects(batchSize);
+        }
+
         public DBDestination(TableDefinition tableDefinition, int batchSize) {
             DestinationTableDefinition = tableDefinition;
             BatchSize = batchSize;            

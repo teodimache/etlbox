@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ALE.ETLBox {
@@ -32,6 +33,33 @@ namespace ALE.ETLBox {
 
         public void CreateTable() {
             CreateTableTask.Create(this);
+        }
+
+        public static TableDefinition GetDefinitionFromTableName(string tableName) {
+            TableDefinition result = new TableDefinition(tableName);
+            TableColumn curCol = null;
+            var readMetaSql = new SqlTask($"Read column meta data for table {tableName}",
+             $@" select cols.name, tpes.name, cols.is_nullable, cols.is_identity
+  from sys.columns cols
+  inner join sys.tables tbl
+   on cols.object_id = tbl.object_id
+  inner join sys.schemas sc
+   on tbl.schema_id = sc.schema_id
+   inner join sys.systypes tpes
+    on tpes.xtype = cols.system_type_id
+  where sc.name + '.' + tbl.name  =  '{tableName}'
+  and tbl.type = 'U'
+  and tpes.name <> 'sysname'"
+            , () => { curCol = new TableColumn(); }
+            , () => { result.Columns.Add(curCol); }
+            , name => curCol.Name = name.ToString()            
+            , colname => curCol.DataType = colname.ToString()
+            , is_nullable => curCol.AllowNulls = (bool)is_nullable
+            , is_identity => curCol.IsIdentity = (bool)is_identity
+             ) 
+            { DisableLogging = true };
+            readMetaSql.ExecuteReader();
+            return result;
         }
 
       
