@@ -47,7 +47,7 @@ It's easy to create your own data flow pipeline.
 Just create a source, some transformation and a destination. 
 
 ```C#
-DBSource<MySimpleRow> source = new DBSource<MySimpleRow>() { SourceTableDefinition = sourceTableDefinition };
+DBSource<MySimpleRow> source = new DBSource<MySimpleRow>("select * from dbo.test");
 RowTransformation<MySimpleRow, MySimpleRow> trans = new RowTransformation<MySimpleRow, MySimpleRow>(
   "RowTransformation testing init Action",
    testClass.TestTransformationFunc, 
