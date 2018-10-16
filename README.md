@@ -47,13 +47,13 @@ It's easy to create your own data flow pipeline.
 Just create a source, some transformation and a destination. 
 
 ```C#
-DBSource<MySimpleRow> source = new DBSource<MySimpleRow>("select * from dbo.test");
+DBSource<MySimpleRow> source = new DBSource<MySimpleRow>("select * from dbo.Source");
 RowTransformation<MySimpleRow, MySimpleRow> trans = new RowTransformation<MySimpleRow, MySimpleRow>(
-  "RowTransformation testing init Action",
-   testClass.TestTransformationFunc, 
-   testClass.SetAddValue
- );
-DBDestination<MySimpleRow> dest = new DBDestination<MySimpleRow>() { DestinationTableDefinition = destinationTableDefinition };
+    myRow => {  
+        myRow.Value2 += 1;
+        return myRow;
+    });
+DBDestination<MySimpleRow> dest = new DBDestination<MySimpleRow>("dbo.Destination);
 ```
 
 Now link these pipeline elements together. 
