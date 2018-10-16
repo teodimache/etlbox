@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
@@ -61,8 +62,17 @@ namespace ALE.ETLBox {
             return cmd.ExecuteScalar();
         }
 
-        public IDataReader ExecuteReader(string commandText) {
+        public IDataReader ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null) {
             Command cmd = CreateCommand(commandText);
+            if (parameterList != null) {
+                foreach (QueryParameter par in parameterList) {
+                    var newPar = cmd.CreateParameter();
+                    newPar.ParameterName = par.Name;
+                    newPar.DbType = par.DBType;
+                    newPar.Value = par.Value;
+                    cmd.Parameters.Add(newPar);
+                }
+            }
             return cmd.ExecuteReader();
 
         }

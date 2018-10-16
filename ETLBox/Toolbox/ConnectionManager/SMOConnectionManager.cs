@@ -1,6 +1,7 @@
 ﻿using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace ALE.ETLBox {
@@ -40,7 +41,7 @@ namespace ALE.ETLBox {
             return OpenedContext.ExecuteScalar(command);
         }
 
-        public IDataReader ExecuteReader(string command) {
+        public IDataReader ExecuteReader(string command, IEnumerable<QueryParameter> parameterList = null) {
             return OpenedContext.ExecuteReader(command);
         }
 

@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Definitions\Database\ProcedureDefinition.cs" />
+    <Compile Include="Definitions\Database\QueryParameter.cs" />
     <Compile Include="Definitions\Database\TableDefinition.cs" />
     <Compile Include="Definitions\Database\TableData.cs" />
     <Compile Include="Definitions\DataFlow\IDataFlowLinkSource.cs" />

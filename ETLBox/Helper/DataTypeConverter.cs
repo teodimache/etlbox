@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Text.RegularExpressions;
 
 namespace ALE.ETLBox {
@@ -55,6 +56,15 @@ namespace ALE.ETLBox {
 
         public static Type GetTypeObject(string dataTypeString) {
             return Type.GetType(GetObjectTypeString(dataTypeString));
+        }
+
+        public static DbType GetDBType(string dataTypeString) {
+            try {
+                return (DbType) Enum.Parse(typeof(DbType), GetObjectTypeString(dataTypeString).Replace("System.", ""), true);
+            }
+            catch {
+                return DbType.String;
+            }
         }
     }
 }

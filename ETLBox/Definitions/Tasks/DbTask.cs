@@ -33,13 +33,14 @@ namespace ALE.ETLBox {
                 else
                     throw new Exception("Empty command");
             }
-        }
+        }        
 
         /* Internal/Private properties */
         internal bool DoSkipSql { get; private set; }
         NLog.Logger NLogger { get; set; }
         bool HasSql => !(String.IsNullOrWhiteSpace(Sql));
         bool HasFileConnection => FileConnection != null;
+        internal IEnumerable<QueryParameter> _Parameter { get; set; }
 
         /* Some constructors */
         public DbTask() {
@@ -65,7 +66,7 @@ namespace ALE.ETLBox {
 
         public DbTask(string name, string sql, params Action<object>[] actions) : this(name, sql) {
             Actions = actions.ToList();
-        }
+        }                
 
         public DbTask(string name, string sql, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions) : this(name, sql) {
             BeforeRowReadAction = beforeRowReadAction;
@@ -117,7 +118,7 @@ namespace ALE.ETLBox {
             using (var conn = DbConnectionManager.Clone()) {
                 conn.Open();
                 QueryStart();                
-                IDataReader reader = conn.ExecuteReader(Command) as IDataReader;
+                IDataReader reader = conn.ExecuteReader(Command, _Parameter) as IDataReader;
                 for (int rowNr = 0; rowNr < ReadTopX; rowNr++) {
                     if (reader.Read()) {
                         InternalBeforeRowReadAction?.Invoke();

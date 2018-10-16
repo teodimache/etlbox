@@ -23,7 +23,6 @@ namespace ALE.ETLBoxTest {
             string asisCollation = SqlTask.ExecuteScalar("Get reference result", $"select value from fn_listextendedproperty('{propName}', default, default, default, default, default, default)").ToString();
             Assert.AreEqual("Test", asisCollation);
             SqlTask.ExecuteNonQuery("Drop extended property", $"exec sp_dropextendedproperty @name = N'{propName}'");
-
         }
 
         [TestMethod]
@@ -51,6 +50,16 @@ namespace ALE.ETLBoxTest {
             List<int> asIsResult = new List<int>();
             List<int> toBeResult = new List<int>() { 1, 2, 3 };
             SqlTask.ExecuteReader("Test execute reader", "SELECT * FROM (VALUES (1),(2),(3)) MyTable(a)",
+                colA => asIsResult.Add((int)colA));
+            CollectionAssert.AreEqual(asIsResult, toBeResult);
+        }
+
+        [TestMethod]
+        public void TestExecuteReaderWithParameter() {
+            List<int> asIsResult = new List<int>();
+            List<int> toBeResult = new List<int>() { 1 };
+            List<QueryParameter> parameter = new List<QueryParameter>() { new QueryParameter("par1", "int", 1) };
+            SqlTask.ExecuteReader("Test execute reader", "SELECT * FROM (VALUES (1),(2),(3)) MyTable(a) where a = @par1",parameter,
                 colA => asIsResult.Add((int)colA));
             CollectionAssert.AreEqual(asIsResult, toBeResult);
         }

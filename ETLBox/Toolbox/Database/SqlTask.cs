@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace ALE.ETLBox {
@@ -6,6 +7,8 @@ namespace ALE.ETLBox {
         public override string TaskType { get; set; } = "SQL";
         public override string TaskName { get; set; } = "Run some sql";
         public override void Execute() => ExecuteNonQuery();
+        public IEnumerable<QueryParameter> ParameterList => _Parameter;
+
         public SqlTask() {
         }
 
@@ -24,7 +27,15 @@ namespace ALE.ETLBox {
         public SqlTask(string name, string sql, params Action<object>[] actions) : base(name, sql, actions) {
         }
 
+        public SqlTask(string name, string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions) : base(name, sql, actions) {            
+            _Parameter = parameterList;
+        }
+
         public SqlTask(string name, string sql, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions) : base(name, sql, beforeRowReadAction, afterRowReadAction, actions) {
+        }
+
+        public SqlTask(string name, string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions) : base(name, sql, beforeRowReadAction, afterRowReadAction, actions) {
+            _Parameter = parameterList;
         }
 
         /* Static methods for convenience */
@@ -38,6 +49,9 @@ namespace ALE.ETLBox {
         public static void ExecuteReader(string name, string sql, params Action<object>[] actions) => new SqlTask(name, sql, actions).ExecuteReader();
         public static void ExecuteReader(string name, string sql, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions) =>
             new SqlTask(name, sql, beforeRowReadAction, afterRowReadAction, actions).ExecuteReader();
+        public static void ExecuteReader(string name, string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions) => new SqlTask(name, sql, parameterList, actions).ExecuteReader();
+        public static void ExecuteReader(string name, string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions) =>
+            new SqlTask(name, sql, parameterList, beforeRowReadAction, afterRowReadAction, actions).ExecuteReader();
         public static void BulkInsert(string name, IDataReader data, IColumnMappingCollection columnMapping, string tableName) =>
             new SqlTask(name).BulkInsert(data, columnMapping, tableName);
     }
