@@ -45,25 +45,10 @@ namespace ALE.ETLBox {
 
         //public void CloseConnection() => Close();
 
-        public Command CreateCommand(string commandText) {
+        public Command CreateCommand(string commandText, IEnumerable<QueryParameter> parameterList = null) {
             var cmd = DbConnection.CreateCommand();
             cmd.CommandTimeout = 0;
             cmd.CommandText = commandText;
-            return cmd as Command;
-        }
-
-        public int ExecuteNonQuery(string commandText) {
-            Command sqlcmd = CreateCommand(commandText);
-            return sqlcmd.ExecuteNonQuery();
-        }
-
-        public object ExecuteScalar(string commandText) {
-            Command cmd = CreateCommand(commandText);
-            return cmd.ExecuteScalar();
-        }
-
-        public IDataReader ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null) {
-            Command cmd = CreateCommand(commandText);
             if (parameterList != null) {
                 foreach (QueryParameter par in parameterList) {
                     var newPar = cmd.CreateParameter();
@@ -73,6 +58,21 @@ namespace ALE.ETLBox {
                     cmd.Parameters.Add(newPar);
                 }
             }
+            return cmd as Command;
+        }
+
+        public int ExecuteNonQuery(string commandText, IEnumerable<QueryParameter> parameterList = null) {
+            Command sqlcmd = CreateCommand(commandText, parameterList);
+            return sqlcmd.ExecuteNonQuery();
+        }
+
+        public object ExecuteScalar(string commandText, IEnumerable<QueryParameter> parameterList = null) {
+            Command cmd = CreateCommand(commandText, parameterList);
+            return cmd.ExecuteScalar();
+        }
+
+        public IDataReader ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null) {
+            Command cmd = CreateCommand(commandText, parameterList);            
             return cmd.ExecuteReader();
 
         }

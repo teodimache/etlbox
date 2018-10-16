@@ -3,8 +3,8 @@ using System.Data;
 
 namespace ALE.ETLBox {
     public interface IDbConnectionManager : IConnectionManager  {      
-        int ExecuteNonQuery(string command);
-        object ExecuteScalar(string command);
+        int ExecuteNonQuery(string command, IEnumerable<QueryParameter> parameterList = null);
+        object ExecuteScalar(string command, IEnumerable<QueryParameter> parameterList = null);
         IDataReader ExecuteReader(string command, IEnumerable<QueryParameter> parameterList = null);
         void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName);
         IDbConnectionManager Clone();

@@ -33,11 +33,11 @@ namespace ALE.ETLBox {
             Context.StatementTimeout = 0;
         }
 
-        public int ExecuteNonQuery(string command) {
+        public int ExecuteNonQuery(string command, IEnumerable<QueryParameter> parameterList = null) {
             return OpenedContext.ExecuteNonQuery(command);
         }
 
-        public object ExecuteScalar(string command) {
+        public object ExecuteScalar(string command, IEnumerable<QueryParameter> parameterList = null) {
             return OpenedContext.ExecuteScalar(command);
         }
 

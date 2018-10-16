@@ -26,6 +26,16 @@ namespace ALE.ETLBoxTest {
         }
 
         [TestMethod]
+        public void TestExecuteNonQueryWithParameter() {
+            string propName = TestHelper.RandomString(10);
+            var parameter = new List<QueryParameter> { new QueryParameter("propName", "nvarchar(100)", propName) };
+            SqlTask.ExecuteNonQuery("Test add extended property", $"exec sp_addextendedproperty @name = @propName, @value = 'Test';", parameter);
+            string asisCollation = SqlTask.ExecuteScalar("Get reference result", $"select value from fn_listextendedproperty(@propName, default, default, default, default, default, default)", parameter).ToString();
+            Assert.AreEqual("Test", asisCollation);
+            SqlTask.ExecuteNonQuery("Drop extended property", $"exec sp_dropextendedproperty @name = N'{propName}'");
+        }
+
+        [TestMethod]
         public void TestExecuteScalar() {
             object result = SqlTask.ExecuteScalar("Test execute scalar", "select cast('Hallo Welt' as nvarchar(100)) as ScalarResult");
             Assert.AreEqual(result.ToString(), "Hallo Welt");

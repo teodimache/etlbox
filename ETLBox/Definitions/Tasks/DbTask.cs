@@ -83,7 +83,7 @@ namespace ALE.ETLBox {
             using (var conn= DbConnectionManager.Clone()) {
                 conn.Open();
                 QueryStart();
-                RowsAffected = DoSkipSql ? 0 : conn.ExecuteNonQuery(Command);//DbConnectionManager.ExecuteNonQuery(Command);
+                RowsAffected = DoSkipSql ? 0 : conn.ExecuteNonQuery(Command, _Parameter);//DbConnectionManager.ExecuteNonQuery(Command);
                 QueryFinish(LogType.Rows);
             }
             return RowsAffected ?? 0;
@@ -94,7 +94,7 @@ namespace ALE.ETLBox {
             using (var conn = DbConnectionManager.Clone()) {
                 conn.Open();
                 QueryStart();
-                result = conn.ExecuteScalar(Command);
+                result = conn.ExecuteScalar(Command, _Parameter);
                 QueryFinish();
             }
             return result;
