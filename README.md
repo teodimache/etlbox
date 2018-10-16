@@ -53,7 +53,7 @@ RowTransformation<MySimpleRow, MySimpleRow> trans = new RowTransformation<MySimp
         myRow.Value2 += 1;
         return myRow;
     });
-DBDestination<MySimpleRow> dest = new DBDestination<MySimpleRow>("dbo.Destination);
+DBDestination<MySimpleRow> dest = new DBDestination<MySimpleRow>("dbo.Destination");
 ```
 
 Now link these pipeline elements together. 
