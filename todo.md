@@ -11,7 +11,8 @@
 	Add Ola Hallagren script for database maintenance (backup, restore, ...)
 
 - Dataflow: 
-  Mapping to objects has some kind of implicit data type checks - there should be a dataflow task which explicit type check on data 
+  Mapping to objects has some kind of implicit data type checks - there should be a dataflow task which explicit type check on data? 
+  This would mean that if data is typeof object, information is extracted via reflection
 
 - CreateTableTask
   Function for adding test data into table (depending on table definition)  
