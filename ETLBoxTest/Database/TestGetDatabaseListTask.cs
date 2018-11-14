@@ -21,7 +21,7 @@ namespace ALE.ETLBoxTest {
         public void TestGetDatabaseList() {
             List<string> allDatabases = GetDatabaseListTask.List();
 
-            Assert.IsTrue(allDatabases.Count > 1);
+            Assert.IsTrue(allDatabases.Count >= 1);
             Assert.IsTrue(allDatabases.Any(name => name == DBNameParameter));
 
         }        
