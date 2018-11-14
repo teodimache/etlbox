@@ -65,15 +65,11 @@ namespace ALE.ETLBox {
         }
 
         private async Task ReadAll() {
-            bool headerRead = false;
+            CsvReader.Read();
+            CsvReader.ReadHeader();
+            FieldHeaders = CsvReader.Context.HeaderRecord;
             while (CsvReader.Read()) {
-                if (!headerRead && CsvReader.FieldHeaders != null) {
-                    FieldHeaders = CsvReader.FieldHeaders.Select(header => header.Trim()).ToArray();
-                    headerRead = true;
-                }
-                string[] line = new string[CsvReader.CurrentRecord.Length];
-                for (int idx = 0; idx < CsvReader.CurrentRecord.Length; idx++)
-                    line[idx] = CsvReader.GetField(idx);
+                string[] line = CsvReader.Context.Record;
                 await Buffer.SendAsync(line);
             }
         }
@@ -82,11 +78,9 @@ namespace ALE.ETLBox {
             CsvReader.Configuration.Delimiter = Delimiter;
             CsvReader.Configuration.Quote = Quote;
             CsvReader.Configuration.AllowComments = AllowComments;
-            CsvReader.Configuration.Comment = Comment;
-            CsvReader.Configuration.SkipEmptyRecords = SkipEmptyRecords;
-            CsvReader.Configuration.IgnoreBlankLines = IgnoreBlankLines;
-            CsvReader.Configuration.TrimHeaders = TrimHeaders;
-            CsvReader.Configuration.TrimFields = TrimFields;
+            CsvReader.Configuration.Comment = Comment;            
+            CsvReader.Configuration.IgnoreBlankLines = IgnoreBlankLines;            
+            CsvReader.Configuration.TrimOptions = CsvHelper.Configuration.TrimOptions.Trim;
             CsvReader.Configuration.Encoding = Encoding.UTF8;            
         }
 
