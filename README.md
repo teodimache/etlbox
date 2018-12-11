@@ -181,6 +181,15 @@ A quick overview of some of the available tasks:
  - Package
  - Sequence
  - CustomTask
+ - BlockTransformation
+ - CSVSource, DBSource, CustomSource
+ - DBDestination, CustomDestination
+ - Lookup
+ - MergeJoin
+ - Multicast
+ - RowTransformation
+ - Sort
+ - ... much more
 
 ## Getting Started
 
