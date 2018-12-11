@@ -10,6 +10,32 @@ ETLBox is a comprehensive C# class library that is able to manage your whole ETL
 
 Perhaps you are looking for an alternative to Sql Server Integrations Services (SSIS). Or you are searching for framework to create an ETL with C# code. The goal of ETLBox is to provide an easy-to-use but still powerful library to create complex ETL routines and sophisticated data flows.
 
+## Advantages of using ETLBox
+
+### Build ETL in C#
+
+Code your ETL with a language fittingyour team’s skills and that is coming with a mature toolset
+
+### Run locally
+
+Develop and test your ETL code locally on your desktop using your existing development & debugging tools.
+
+### Process In-Memory
+
+ETLBox comes with dataflow components that allow in-memory processing which is much faster than storing data on disk and processing later. 
+
+### Know your errors
+
+When exceptions are raised you get the exact line of code where your ETL stopped, including a hands-on description of the error.
+
+### Manage Change
+
+Track you changes with git (or other source controls), code review your etl logic, and use your existing CI/CD processes.
+
+### Embedded or standalone (coming soon)
+
+With .net core and .net standard, etlbox will very likely become a self-deploying toolbol – usable where .net core runs. (Work in progress, currently ETLBox is tested only with .NET 4.6.1)
+
 ## Overview of functionalities
 
 ETLBox is split into two main components: Control Flow task and Data Flow Tasks.
@@ -129,33 +155,6 @@ Attention: Before running this code, you must configure a nlog target for your d
 ### but there is more
 a quick overview of available task:
  - CalculateDatabaseHashTask, CleanUpSchemaTask, CreateIndexTask, GetDatabaseListTask, RestoreDatabaseTask, XmlaTask, DropCubeTask, ProcessCubeTask, ConnectionManager (Sql, SMO, AdoMD, AS, File), ControlFlow, Package, Sequence, CustomTask, ...  
-
-
-## Advantages of using ETLBox
-
-### Build ETL in C#
-
-Code your ETL with a language fittingyour team’s skills and that is coming with a mature toolset
-
-### Run locally
-
-Develop and test your ETL code locally on your desktop using your existing development & debugging tools.
-
-### Process In-Memory
-
-ETLBox comes with dataflow components that allow in-memory processing which is much faster than storing data on disk and processing later. 
-
-### Know your errors
-
-When exceptions are raised you get the exact line of code where your ETL stopped, including a hands-on description of the error.
-
-### Manage Change
-
-Track you changes with git (or other source controls), code review your etl logic, and use your existing CI/CD processes.
-
-### Embedded or standalone (coming soon)
-
-With .net core and .net standard, etlbox will very likely become a self-deploying toolbol – usable where .net core runs. (Work in progress, currently ETLBox is tested only with .NET 4.6.1)
 
 ## Getting Started
 
