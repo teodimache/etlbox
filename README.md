@@ -168,11 +168,22 @@ Attention: Before running this code, you must configure a nlog target for your d
 
 ## There is more
 A quick overview of some of the available tasks:
+ - AddFileGroupTask
  - CalculateDatabaseHashTask
  - CleanUpSchemaTask
+ - CreateDatabaseTask
  - CreateIndexTask
+ - CreateSchemaTask
+ - CreateTableTask
+ - CRUDProcedureTask
+ - CRUDViewTask
+ - DropDatabaseTask
+ - DropTableTask
  - GetDatabaseListTask
  - RestoreDatabaseTask
+ - RowCountTask
+ - SqlTask
+ - TruncateTableTask
  - XmlaTask
  - DropCubeTask
  - ProcessCubeTask
@@ -189,7 +200,7 @@ A quick overview of some of the available tasks:
  - Multicast
  - RowTransformation
  - Sort
- - ... much more
+ - .. and much more
 
 ## Getting Started
 
@@ -217,4 +228,4 @@ Now you can build the solution, and use it as a reference in your other projects
 
 To dig deeper into it, have a look at the ETLBox tests within the solution. There is a test for everything that you can do with ETLToolbox.
 
-See the wiki for detailed documentation of every task or component, including examples.
+See the (ETLBox Wiki)[https://github.com/roadrunnerlenny/etlbox/wiki] for detailed documentation of every task or component, including examples.
