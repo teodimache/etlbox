@@ -127,44 +127,12 @@ dest.Wait();
 
 ### Logging 
 
-By default, ETLBox uses NLog. NLog already comes with different log targets that be configured either via your app.config or programatically. Please see the NLog-documentation for a full reference: (https://nlog-project.org/)[https://nlog-project.org/]
+By default, ETLBox uses NLog. ETLBox already comes with NLog as dependency. So the needed packages will be retrieved from nuget. In order to have the logging activating, you just have to set up a nlog configuration section in your app.config, and create a target and a logger rule. After adding this, you will already get some logging output. 
 
-ETLBox already comes with NLog as dependency. So the needed packages will be retrieved from nuget. But in order to use it, you have to set up a nlog configuration section in your app.config, and create a target and a logger rule.
+Also you can create log tables within the database that holds all log information. The task CreateLogTablesTask will do that for you.
+Once the tables exists, etlbox will log into them.
 
-This could look like
-```xml
-<nlog>
-  <rules>
-    <logger name="*" minlevel="Debug" writeTo="debugger" />
-  </rules>
-  <targets>
-    <target name="debugger" xsi:type="Debugger" />     
-  </targets>
-</nlog>
-```
-
-After adding this section, you will already get some logging output. 
-
-But there is more. If you want to have logging in your database, you can use the CreateLogTables - Task. This task will create two tables: etl.LoadProcess and etl.Log
-
-The etl.LoadProcess contains information about the etl processes that you started programatically with the StartLoadProcessTask. To end or abort a process, you can use the EndLoadProcessTask or AbortLoadProcessTask.
-
-The etl.Log table will store all log message generated from any control flow or data flow task. You can even use your own LogTask to create your own log message in there.
-
-This is an example for using the logging
-```C#
-StartLoadProcessTask.Start("Process 1 started");
-
-SqlTask.ExecuteNonQuery("some sql", "Select 1 as test");
-Sequence.Execute("some custom code", () => { });
-LogTask.Warn("Some warning!");
-
-EndLoadProcessTask.End("Process 1 ended successfully");
-```
-
-After running this code, you will one line with process information in your etl.LoadProcess Table and several lines of log information (for each task like SqlTask, Sequence or LogTask) in your etl.Log table.
-
-Attention: Before running this code, you must configure a nlog target for your database. Please see the wiki for the complete example. 
+Use can then use the (ETLBox LogViewer)[https://github.com/roadrunnerlenny/etlboxlogviewer] to easily access and analyze your logs.
 
 ## There is more
 A quick overview of some of the available tasks:
@@ -210,11 +178,11 @@ We recommend that you have Visual Studio 2017 installed (including the Github ex
 
 ### Using ETLBox
 
-#### Nuget 
+#### Variant 1: Nuget 
 
-ETLBox is available on nuget.
+ETLBox is available on nuget. Just add the package to your project via your nuget package manager
 
-#### Download the sources
+#### Variant 2: Download the sources
 
 Clone the repository
 ```
@@ -223,9 +191,10 @@ git clone https://github.com/roadrunnerlenny/etlbox.git
 
 Then, open the downloaded solution file ETLBox.sln with Visual Studio 2015 or higher.
 Now you can build the solution, and use it as a reference in your other projects. 
+Feel free to make changes or to fix bug. Every particiation in this open source project is appreciated.
 
 ## Going further
 
-To dig deeper into it, have a look at the ETLBox tests within the solution. There is a test for everything that you can do with ETLToolbox.
+To dig deeper into it, have a look at the ETLBox tests within the solution. There is a test for (almost) everything that you can do with ETLToolbox.
 
 See the (ETLBox Wiki)[https://github.com/roadrunnerlenny/etlbox/wiki] for detailed documentation of every task or component, including examples.
