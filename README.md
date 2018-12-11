@@ -132,7 +132,7 @@ By default, ETLBox uses NLog. ETLBox already comes with NLog as dependency. So t
 Also you can create log tables within the database that holds all log information. The task CreateLogTablesTask will do that for you.
 Once the tables exists, etlbox will log into them.
 
-Use can then use the (https://github.com/roadrunnerlenny/etlboxlogviewer)[ETLBox LogViewer] to easily access and analyze your logs.
+Use can then use the [ETLBox LogViewer](https://github.com/roadrunnerlenny/etlboxlogviewer) to easily access and analyze your logs.
 
 ## There is more
 A quick overview of some of the available tasks:
@@ -197,4 +197,4 @@ Feel free to make changes or to fix bug. Every particiation in this open source 
 
 To dig deeper into it, have a look at the ETLBox tests within the solution. There is a test for (almost) everything that you can do with ETLToolbox.
 
-See the (https://github.com/roadrunnerlenny/etlbox/wiki)[ETLBox Wiki] for detailed documentation of every task or component, including examples.
+See the [ETLBox Wiki](https://github.com/roadrunnerlenny/etlbox/wiki) for detailed documentation of every task or component, including examples.
