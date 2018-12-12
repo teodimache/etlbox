@@ -1,6 +1,9 @@
 ﻿using System;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A custom task allows you to run your own code (defined as an Action object), with additionally logging in place. (TaskType: CUSTOM)
+    /// </summary>
     public class CustomTask : GenericTask, ITask {
         /* ITask interface */
         public override string TaskType { get; set; } = "CUSTOM";

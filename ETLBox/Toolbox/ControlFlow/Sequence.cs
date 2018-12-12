@@ -1,6 +1,9 @@
 ﻿using System;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A sequence is a shortcute for custom task, but with the TaskType "SEQUENCE".
+    /// </summary>
     public class Sequence : GenericTask, ITask
     {
         public override string TaskType { get; set; } = "SEQUENCE";

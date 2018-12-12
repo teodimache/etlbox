@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Creates a schema if the schema doesn't exists.
+    /// </summary>
     public class CreateSchemaTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATESCHEMA";

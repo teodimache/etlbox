@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Reads data from the etl.LoadProcessTable.
+    /// </summary>
     public class ReadLoadProcessTableTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOADPROCESS_READ";

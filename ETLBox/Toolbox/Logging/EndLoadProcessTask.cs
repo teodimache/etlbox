@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Will set the table entry for current load process to ended.
+    /// </summary>
     public class EndLoadProcessTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOADPROCESS_END";

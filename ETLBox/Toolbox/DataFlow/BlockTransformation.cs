@@ -4,6 +4,11 @@ using System.Threading.Tasks.Dataflow;
 
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A block transformation will wait for all data to be loaded into the buffer before the transformation is applied. After all data is in the buffer, the transformation
+    /// is execution and the result posted into the targets.
+    /// </summary>
+    /// <typeparam name="TInput"></typeparam>
     public class BlockTransformation<TInput> : GenericTask, ITask, IDataFlowLinkTarget<TInput>, IDataFlowLinkSource<TInput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_BLOCKTRANSFORMATION";

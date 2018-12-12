@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Truncates a table.
+    /// </summary>
     public class TruncateTableTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "TRUNCATE";

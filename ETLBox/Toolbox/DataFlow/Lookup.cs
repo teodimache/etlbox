@@ -4,6 +4,12 @@ using System.Threading.Tasks.Dataflow;
 
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A lookup task - data from the input can be enriched with data retrieved from the lookup source. The result is then posted into the output.
+    /// </summary>
+    /// <typeparam name="TTransformationInput">Input block</typeparam>
+    /// <typeparam name="TTransformationOutput">Output block</typeparam>
+    /// <typeparam name="TSourceOutput">Lookup source</typeparam>
     public class Lookup<TTransformationInput, TTransformationOutput, TSourceOutput>
         : GenericTask, ITask, IDataFlowTransformation<TTransformationInput, TTransformationOutput>
         where TSourceOutput : new() {

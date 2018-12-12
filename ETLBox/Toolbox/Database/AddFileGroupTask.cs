@@ -1,6 +1,9 @@
 ﻿using System;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// This task will add a filegroup to the database.
+    /// </summary>
     public class AddFileGroupTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATEFG";

@@ -2,6 +2,11 @@
 using System.Threading.Tasks.Dataflow;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A database source defines either a table or sql query that returns data from a database. While reading the result set or the table, data is asnychronously posted
+    /// into the targets.
+    /// </summary>
+    /// <typeparam name="TOutput"></typeparam>
     public class DBSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> where TOutput : new() {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_DBSOURCE";

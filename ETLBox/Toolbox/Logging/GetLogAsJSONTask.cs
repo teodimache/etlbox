@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Returns the content of the etl.Log table as a JSON string. 
+    /// </summary>
     public class GetLogAsJSONTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOG_GETJSON";

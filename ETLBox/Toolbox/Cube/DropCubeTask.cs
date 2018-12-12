@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Drop cube task will drop a cube database.
+    /// </summary>
     public class DropCubeTask : GenericTask, ITask {
         public override string TaskType { get; set; } = "DROPCUBE";
         public override string TaskName => $"Drops cube {ASConnectionManager.ConnectionString.CatalogName}";

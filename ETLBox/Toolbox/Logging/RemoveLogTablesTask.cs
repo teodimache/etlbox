@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Removes the log tables and all the log procedures.
+    /// </summary>
     public class RemoveLogTablesTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "REMOVELOG";

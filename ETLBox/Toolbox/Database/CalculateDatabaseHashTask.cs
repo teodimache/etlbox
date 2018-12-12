@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Calculates a hash value of the database. It will use only the schemas given in the property SchemaName for the calculation.
+    /// The hash calcualtion is based only on the user tables in the schema.
+    /// </summary>
     public class CalculateDatabaseHashTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CALCDBHASH";

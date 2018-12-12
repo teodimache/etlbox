@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Tries to drop a database if the database exists.
+    /// </summary>
     public class DropDatabaseTask : GenericTask, ITask
     {
         /* ITask Interface */

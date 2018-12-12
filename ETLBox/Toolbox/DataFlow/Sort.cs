@@ -4,6 +4,10 @@ using System.Threading.Tasks.Dataflow;
 
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Sort the input with the given sort function. 
+    /// </summary>
+    /// <typeparam name="TInput">Input block type.</typeparam>
     public class Sort<TInput> : GenericTask, ITask, IDataFlowLinkTarget<TInput>, IDataFlowLinkSource<TInput> {
         
 

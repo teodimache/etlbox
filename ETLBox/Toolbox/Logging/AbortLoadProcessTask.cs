@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Will set the table entry for current load process to aborted.
+    /// </summary>
     public class AbortLoadProcessTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOADPROCESS_ABORT";

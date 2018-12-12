@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Creates or updates a procedure.
+    /// </summary>
     public class CRUDProcedureTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CRUDPROC";

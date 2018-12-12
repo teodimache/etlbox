@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Sets the TransferCompletedDate for the current load process. 
+    /// </summary>
     public class TransferCompletedForLoadProcessTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "TRANSFERCOMPLETE";

@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Drops a table if the table exists.
+    /// </summary>
     public class DropTableTask : GenericTask, ITask
     {
         /* ITask Interface */

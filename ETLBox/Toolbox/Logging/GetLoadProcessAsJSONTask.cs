@@ -3,6 +3,9 @@ using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Returns the content of the etl.LoadProcess table as JSON.
+    /// </summary>
     public class GetLoadProcessAsJSONTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOADPROCESS_GETJSON";

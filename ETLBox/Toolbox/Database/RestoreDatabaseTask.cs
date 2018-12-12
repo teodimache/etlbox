@@ -4,6 +4,9 @@ using System.IO;
 using System.Linq;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Restores a database from a backup.
+    /// </summary>
     public class RestoreDatabaseTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "RESTOREDB";

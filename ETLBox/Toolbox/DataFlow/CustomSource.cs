@@ -2,6 +2,10 @@
 using System.Threading.Tasks.Dataflow;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Define your own source block.
+    /// </summary>
+    /// <typeparam name="TOutput"></typeparam>
     public class CustomSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_CSVSOURCE";

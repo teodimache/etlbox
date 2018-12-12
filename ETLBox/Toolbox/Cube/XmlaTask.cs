@@ -3,6 +3,9 @@ using System.Data;
 using System.Linq;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// This task can exeucte any XMLA.
+    /// </summary>
     public class XmlaTask : DbTask {
         public override string TaskType { get; set; } = "XMLA";
         public override string TaskName { get; set; } = "Run some xmla";

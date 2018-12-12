@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Reads data from the etl.Log table.
+    /// </summary>
     public class ReadLogTableTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOG_READLOG";

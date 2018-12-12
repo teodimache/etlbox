@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Creates an index if the index doesn't exists.
+    /// </summary>
     public class CreateIndexTask: GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATEINDEX";

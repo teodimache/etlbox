@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Removes log data older than the specified days to keep. 
+    /// </summary>
     public class CleanUpLogTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CLEANUPLOG";

@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
+    /// </summary>
     public class CSVSource : GenericTask, ITask, IDataFlowSource<string[]> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_CSVSOURCE";

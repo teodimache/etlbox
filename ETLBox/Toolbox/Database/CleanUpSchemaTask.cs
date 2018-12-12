@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Tries to remove all database objects from the given schema(s).
+    /// </summary>
     public class CleanUpSchemaTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CLEANSCHEMA";

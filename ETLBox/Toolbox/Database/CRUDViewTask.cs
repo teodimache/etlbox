@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Creates or updates a view.
+    /// </summary>
     public class CRUDViewTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CRUDVIEW";

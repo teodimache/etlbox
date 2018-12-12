@@ -3,6 +3,11 @@ using System.Threading.Tasks.Dataflow;
 
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Transforms the data row-by-row with the help of the transformation function.
+    /// </summary>
+    /// <typeparam name="TInput">Input block.</typeparam>
+    /// <typeparam name="TOutput">Output block.</typeparam>
     public class RowTransformation<TInput, TOutput> : GenericTask, ITask, IDataFlowTransformation<TInput, TOutput> {        
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_ROWTRANSFORMATION";

@@ -2,6 +2,10 @@
 using System.Threading.Tasks.Dataflow;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Define your own destination block.
+    /// </summary>
+    /// <typeparam name="TInput"></typeparam>
     public class CustomDestination<TInput> : GenericTask, ITask, IDataFlowDestination<TInput> {       
 
         /* ITask Interface */

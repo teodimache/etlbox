@@ -1,6 +1,9 @@
 ﻿using System;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Will create a database if the database doesn't exists.
+    /// </summary>
     public class CreateDatabaseTask : GenericTask, ITask
     {
         /* ITask Interface */

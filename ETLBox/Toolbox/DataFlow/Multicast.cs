@@ -4,6 +4,10 @@ using System.Threading.Tasks.Dataflow;
 
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A multicast duplicates data from the input into two outputs.
+    /// </summary>
+    /// <typeparam name="TInput">Input block</typeparam>
     public class Multicast<TInput> : GenericTask, ITask, IDataFlowTransformation<TInput, TInput> where TInput : new() {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_MULTICAST";

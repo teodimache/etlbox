@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// Used this task for custom log messages.
+    /// </summary>
     public class LogTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "LOG";

@@ -1,4 +1,7 @@
 ﻿namespace ALE.ETLBox {
+    /// <summary>
+    /// This task will process a cube database.
+    /// </summary>
     public class ProcessCubeTask : GenericTask, ITask
     {
         public override string TaskType { get; set; } = "PROCESSCUBE";
@@ -16,7 +19,7 @@
         {
             NLogger = NLog.LogManager.GetLogger("ETL");
         }
-
+        
         public ProcessCubeTask(string name) : this()
         {          
             this.TaskName = name;

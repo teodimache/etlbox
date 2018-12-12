@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// Will create two tables: etl.Log and etl.LoadProcess. Also it will create some procedure for starting, stopping and aborting load processes.
+    /// If logging is configured via a NLog config, these tables contain log information from the tasks.
+    /// </summary>
     public class CreateLogTablesTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATELOG";
