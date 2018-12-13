@@ -41,7 +41,6 @@ namespace ALE.ETLBox {
 
         private void Init() {
             DoXMLCommentStyle = true;
-            UseAdomdConnection = true;
         }
 
         /* Static methods for convenience */

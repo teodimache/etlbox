@@ -51,15 +51,7 @@ namespace ALE.ETLBoxTest {
 </Delete>";
         }
 
-        internal static void RecreateCube(TestContext testContext) {
-            string dbName = testContext.Properties["dbName"].ToString();
-            ControlFlow.CurrentAdomdConnection = new AdomdConnectionManager(new ConnectionString(testContext.Properties["connectionString"].ToString()).GetConnectionWithoutCatalog());
-            try {
-                XmlaTask.ExecuteNonQuery("Drop cube", DeleteCubeXMLA(dbName));
-            }
-            catch { }
-            XmlaTask.ExecuteNonQuery("Create cube", CreateCubeXMLA(dbName));
-        }
+      
 
     }
 }

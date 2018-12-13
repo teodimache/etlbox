@@ -23,28 +23,10 @@ namespace ALE.ETLBox {
         //}
         internal virtual IDbConnectionManager DbConnectionManager {
             get {
-                if (ConnectionManager == null) {
-                    if (UseAdomdConnection && ControlFlow.CurrentAdomdConnection != null)
-                        return (IDbConnectionManager)ControlFlow.CurrentAdomdConnection;
-                    if (ControlFlow.CurrentDbConnection != null)
-                        return (IDbConnectionManager)ControlFlow.CurrentDbConnection;
-                    else
-                        return null;
-                }
-                else
+                if (ConnectionManager == null) 
+                    return (IDbConnectionManager)ControlFlow.CurrentDbConnection;
+               else
                     return (IDbConnectionManager)ConnectionManager;
-            }
-        }
-
-        internal virtual ICubeConnectionManager ASConnectionManager {
-            get {
-                if (ConnectionManager == null) {
-                    if (ControlFlow.CurrentASConnection != null)
-                        return ControlFlow.CurrentASConnection as ICubeConnectionManager;
-                    else
-                        return null;
-                }
-                return ConnectionManager as ICubeConnectionManager;
             }
         }
 
@@ -78,7 +60,6 @@ namespace ALE.ETLBox {
         private string CommentStart => DoXMLCommentStyle ? @"<!--" : "/*";
         private string CommentEnd => DoXMLCommentStyle ? @"-->" : "*/";        
         public virtual bool DoXMLCommentStyle { get; set; }
-        internal virtual bool UseAdomdConnection { get; set; }
 
     }
 }
