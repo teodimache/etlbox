@@ -821,18 +821,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/ALE.ETLBox.RuntimePolicyHelper.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/ALE.ETLBox.RuntimePolicyHelper.html",
-          "hash": "E4qeytPoK300UgTMFwk6YA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/ALE.ETLBox.SMOConnectionManager.yml",
       "output": {
         ".html": {
@@ -1053,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.html",
-          "hash": "QbvdDuBwscZChOsqtaV5Og=="
+          "hash": "vMV8sBuF7mtkOoqQPW789A=="
         }
       },
       "is_incremental": false,
@@ -1077,7 +1065,31 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "r5SDELeBKwp0RSsKaMF4VA=="
+          "hash": "w773cp9maEq6fBs43lRWpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_controlflow.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_controlflow.html",
+          "hash": "6q+Cs6kU3/N9Ay3T10dteg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/example_dataflow.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/example_dataflow.html",
+          "hash": "2uCdXLoBZqcY8y3UnjwyiA=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1101,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "DcqpGUEITn7rlhAUkQzdqw=="
+          "hash": "4EgmnTqHQSAvvdUTGUx1Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/logging.html",
+          "hash": "WuUnCOIMN5W1GoDm6HjMaA=="
         }
       },
       "is_incremental": false,
@@ -1101,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+          "hash": "+4hWIDQ2hL5ES7RXbB/qAw=="
         }
       },
       "is_incremental": false,

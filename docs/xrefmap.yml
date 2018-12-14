@@ -8182,38 +8182,6 @@ references:
   fullName.vb: ALE.ETLBox.RowTransformation(Of TInput, TOutput).WasInitialized
   nameWithType: RowTransformation<TInput, TOutput>.WasInitialized
   nameWithType.vb: RowTransformation(Of TInput, TOutput).WasInitialized
-- uid: ALE.ETLBox.RuntimePolicyHelper
-  name: RuntimePolicyHelper
-  href: api/ALE.ETLBox.RuntimePolicyHelper.html
-  commentId: T:ALE.ETLBox.RuntimePolicyHelper
-  fullName: ALE.ETLBox.RuntimePolicyHelper
-  nameWithType: RuntimePolicyHelper
-- uid: ALE.ETLBox.RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-  name: LegacyV2RuntimeEnabledSuccessfully
-  href: api/ALE.ETLBox.RuntimePolicyHelper.html#ALE_ETLBox_RuntimePolicyHelper_LegacyV2RuntimeEnabledSuccessfully
-  commentId: P:ALE.ETLBox.RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-  fullName: ALE.ETLBox.RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-  nameWithType: RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-- uid: ALE.ETLBox.RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully*
-  name: LegacyV2RuntimeEnabledSuccessfully
-  href: api/ALE.ETLBox.RuntimePolicyHelper.html#ALE_ETLBox_RuntimePolicyHelper_LegacyV2RuntimeEnabledSuccessfully_
-  commentId: Overload:ALE.ETLBox.RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-  isSpec: "True"
-  fullName: ALE.ETLBox.RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-  nameWithType: RuntimePolicyHelper.LegacyV2RuntimeEnabledSuccessfully
-- uid: ALE.ETLBox.RuntimePolicyHelper.SetNET20Compatibilty
-  name: SetNET20Compatibilty()
-  href: api/ALE.ETLBox.RuntimePolicyHelper.html#ALE_ETLBox_RuntimePolicyHelper_SetNET20Compatibilty
-  commentId: M:ALE.ETLBox.RuntimePolicyHelper.SetNET20Compatibilty
-  fullName: ALE.ETLBox.RuntimePolicyHelper.SetNET20Compatibilty()
-  nameWithType: RuntimePolicyHelper.SetNET20Compatibilty()
-- uid: ALE.ETLBox.RuntimePolicyHelper.SetNET20Compatibilty*
-  name: SetNET20Compatibilty
-  href: api/ALE.ETLBox.RuntimePolicyHelper.html#ALE_ETLBox_RuntimePolicyHelper_SetNET20Compatibilty_
-  commentId: Overload:ALE.ETLBox.RuntimePolicyHelper.SetNET20Compatibilty
-  isSpec: "True"
-  fullName: ALE.ETLBox.RuntimePolicyHelper.SetNET20Compatibilty
-  nameWithType: RuntimePolicyHelper.SetNET20Compatibilty
 - uid: ALE.ETLBox.Sequence
   name: Sequence
   href: api/ALE.ETLBox.Sequence.html
