@@ -6,7 +6,7 @@
           "files": [
             "**.csproj"
           ],
-          "src": "D:\\ALE\\etlbox\\ETLBox"
+          "src": "../"
         }
       ],
       "dest": "api",
@@ -27,7 +27,8 @@
           "articles/**.md",
           "articles/**/toc.yml",
           "toc.yml",
-          "*.md"
+          "*.md",
+          "../*.md"
         ]
       }
     ],
