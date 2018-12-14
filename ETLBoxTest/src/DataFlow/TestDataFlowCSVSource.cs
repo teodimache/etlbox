@@ -31,12 +31,12 @@ namespace ALE.ETLBoxTest {
                 new TableColumn("Col2", "int", allowNulls: true)
             });
             stagingTable.CreateTable();
-            CSVSource source = new CSVSource("DataFlow/Simple_CSV2DB.csv");
+            CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
             DBDestination<string[]> dest = new DBDestination<string[]>() { DestinationTableDefinition = stagingTable };
             source.LinkTo(dest);
 
             source.Execute();
-            dest.Wait(); //TODO Wait should be part of source
+            dest.Wait(); 
 
             Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
@@ -67,12 +67,12 @@ namespace ALE.ETLBoxTest {
             columns.Insert(keyPosition, new TableColumn("Key", "int", allowNulls: false, isPrimaryKey: true) { IsIdentity = true });
             TableDefinition stagingTable = new TableDefinition($"test.Staging{keyPosition}", columns);
             stagingTable.CreateTable();
-            CSVSource source = new CSVSource("DataFlow/Simple_CSV2DB.csv");
+            CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
             DBDestination<string[]> dest = new DBDestination<string[]>() { DestinationTableDefinition = stagingTable };
             source.LinkTo(dest);
 
             source.Execute();
-            dest.Wait(); //TODO Wait should be part of source
+            dest.Wait(); 
 
             Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging{keyPosition} where Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
@@ -87,7 +87,7 @@ namespace ALE.ETLBoxTest {
                 new TableColumn("Col2", "int", allowNulls: true)
             });
             stagingTable.CreateTable();
-            CSVSource source = new CSVSource("DataFlow/Simple_CSV2DB.csv");
+            CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
             DBDestination<string[]> dest = new DBDestination<string[]>(batchSize: 2) {
                 DestinationTableDefinition = stagingTable,
                 BeforeBatchWrite =
@@ -99,7 +99,7 @@ namespace ALE.ETLBoxTest {
             source.LinkTo(dest);
 
             source.Execute();
-            dest.Wait(); //TODO Wait should be part of source
+            dest.Wait(); 
 
             Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
             Assert.AreEqual(2, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 = 'NewValue'"));

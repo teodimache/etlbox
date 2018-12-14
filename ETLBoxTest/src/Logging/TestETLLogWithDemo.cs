@@ -24,7 +24,7 @@ namespace ALE.ETLBoxTest {
             RunDemoProcess();
             string jsonresult = GetLogAsJSONTask.GetJSON();
             jsonresult = RemoveHashes(RemoveDates(jsonresult.ToLower().Trim()));
-            string expectedresult = RemoveHashes(RemoveDates(File.ReadAllText("Logging/demolog_tobe.json").ToLower().Trim()));
+            string expectedresult = RemoveHashes(RemoveDates(File.ReadAllText("src/Logging/demolog_tobe.json").ToLower().Trim()));
             Assert.AreEqual(expectedresult, jsonresult);
         }
 

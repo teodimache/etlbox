@@ -41,7 +41,7 @@ namespace ALE.ETLBoxTest {
                 new TableColumn("Col4", "nchar(1000)", allowNulls: false),
             });
             stagingTable.CreateTable();
-            string fileName = "DataFlow/BigData_CSV2DB.csv";
+            string fileName = "src/DataFlow/BigData_CSV2DB.csv";
             BigDataHelper bigData = new BigDataHelper() {
                 FileName = fileName,
                 NumberOfRows = numberOfRows,

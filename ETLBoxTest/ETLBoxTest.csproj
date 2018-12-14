@@ -16,4 +16,16 @@
     <ProjectReference Include="..\ETLBox\ETLBox.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="src\DataFlow\Simple_CSV2DB.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="src\Logging\demolog_tobe.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -32,7 +32,7 @@ namespace ALE.ETLBoxTest {
             });
             destinationTableDefinition.CreateTable();
 
-            CSVSource source = new CSVSource("DataFlow/Simple_CSV2DB.csv");
+            CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
             RowTransformation<string[], MySimpleRow> trans = new RowTransformation<string[], MySimpleRow>(
                 csvdata => {
                     return new MySimpleRow() {
