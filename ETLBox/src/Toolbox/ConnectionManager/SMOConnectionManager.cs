@@ -10,7 +10,7 @@ namespace ALE.ETLBox {
         public bool IsConnectionOpen => SqlConnectionManager.DbConnection?.State == ConnectionState.Open;
 
         public SMOConnectionManager(ConnectionString connectionString) {
-            RuntimePolicyHelper.SetNET20Compatibilty();
+            //RuntimePolicyHelper.SetNET20Compatibilty();
             ConnectionString = connectionString;
             SqlConnectionManager = new SqlConnectionManager(connectionString);
         }

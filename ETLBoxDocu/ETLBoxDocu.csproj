@@ -12,4 +12,14 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ETLBox\ETLBox.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="src\DataFlow\DemoData.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
