@@ -5,1094 +5,1130 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.AbortLoadProcessTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.AbortLoadProcessTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.AbortLoadProcessTask.html",
-          "hash": "rMdcS8v1jNHGxSF+Xyzvfw=="
+          "relative_path": "api/ALE.ETLBox.AbortLoadProcessTask.html",
+          "hash": "/QZhwdlOf39gpgphXbVlwg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.AddFileGroupTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.AddFileGroupTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.AddFileGroupTask.html",
-          "hash": "l+4aKmhmShKBzHmpqgZY5g=="
+          "relative_path": "api/ALE.ETLBox.AddFileGroupTask.html",
+          "hash": "tLB861+RkF7zDoLJFEGa0w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.AdomdConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.AdomdConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.AdomdConnectionManager.html",
-          "hash": "3Ui1DeeYwgliZMDRGk1r1w=="
+          "relative_path": "api/ALE.ETLBox.AdomdConnectionManager.html",
+          "hash": "4/zOybfy6ozzesQZz3LBFg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.BlockTransformation-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.BlockTransformation-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.BlockTransformation-1.html",
-          "hash": "fR4TouzB/WIfheyUISwUzg=="
+          "relative_path": "api/ALE.ETLBox.BlockTransformation-1.html",
+          "hash": "x1SL6SspbAlrPS5kS5mvsw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CRUDProcedureTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CRUDProcedureTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CRUDProcedureTask.html",
-          "hash": "pHajDzVcnu2TJpN55RAfiA=="
+          "relative_path": "api/ALE.ETLBox.CRUDProcedureTask.html",
+          "hash": "yw9J/4PsrhO9W7bqT0H94A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CRUDViewTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CRUDViewTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CRUDViewTask.html",
-          "hash": "rOPR8QLD/hYB+mDm9aCh9w=="
+          "relative_path": "api/ALE.ETLBox.CRUDViewTask.html",
+          "hash": "0u+cLUVxJm0KnvSj7s/z9A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CSVSource.yml",
+      "source_relative_path": "api/ALE.ETLBox.CSVSource.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CSVSource.html",
-          "hash": "fCHtBKynGaWaAubD3l4+qw=="
+          "relative_path": "api/ALE.ETLBox.CSVSource.html",
+          "hash": "KUhjSLYRkg/WFHiFpW0cQg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CalculateDatabaseHashTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CalculateDatabaseHashTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CalculateDatabaseHashTask.html",
-          "hash": "3MEZuNOKV3xkAVEZUHRiYQ=="
+          "relative_path": "api/ALE.ETLBox.CalculateDatabaseHashTask.html",
+          "hash": "+PVBfteNvhQxfmz/wWmDsg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CleanUpLogTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CleanUpLogTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CleanUpLogTask.html",
-          "hash": "H91jzh1jczst0mwPYrDNkw=="
+          "relative_path": "api/ALE.ETLBox.CleanUpLogTask.html",
+          "hash": "0eaj0SN6Kn/XsAdbsZQWEw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CleanUpSchemaTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CleanUpSchemaTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CleanUpSchemaTask.html",
-          "hash": "YKvPQEKf5NMdkOiHrSw3CQ=="
+          "relative_path": "api/ALE.ETLBox.CleanUpSchemaTask.html",
+          "hash": "pXrbozWOIj+0pXHbJXeg6Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ConnectionString.yml",
+      "source_relative_path": "api/ALE.ETLBox.ConnectionString.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ConnectionString.html",
-          "hash": "EwNBBPfk1+LbyJK47eGbiw=="
+          "relative_path": "api/ALE.ETLBox.ConnectionString.html",
+          "hash": "sxFOYjFiEl8TbDJaaE2kbg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ControlFlow.yml",
+      "source_relative_path": "api/ALE.ETLBox.ControlFlow.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ControlFlow.html",
-          "hash": "f0mXARm7SCAq24EjdEKPyQ=="
+          "relative_path": "api/ALE.ETLBox.ControlFlow.html",
+          "hash": "jQjczNzuYTa8AzUjM4i7QQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CreateDatabaseTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CreateDatabaseTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CreateDatabaseTask.html",
-          "hash": "O+7Y10fI//Sts+KzDhzuNg=="
+          "relative_path": "api/ALE.ETLBox.CreateDatabaseTask.html",
+          "hash": "rInaZtjsHXxTz8KdevXuvQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CreateIndexTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CreateIndexTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CreateIndexTask.html",
-          "hash": "0c6rcgSN5ItKN+FcecMlHg=="
+          "relative_path": "api/ALE.ETLBox.CreateIndexTask.html",
+          "hash": "eLt2myDsG2/YOA1dnbSPeg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CreateLogTablesTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CreateLogTablesTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CreateLogTablesTask.html",
-          "hash": "vX2b4ZgD8J2Zc6Ekhpy5xA=="
+          "relative_path": "api/ALE.ETLBox.CreateLogTablesTask.html",
+          "hash": "GhdH3LSz7tOPfyQmFmj8ZQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CreateSchemaTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CreateSchemaTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CreateSchemaTask.html",
-          "hash": "7npINsxJsa6YtIDDwEAeGA=="
+          "relative_path": "api/ALE.ETLBox.CreateSchemaTask.html",
+          "hash": "7WAF6KKqIr9R5g4xyW+ytg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CreateTableTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CreateTableTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CreateTableTask.html",
-          "hash": "1Rn8NVpU60UcX2lLtqhMug=="
+          "relative_path": "api/ALE.ETLBox.CreateTableTask.html",
+          "hash": "zEBuWa9FGlatIiyoFg2Fow=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CustomDestination-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.CustomDestination-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CustomDestination-1.html",
-          "hash": "yciFwNA+4MRKSjaoxXk5Jw=="
+          "relative_path": "api/ALE.ETLBox.CustomDestination-1.html",
+          "hash": "SqROz75wH1o3g4oucYRQIQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CustomSource-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.CustomSource-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CustomSource-1.html",
-          "hash": "+GXCGAL5rVdH9aCyEsiA6A=="
+          "relative_path": "api/ALE.ETLBox.CustomSource-1.html",
+          "hash": "16PvHLVm6/2TFCQ56Fr48A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.CustomTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.CustomTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.CustomTask.html",
-          "hash": "wMXf8944/WSWipaUWsr2nQ=="
+          "relative_path": "api/ALE.ETLBox.CustomTask.html",
+          "hash": "y13hXKXk2YQsUhDn2zcaQA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DBDestination-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.DBDestination-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DBDestination-1.html",
-          "hash": "tVczdNx/Yxa+iCBjYL7BVA=="
+          "relative_path": "api/ALE.ETLBox.DBDestination-1.html",
+          "hash": "dnMOkf/aPfMkx+FOjAn1GA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DBSource-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.DBSource-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DBSource-1.html",
-          "hash": "WIkuhJ233XYyeFhTTEfDAQ=="
+          "relative_path": "api/ALE.ETLBox.DBSource-1.html",
+          "hash": "4b5g5UuWtpaNTieptuPLQw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DataTypeConverter.yml",
+      "source_relative_path": "api/ALE.ETLBox.DataTypeConverter.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DataTypeConverter.html",
-          "hash": "hnnprbYJ1jIjIrV8awpkcw=="
+          "relative_path": "api/ALE.ETLBox.DataTypeConverter.html",
+          "hash": "Yei0cGDwiD0vRtOzQtjBaQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DbConnectionManager-2.yml",
+      "source_relative_path": "api/ALE.ETLBox.DbConnectionManager-2.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DbConnectionManager-2.html",
-          "hash": "6x1BGsyl4tcPpDXvIrzM7Q=="
+          "relative_path": "api/ALE.ETLBox.DbConnectionManager-2.html",
+          "hash": "z/0rgD3lkgMUFo4iPX4TRg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DbTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.DbTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DbTask.html",
-          "hash": "YbfE7ZFloztqG/RfbJIJRg=="
+          "relative_path": "api/ALE.ETLBox.DbTask.html",
+          "hash": "MHQuD7S0TLfLXixKq3toUQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DropDatabaseTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.DropDatabaseTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DropDatabaseTask.html",
-          "hash": "fzF+XCkoOcPxcpBffDE0+A=="
+          "relative_path": "api/ALE.ETLBox.DropDatabaseTask.html",
+          "hash": "RA0tjVE+t9kaMFsdiIMdkA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.DropTableTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.DropTableTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.DropTableTask.html",
-          "hash": "orDw2TiFpLkbdu4wMi/z7g=="
+          "relative_path": "api/ALE.ETLBox.DropTableTask.html",
+          "hash": "5oNHKHbxFBtNkOq33Q/aUQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ETLLogLayoutRenderer.yml",
+      "source_relative_path": "api/ALE.ETLBox.ETLLogLayoutRenderer.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ETLLogLayoutRenderer.html",
-          "hash": "rzP+oVtneHcK9MOCasAx6g=="
+          "relative_path": "api/ALE.ETLBox.ETLLogLayoutRenderer.html",
+          "hash": "MIS+Zjhw4veZiL2ElPHzKw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.EndLoadProcessTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.EndLoadProcessTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.EndLoadProcessTask.html",
-          "hash": "rG532EsicANVvVsKmcGY5A=="
+          "relative_path": "api/ALE.ETLBox.EndLoadProcessTask.html",
+          "hash": "dwyWsSTfv4p5FQA0rC5xIA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ExtensionFile.yml",
+      "source_relative_path": "api/ALE.ETLBox.ExtensionFile.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ExtensionFile.html",
-          "hash": "Euw9HyjRI+uuween1rP2/Q=="
+          "relative_path": "api/ALE.ETLBox.ExtensionFile.html",
+          "hash": "LalMZlJil4KoglYJwr0cdQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ExtensionFileLoader.yml",
+      "source_relative_path": "api/ALE.ETLBox.ExtensionFileLoader.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ExtensionFileLoader.html",
-          "hash": "jry9+asCDPrdvGjfcx1QGg=="
+          "relative_path": "api/ALE.ETLBox.ExtensionFileLoader.html",
+          "hash": "VAD49d0AJSCm0BspENj71Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.FileConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.FileConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.FileConnectionManager.html",
-          "hash": "ZHAf3MVT+QEcweQKMmC3kQ=="
+          "relative_path": "api/ALE.ETLBox.FileConnectionManager.html",
+          "hash": "rV3OAIE03YevPBK6w13jjg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.GenericTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.GenericTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.GenericTask.html",
-          "hash": "N5nnepiPv/eZlAyTbd1dng=="
+          "relative_path": "api/ALE.ETLBox.GenericTask.html",
+          "hash": "t5h8FiijzyahtTnkxSDb5A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.GetDatabaseListTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.GetDatabaseListTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.GetDatabaseListTask.html",
-          "hash": "gdXzT3mOUZn0boDBRxM0nA=="
+          "relative_path": "api/ALE.ETLBox.GetDatabaseListTask.html",
+          "hash": "lPWvhAOxc7KwLQ2jqpW6qQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.GetLoadProcessAsJSONTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.GetLoadProcessAsJSONTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.GetLoadProcessAsJSONTask.html",
-          "hash": "vY5QOd2qMxR2bBf3Xvixcg=="
+          "relative_path": "api/ALE.ETLBox.GetLoadProcessAsJSONTask.html",
+          "hash": "i7htS0TtHOBEa4opTWOBJg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.GetLogAsJSONTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.GetLogAsJSONTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.GetLogAsJSONTask.html",
-          "hash": "vPAEJ0AGXmPbQtymtDZh8A=="
+          "relative_path": "api/ALE.ETLBox.GetLogAsJSONTask.html",
+          "hash": "WlaxIc0DfK+8BLv6meHydA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.HashHelper.yml",
+      "source_relative_path": "api/ALE.ETLBox.HashHelper.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.HashHelper.html",
-          "hash": "lXYWGwb/b1VFJIu01DrQgQ=="
+          "relative_path": "api/ALE.ETLBox.HashHelper.html",
+          "hash": "eiAgQuK/7GHOzr9QiqOaHA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.IConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IConnectionManager.html",
-          "hash": "NHXudZZsme/SXW+xSmH5pA=="
+          "relative_path": "api/ALE.ETLBox.IConnectionManager.html",
+          "hash": "hsKgKk2DSc/zrHBBlQoUJw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ICubeConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.ICubeConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ICubeConnectionManager.html",
-          "hash": "FaNgd2WapWxTeAyIVPZVYw=="
+          "relative_path": "api/ALE.ETLBox.ICubeConnectionManager.html",
+          "hash": "vbqGnborxkF/UWlQMlubtg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IDataFlowDestination-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.IDataFlowDestination-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IDataFlowDestination-1.html",
-          "hash": "4IL0BsNF1WzPY5fsMhy5QA=="
+          "relative_path": "api/ALE.ETLBox.IDataFlowDestination-1.html",
+          "hash": "S5n5GGh9eK5c3L8qkq5+XQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IDataFlowLinkSource-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.IDataFlowLinkSource-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IDataFlowLinkSource-1.html",
-          "hash": "rPqqNrAUHBcwpKRdsnojSw=="
+          "relative_path": "api/ALE.ETLBox.IDataFlowLinkSource-1.html",
+          "hash": "5ENXPmyAKKZ0jSXBK/VckQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IDataFlowLinkTarget-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.IDataFlowLinkTarget-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IDataFlowLinkTarget-1.html",
-          "hash": "QdzC0uqQjPeQ18tKctFlRw=="
+          "relative_path": "api/ALE.ETLBox.IDataFlowLinkTarget-1.html",
+          "hash": "rITZ82+5+iLdWbDOa4kUWA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IDataFlowSource-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.IDataFlowSource-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IDataFlowSource-1.html",
-          "hash": "kX+WPnax6DWeRYzQx3qPOA=="
+          "relative_path": "api/ALE.ETLBox.IDataFlowSource-1.html",
+          "hash": "0WxrH6RaqwEF+mA0bNQI3w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IDataFlowTransformation-2.yml",
+      "source_relative_path": "api/ALE.ETLBox.IDataFlowTransformation-2.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IDataFlowTransformation-2.html",
-          "hash": "f75pUVzkMizjN3P7FjFZQw=="
+          "relative_path": "api/ALE.ETLBox.IDataFlowTransformation-2.html",
+          "hash": "l2fhdpdgz3lnMPYqeSIHkA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.IDbConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.IDbConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.IDbConnectionManager.html",
-          "hash": "IZQAL6J0xzNIXSUMbbJ5Ow=="
+          "relative_path": "api/ALE.ETLBox.IDbConnectionManager.html",
+          "hash": "YkSwP6O3zmxjY32ze6KGDw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ITableColumn.yml",
+      "source_relative_path": "api/ALE.ETLBox.ITableColumn.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ITableColumn.html",
-          "hash": "RJVFBhjIpoVpmqwlhM4c/w=="
+          "relative_path": "api/ALE.ETLBox.ITableColumn.html",
+          "hash": "6jds4uULG76EIOD+P2/i+w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ITask.yml",
+      "source_relative_path": "api/ALE.ETLBox.ITask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ITask.html",
-          "hash": "IJ0K3b77ejvtZXDVCHQR+A=="
+          "relative_path": "api/ALE.ETLBox.ITask.html",
+          "hash": "YppjyahQq1cWZkI3Xglgnw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.LoadProcess.yml",
+      "source_relative_path": "api/ALE.ETLBox.LoadProcess.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.LoadProcess.html",
-          "hash": "rmX9GLKQefBgBgnNEnWaTA=="
+          "relative_path": "api/ALE.ETLBox.LoadProcess.html",
+          "hash": "Ga6cZOcFjChJu4Lx+vyWcA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.LogEntry.yml",
+      "source_relative_path": "api/ALE.ETLBox.LogEntry.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.LogEntry.html",
-          "hash": "xAQ/BhvRb/wlsawFZQbOHg=="
+          "relative_path": "api/ALE.ETLBox.LogEntry.html",
+          "hash": "SIM03dpt6MqUt7o9nrdQsw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.LogHierarchyEntry.yml",
+      "source_relative_path": "api/ALE.ETLBox.LogHierarchyEntry.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.LogHierarchyEntry.html",
-          "hash": "Hz1V2e66qMXjjkqfNIafxA=="
+          "relative_path": "api/ALE.ETLBox.LogHierarchyEntry.html",
+          "hash": "wJLY4QSmpPLE/etD4sIo0w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.LogTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.LogTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.LogTask.html",
-          "hash": "eirPNXepukusoopgaJLi5w=="
+          "relative_path": "api/ALE.ETLBox.LogTask.html",
+          "hash": "G7QjMz6rm3O88Cgn2JJ19w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.Lookup-3.yml",
+      "source_relative_path": "api/ALE.ETLBox.Lookup-3.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.Lookup-3.html",
-          "hash": "2BoN9kzHf5EyEkeo8si98A=="
+          "relative_path": "api/ALE.ETLBox.Lookup-3.html",
+          "hash": "+f8kK81ToXyQLBaR0LAQzg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.MergeJoin-3.yml",
+      "source_relative_path": "api/ALE.ETLBox.MergeJoin-3.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.MergeJoin-3.html",
-          "hash": "t8QZJDEeAA2x6KE6ImSjzA=="
+          "relative_path": "api/ALE.ETLBox.MergeJoin-3.html",
+          "hash": "mH5wmnu4kK/Wwn0yL3O2Nw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.MergeJoinTarget-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.MergeJoinTarget-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.MergeJoinTarget-1.html",
-          "hash": "nfYo2nwXxPyMOr42FlOmeg=="
+          "relative_path": "api/ALE.ETLBox.MergeJoinTarget-1.html",
+          "hash": "C7RvT6Xp+/ssCUqxfAReXA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.Multicast-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.Multicast-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.Multicast-1.html",
-          "hash": "JvP3WU6CXTI8UcIA0HSPoA=="
+          "relative_path": "api/ALE.ETLBox.Multicast-1.html",
+          "hash": "vOswvwo1GtYhCvy4Ziy7Ew=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.Package.yml",
+      "source_relative_path": "api/ALE.ETLBox.Package.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.Package.html",
-          "hash": "WcllG1GEmh3YlSjt5aurZA=="
+          "relative_path": "api/ALE.ETLBox.Package.html",
+          "hash": "QBJoRlXFOWZ+KiT5yw/ejQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ProcedureDefinition.yml",
+      "source_relative_path": "api/ALE.ETLBox.ProcedureDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ProcedureDefinition.html",
-          "hash": "nTp3pFbcfwj/qG/FakjbKA=="
+          "relative_path": "api/ALE.ETLBox.ProcedureDefinition.html",
+          "hash": "5KrYsFq9fbUMCRlskrrCkQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ProcedureParameter.yml",
+      "source_relative_path": "api/ALE.ETLBox.ProcedureParameter.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ProcedureParameter.html",
-          "hash": "zGwa9A1jWuk5E1sLyiD20Q=="
+          "relative_path": "api/ALE.ETLBox.ProcedureParameter.html",
+          "hash": "3EWwRvLOf0Cf9WrmiQrI9w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.QueryParameter.yml",
+      "source_relative_path": "api/ALE.ETLBox.QueryParameter.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.QueryParameter.html",
-          "hash": "2otdf4is4mFG+1LWzU1Gow=="
+          "relative_path": "api/ALE.ETLBox.QueryParameter.html",
+          "hash": "dBWrg/oi3CE0pQPDQ+iWTQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ReadLoadProcessTableTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.ReadLoadProcessTableTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ReadLoadProcessTableTask.html",
-          "hash": "viCMSiRnLQYsMKyIr1gi/g=="
+          "relative_path": "api/ALE.ETLBox.ReadLoadProcessTableTask.html",
+          "hash": "3KtJ+kYDfLHmCO/rjKLKDA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ReadLogTableTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.ReadLogTableTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ReadLogTableTask.html",
-          "hash": "xUneRT4sGnN7u8KlgtCDkw=="
+          "relative_path": "api/ALE.ETLBox.ReadLogTableTask.html",
+          "hash": "2/NgHzlE/9wMZpzj9C3fwQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.ReadOptions.yml",
+      "source_relative_path": "api/ALE.ETLBox.ReadOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.ReadOptions.html",
-          "hash": "WPwf8NyoMqUU0PC0Cs4AKg=="
+          "relative_path": "api/ALE.ETLBox.ReadOptions.html",
+          "hash": "qU5Py5aDNItAUA+jBjvWHw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RecoveryModel.yml",
+      "source_relative_path": "api/ALE.ETLBox.RecoveryModel.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RecoveryModel.html",
-          "hash": "MtM8lO7fuJEIinOq/qZfCg=="
+          "relative_path": "api/ALE.ETLBox.RecoveryModel.html",
+          "hash": "DBfE8LqwIGLPYMfhqzetBw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RemoveLogTablesTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.RemoveLogTablesTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RemoveLogTablesTask.html",
-          "hash": "2/msp+rgLQZNMLbeNSigyw=="
+          "relative_path": "api/ALE.ETLBox.RemoveLogTablesTask.html",
+          "hash": "qkysskg2HOph+TTF/fN9nw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RestoreDatabaseTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.RestoreDatabaseTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RestoreDatabaseTask.html",
-          "hash": "15Lm9+K3pKXRY74tbQI3wQ=="
+          "relative_path": "api/ALE.ETLBox.RestoreDatabaseTask.html",
+          "hash": "M2t1SeIwY0fJzQdlpBxPZw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RowCountOptions.yml",
+      "source_relative_path": "api/ALE.ETLBox.RowCountOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RowCountOptions.html",
-          "hash": "xD9Dql35yohZCMWaBo8Psg=="
+          "relative_path": "api/ALE.ETLBox.RowCountOptions.html",
+          "hash": "MlxJT14w4P+5/AN16IJmGg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RowCountTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.RowCountTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RowCountTask.html",
-          "hash": "uCzGMxXUd5xMgrDfAHh3Hg=="
+          "relative_path": "api/ALE.ETLBox.RowCountTask.html",
+          "hash": "phTSVdxXuWbeyMBnKEExNQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RowTransformation-2.yml",
+      "source_relative_path": "api/ALE.ETLBox.RowTransformation-2.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RowTransformation-2.html",
-          "hash": "FNaEzxUqXko+yQAJebUsdg=="
+          "relative_path": "api/ALE.ETLBox.RowTransformation-2.html",
+          "hash": "l5V1G/6GAiHVls7m3kEjJA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.RuntimePolicyHelper.yml",
+      "source_relative_path": "api/ALE.ETLBox.RuntimePolicyHelper.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.RuntimePolicyHelper.html",
-          "hash": "E8eZb860Mlwcl5SSRPXsYw=="
+          "relative_path": "api/ALE.ETLBox.RuntimePolicyHelper.html",
+          "hash": "E4qeytPoK300UgTMFwk6YA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.SMOConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.SMOConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.SMOConnectionManager.html",
-          "hash": "VbRdffxnEtIMytiW00Z2kw=="
+          "relative_path": "api/ALE.ETLBox.SMOConnectionManager.html",
+          "hash": "NsylD+F9XW0k7UJDRPwWjA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.Sequence-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.Sequence-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.Sequence-1.html",
-          "hash": "X/Qb7oO/N8uWW0dUqTif5w=="
+          "relative_path": "api/ALE.ETLBox.Sequence-1.html",
+          "hash": "sWcXfevdO91B951e2mpqyg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.Sequence.yml",
+      "source_relative_path": "api/ALE.ETLBox.Sequence.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.Sequence.html",
-          "hash": "hrL15DfSul2n0phD6S+KUg=="
+          "relative_path": "api/ALE.ETLBox.Sequence.html",
+          "hash": "R9sGg5AxwlThFS95nAvFmQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.Sort-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.Sort-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.Sort-1.html",
-          "hash": "gyOr8XYmp789/SViU6B7cg=="
+          "relative_path": "api/ALE.ETLBox.Sort-1.html",
+          "hash": "1BDy5y//7/nz9+Lj/XM5+A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.SqlConnectionManager.yml",
+      "source_relative_path": "api/ALE.ETLBox.SqlConnectionManager.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.SqlConnectionManager.html",
-          "hash": "LFt6bXSkXV0xtaQFRpVPXg=="
+          "relative_path": "api/ALE.ETLBox.SqlConnectionManager.html",
+          "hash": "Ep22oXdaI7oCbaRwoTWOMQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.SqlHelper.yml",
+      "source_relative_path": "api/ALE.ETLBox.SqlHelper.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.SqlHelper.html",
-          "hash": "vppNkns/J9/iTV9GRIfFiQ=="
+          "relative_path": "api/ALE.ETLBox.SqlHelper.html",
+          "hash": "LBNV3ild/gF9yaXY+XND7w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.SqlHelperExtensions.yml",
+      "source_relative_path": "api/ALE.ETLBox.SqlHelperExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.SqlHelperExtensions.html",
-          "hash": "CcKY6qtg4so0vfK+te6e/w=="
+          "relative_path": "api/ALE.ETLBox.SqlHelperExtensions.html",
+          "hash": "zekI4pn861Y4pFRWlJunCA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.SqlTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.SqlTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.SqlTask.html",
-          "hash": "+dRspO63LjoGGtAeD5tweQ=="
+          "relative_path": "api/ALE.ETLBox.SqlTask.html",
+          "hash": "97gDbdUMBE4wY7dlKx5JwQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.StartLoadProcessTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.StartLoadProcessTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.StartLoadProcessTask.html",
-          "hash": "KvyZvL7CUtmpOLiaZy7DTw=="
+          "relative_path": "api/ALE.ETLBox.StartLoadProcessTask.html",
+          "hash": "QplM4KARotNr/JJ2AtZYWQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.StringExtension.yml",
+      "source_relative_path": "api/ALE.ETLBox.StringExtension.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.StringExtension.html",
-          "hash": "TFJ0o3zUW+kz9B7ONUqwvQ=="
+          "relative_path": "api/ALE.ETLBox.StringExtension.html",
+          "hash": "Vfk5pAnWdAwS+dxyFkNgTg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TableColumn.yml",
+      "source_relative_path": "api/ALE.ETLBox.TableColumn.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TableColumn.html",
-          "hash": "GP+v8eS+uFHk5/nOROT2Fg=="
+          "relative_path": "api/ALE.ETLBox.TableColumn.html",
+          "hash": "noNtw0p1pSCeLrHb20HR0g=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TableData-1.yml",
+      "source_relative_path": "api/ALE.ETLBox.TableData-1.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TableData-1.html",
-          "hash": "+7aeHW/C8c61FOQGBX0BPw=="
+          "relative_path": "api/ALE.ETLBox.TableData-1.html",
+          "hash": "f75pPKb0jAO5PQpS0NpFVQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TableData.yml",
+      "source_relative_path": "api/ALE.ETLBox.TableData.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TableData.html",
-          "hash": "h/jCJo6Qo//Hdn0GK2RrTQ=="
+          "relative_path": "api/ALE.ETLBox.TableData.html",
+          "hash": "NwNlJ95cKyC0FOW5Gsx/xQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TableDefinition.yml",
+      "source_relative_path": "api/ALE.ETLBox.TableDefinition.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TableDefinition.html",
-          "hash": "HMN0E+mciFfhSj5Gb8HE7Q=="
+          "relative_path": "api/ALE.ETLBox.TableDefinition.html",
+          "hash": "8js+VdUi0wcMydiujfInIQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TransferCompletedForLoadProcessTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.TransferCompletedForLoadProcessTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TransferCompletedForLoadProcessTask.html",
-          "hash": "lA3/7COS6hgBTraVep+boQ=="
+          "relative_path": "api/ALE.ETLBox.TransferCompletedForLoadProcessTask.html",
+          "hash": "ae2ajMTMFKuONWu8z/1zYg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TruncateTableTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.TruncateTableTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TruncateTableTask.html",
-          "hash": "pAsDfgDqNL6J1IygyMm4Iw=="
+          "relative_path": "api/ALE.ETLBox.TruncateTableTask.html",
+          "hash": "l9KLNBV0t2LfHBViIHLU/Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.TypeInfo.yml",
+      "source_relative_path": "api/ALE.ETLBox.TypeInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.TypeInfo.html",
-          "hash": "iYoHQN7sXbClbzZIRKHbUw=="
+          "relative_path": "api/ALE.ETLBox.TypeInfo.html",
+          "hash": "kLSdmITy7rA7bp2R3aUoHQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.XmlaTask.yml",
+      "source_relative_path": "api/ALE.ETLBox.XmlaTask.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.XmlaTask.html",
-          "hash": "gGaeaojaYDWig2dFDD96Sw=="
+          "relative_path": "api/ALE.ETLBox.XmlaTask.html",
+          "hash": "qTeXuXG4DdqcrH9kQSGZzg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "docfx/api/ALE.ETLBox.yml",
+      "source_relative_path": "api/ALE.ETLBox.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/ALE.ETLBox.html",
-          "hash": "Wz288ZrxRnW8V3slnA5bkQ=="
+          "relative_path": "api/ALE.ETLBox.html",
+          "hash": "QbvdDuBwscZChOsqtaV5Og=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docfx/api/index.md",
+      "source_relative_path": "api/index.md",
       "output": {
         ".html": {
-          "relative_path": "docfx/api/index.html",
-          "hash": "NRpEmgLQoAmNmT71OFb6gA=="
+          "relative_path": "api/index.html",
+          "hash": "LopVJ5lDfyHETdEfJ79klA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "r5SDELeBKwp0RSsKaMF4VA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "miSWEGKAmjdhpXv5eJAbFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "t7iiFrmuYmrKWisdq+lN6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "X7g+yt7WoMDKiSu2YIImGQ=="
         }
       },
       "is_incremental": true,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "docfx/articles/intro.md",
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
       "output": {
         ".html": {
-          "relative_path": "docfx/articles/intro.html",
-          "hash": "Otde8JwVZke6kHjlD0mGWw=="
+          "relative_path": "toc.html",
+          "hash": "k+/dkjFuwAVS32HduMpmBw=="
         }
       },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docfx/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docfx/index.html",
-          "hash": "9nHjmo0bp/G9nAt8brQwaQ=="
-        }
-      },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     }
   ],
@@ -1108,11 +1144,11 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

@@ -1,5 +1,5 @@
 ###############
 #    folder   #
 ###############
-docfx/_site
+_site
 log.txt
