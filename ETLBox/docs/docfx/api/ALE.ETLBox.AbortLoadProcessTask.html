@@ -1,0 +1,898 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AbortLoadProcessTask
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AbortLoadProcessTask
+   ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="ALE.ETLBox.html" title="ALE.ETLBox" class="">ALE.ETLBox</a>
+                        
+                        <ul class="nav level2">
+                          <li class="active">
+                            <a href="ALE.ETLBox.AbortLoadProcessTask.html" title="AbortLoadProcessTask" class="active">AbortLoadProcessTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.AddFileGroupTask.html" title="AddFileGroupTask" class="">AddFileGroupTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.AdomdConnectionManager.html" title="AdomdConnectionManager" class="">AdomdConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.BlockTransformation-1.html" title="BlockTransformation&lt;TInput&gt;" class="">BlockTransformation&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CalculateDatabaseHashTask.html" title="CalculateDatabaseHashTask" class="">CalculateDatabaseHashTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CleanUpLogTask.html" title="CleanUpLogTask" class="">CleanUpLogTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CleanUpSchemaTask.html" title="CleanUpSchemaTask" class="">CleanUpSchemaTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ConnectionString.html" title="ConnectionString" class="">ConnectionString</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ControlFlow.html" title="ControlFlow" class="">ControlFlow</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CreateDatabaseTask.html" title="CreateDatabaseTask" class="">CreateDatabaseTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CreateIndexTask.html" title="CreateIndexTask" class="">CreateIndexTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CreateLogTablesTask.html" title="CreateLogTablesTask" class="">CreateLogTablesTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CreateSchemaTask.html" title="CreateSchemaTask" class="">CreateSchemaTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CreateTableTask.html" title="CreateTableTask" class="">CreateTableTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CRUDProcedureTask.html" title="CRUDProcedureTask" class="">CRUDProcedureTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CRUDViewTask.html" title="CRUDViewTask" class="">CRUDViewTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CSVSource.html" title="CSVSource" class="">CSVSource</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CustomDestination-1.html" title="CustomDestination&lt;TInput&gt;" class="">CustomDestination&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CustomSource-1.html" title="CustomSource&lt;TOutput&gt;" class="">CustomSource&lt;TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.CustomTask.html" title="CustomTask" class="">CustomTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DataTypeConverter.html" title="DataTypeConverter" class="">DataTypeConverter</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DbConnectionManager-2.html" title="DbConnectionManager&lt;Connection, Command&gt;" class="">DbConnectionManager&lt;Connection, Command&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DBDestination-1.html" title="DBDestination&lt;TInput&gt;" class="">DBDestination&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DBSource-1.html" title="DBSource&lt;TOutput&gt;" class="">DBSource&lt;TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DbTask.html" title="DbTask" class="">DbTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DropDatabaseTask.html" title="DropDatabaseTask" class="">DropDatabaseTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.DropTableTask.html" title="DropTableTask" class="">DropTableTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.EndLoadProcessTask.html" title="EndLoadProcessTask" class="">EndLoadProcessTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ETLLogLayoutRenderer.html" title="ETLLogLayoutRenderer" class="">ETLLogLayoutRenderer</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ExtensionFile.html" title="ExtensionFile" class="">ExtensionFile</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ExtensionFileLoader.html" title="ExtensionFileLoader" class="">ExtensionFileLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.FileConnectionManager.html" title="FileConnectionManager" class="">FileConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.GenericTask.html" title="GenericTask" class="">GenericTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.GetDatabaseListTask.html" title="GetDatabaseListTask" class="">GetDatabaseListTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.GetLoadProcessAsJSONTask.html" title="GetLoadProcessAsJSONTask" class="">GetLoadProcessAsJSONTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.GetLogAsJSONTask.html" title="GetLogAsJSONTask" class="">GetLogAsJSONTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.HashHelper.html" title="HashHelper" class="">HashHelper</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IConnectionManager.html" title="IConnectionManager" class="">IConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ICubeConnectionManager.html" title="ICubeConnectionManager" class="">ICubeConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IDataFlowDestination-1.html" title="IDataFlowDestination&lt;TInput&gt;" class="">IDataFlowDestination&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IDataFlowLinkSource-1.html" title="IDataFlowLinkSource&lt;TOutput&gt;" class="">IDataFlowLinkSource&lt;TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IDataFlowLinkTarget-1.html" title="IDataFlowLinkTarget&lt;TInput&gt;" class="">IDataFlowLinkTarget&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IDataFlowSource-1.html" title="IDataFlowSource&lt;TOutput&gt;" class="">IDataFlowSource&lt;TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IDataFlowTransformation-2.html" title="IDataFlowTransformation&lt;TInput, TOutput&gt;" class="">IDataFlowTransformation&lt;TInput, TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.IDbConnectionManager.html" title="IDbConnectionManager" class="">IDbConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ITableColumn.html" title="ITableColumn" class="">ITableColumn</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ITask.html" title="ITask" class="">ITask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.LoadProcess.html" title="LoadProcess" class="">LoadProcess</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.LogEntry.html" title="LogEntry" class="">LogEntry</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.LogHierarchyEntry.html" title="LogHierarchyEntry" class="">LogHierarchyEntry</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.LogTask.html" title="LogTask" class="">LogTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.Lookup-3.html" title="Lookup&lt;TTransformationInput, TTransformationOutput, TSourceOutput&gt;" class="">Lookup&lt;TTransformationInput, TTransformationOutput, TSourceOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.MergeJoin-3.html" title="MergeJoin&lt;TInput1, TInput2, TOutput&gt;" class="">MergeJoin&lt;TInput1, TInput2, TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.MergeJoinTarget-1.html" title="MergeJoinTarget&lt;TInput&gt;" class="">MergeJoinTarget&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.Multicast-1.html" title="Multicast&lt;TInput&gt;" class="">Multicast&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.Package.html" title="Package" class="">Package</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ProcedureDefinition.html" title="ProcedureDefinition" class="">ProcedureDefinition</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ProcedureParameter.html" title="ProcedureParameter" class="">ProcedureParameter</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.QueryParameter.html" title="QueryParameter" class="">QueryParameter</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ReadLoadProcessTableTask.html" title="ReadLoadProcessTableTask" class="">ReadLoadProcessTableTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ReadLogTableTask.html" title="ReadLogTableTask" class="">ReadLogTableTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.ReadOptions.html" title="ReadOptions" class="">ReadOptions</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RecoveryModel.html" title="RecoveryModel" class="">RecoveryModel</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RemoveLogTablesTask.html" title="RemoveLogTablesTask" class="">RemoveLogTablesTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RestoreDatabaseTask.html" title="RestoreDatabaseTask" class="">RestoreDatabaseTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RowCountOptions.html" title="RowCountOptions" class="">RowCountOptions</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RowCountTask.html" title="RowCountTask" class="">RowCountTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RowTransformation-2.html" title="RowTransformation&lt;TInput, TOutput&gt;" class="">RowTransformation&lt;TInput, TOutput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.RuntimePolicyHelper.html" title="RuntimePolicyHelper" class="">RuntimePolicyHelper</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.Sequence.html" title="Sequence" class="">Sequence</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.Sequence-1.html" title="Sequence&lt;T&gt;" class="">Sequence&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.SMOConnectionManager.html" title="SMOConnectionManager" class="">SMOConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.Sort-1.html" title="Sort&lt;TInput&gt;" class="">Sort&lt;TInput&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.SqlConnectionManager.html" title="SqlConnectionManager" class="">SqlConnectionManager</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.SqlHelper.html" title="SqlHelper" class="">SqlHelper</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.SqlHelperExtensions.html" title="SqlHelperExtensions" class="">SqlHelperExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.SqlTask.html" title="SqlTask" class="">SqlTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.StartLoadProcessTask.html" title="StartLoadProcessTask" class="">StartLoadProcessTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.StringExtension.html" title="StringExtension" class="">StringExtension</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TableColumn.html" title="TableColumn" class="">TableColumn</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TableData.html" title="TableData" class="">TableData</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TableData-1.html" title="TableData&lt;T&gt;" class="">TableData&lt;T&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TableDefinition.html" title="TableDefinition" class="">TableDefinition</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TransferCompletedForLoadProcessTask.html" title="TransferCompletedForLoadProcessTask" class="">TransferCompletedForLoadProcessTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TruncateTableTask.html" title="TruncateTableTask" class="">TruncateTableTask</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.TypeInfo.html" title="TypeInfo" class="">TypeInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="ALE.ETLBox.XmlaTask.html" title="XmlaTask" class="">XmlaTask</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="ALE.ETLBox.AbortLoadProcessTask">
+  
+  
+  <h1 id="ALE_ETLBox_AbortLoadProcessTask" data-uid="ALE.ETLBox.AbortLoadProcessTask" class="text-break">Class AbortLoadProcessTask
+  </h1>
+  <div class="markdown level0 summary"><p>Will set the table entry for current load process to aborted.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="ALE.ETLBox.GenericTask.html">GenericTask</a></div>
+    <div class="level2"><span class="xref">AbortLoadProcessTask</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="ALE.ETLBox.ITask.html">ITask</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_ConnectionManager">GenericTask.ConnectionManager</a>
+    </div>
+    <div>
+      <a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask__disableLogging">GenericTask._disableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_DisableLogging">GenericTask.DisableLogging</a>
+    </div>
+    <div>
+      <a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_TaskHash">GenericTask.TaskHash</a>
+    </div>
+    <div>
+      <a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_DoXMLCommentStyle">GenericTask.DoXMLCommentStyle</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="ALE.ETLBox.html">ALE.ETLBox</a></h6>
+  <h6><strong>Assembly</strong>: ETLBox.dll</h6>
+  <h5 id="ALE_ETLBox_AbortLoadProcessTask_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AbortLoadProcessTask : GenericTask, ITask</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask__ctor.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L33">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask__ctor_" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask__ctor" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor">AbortLoadProcessTask()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbortLoadProcessTask()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask__ctor_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.%23ctor(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L37">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask__ctor_" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask__ctor_System_Nullable_System_Int32__" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor(System.Nullable{System.Int32})">AbortLoadProcessTask(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbortLoadProcessTask(int? loadProcessKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">loadProcessKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask__ctor_System_Nullable_System_Int32__System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.%23ctor(System.Nullable%7BSystem.Int32%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L40">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask__ctor_" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask__ctor_System_Nullable_System_Int32__System_String_" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor(System.Nullable{System.Int32},System.String)">AbortLoadProcessTask(Nullable&lt;Int32&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbortLoadProcessTask(int? loadProcessKey, string abortMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">loadProcessKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">abortMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask__ctor_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L44">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask__ctor_" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask__ctor_System_String_" data-uid="ALE.ETLBox.AbortLoadProcessTask.#ctor(System.String)">AbortLoadProcessTask(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AbortLoadProcessTask(string abortMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">abortMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask__loadProcessKey.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask._loadProcessKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L17">View Source</a>
+  </span>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask__loadProcessKey" data-uid="ALE.ETLBox.AbortLoadProcessTask._loadProcessKey">_loadProcessKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? _loadProcessKey</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_AbortMessage.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.AbortMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L26">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_AbortMessage_" data-uid="ALE.ETLBox.AbortLoadProcessTask.AbortMessage*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_AbortMessage" data-uid="ALE.ETLBox.AbortLoadProcessTask.AbortMessage">AbortMessage</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AbortMessage { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_LoadProcessKey.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.LoadProcessKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L18">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_LoadProcessKey_" data-uid="ALE.ETLBox.AbortLoadProcessTask.LoadProcessKey*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_LoadProcessKey" data-uid="ALE.ETLBox.AbortLoadProcessTask.LoadProcessKey">LoadProcessKey</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? LoadProcessKey { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_Sql.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.Sql%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L29">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_Sql_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Sql*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_Sql" data-uid="ALE.ETLBox.AbortLoadProcessTask.Sql">Sql</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sql { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_TaskName.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L8">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_TaskName_" data-uid="ALE.ETLBox.AbortLoadProcessTask.TaskName*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_TaskName" data-uid="ALE.ETLBox.AbortLoadProcessTask.TaskName">TaskName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string TaskName { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_TaskName">GenericTask.TaskName</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_TaskType.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.TaskType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L7">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_TaskType_" data-uid="ALE.ETLBox.AbortLoadProcessTask.TaskType*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_TaskType" data-uid="ALE.ETLBox.AbortLoadProcessTask.TaskType">TaskType</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string TaskType { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_TaskType">GenericTask.TaskType</a></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_Abort.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.Abort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L48">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_Abort_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_Abort" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort">Abort()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Abort()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_Abort_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.Abort(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L49">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_Abort_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_Abort_System_Nullable_System_Int32__" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort(System.Nullable{System.Int32})">Abort(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Abort(int? loadProcessKey)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">loadProcessKey</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_Abort_System_Nullable_System_Int32__System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.Abort(System.Nullable%7BSystem.Int32%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L51">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_Abort_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_Abort_System_Nullable_System_Int32__System_String_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort(System.Nullable{System.Int32},System.String)">Abort(Nullable&lt;Int32&gt;, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Abort(int? loadProcessKey, string abortMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">loadProcessKey</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">abortMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_Abort_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.Abort(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L50">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_Abort_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_Abort_System_String_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Abort(System.String)">Abort(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Abort(string abortMessage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">abortMessage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask_Execute.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask.Execute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L9">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_AbortLoadProcessTask_Execute_" data-uid="ALE.ETLBox.AbortLoadProcessTask.Execute*"></a>
+  <h4 id="ALE_ETLBox_AbortLoadProcessTask_Execute" data-uid="ALE.ETLBox.AbortLoadProcessTask.Execute">Execute()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Execute()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="ALE.ETLBox.GenericTask.html#ALE_ETLBox_GenericTask_Execute">GenericTask.Execute()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="ALE.ETLBox.ITask.html">ITask</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_AbortLoadProcessTask.md&amp;value=---%0Auid%3A%20ALE.ETLBox.AbortLoadProcessTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Logging/AbortLoadProcessTask.cs/#L5" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
