@@ -20,6 +20,7 @@ namespace ALE.ETLBoxDemo {
             dft.Start();
             Console.WriteLine("Dafaflow finished...");
 
+            Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
         }
     }
