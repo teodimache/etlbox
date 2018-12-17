@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks.Dataflow;
 
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A lookup task - data from the input can be enriched with data retrieved from the lookup source. The result is then posted into the output.
     /// </summary>

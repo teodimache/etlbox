@@ -2,7 +2,7 @@
 using System.Threading.Tasks.Dataflow;
 
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Transforms the data row-by-row with the help of the transformation function.
     /// </summary>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks.Dataflow;
 
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Sort the input with the given sort function. 
     /// </summary>

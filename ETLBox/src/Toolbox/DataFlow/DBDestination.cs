@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks.Dataflow;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).
     /// </summary>

@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Threading.Tasks.Dataflow;
 
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A multicast duplicates data from the input into two outputs.
     /// </summary>

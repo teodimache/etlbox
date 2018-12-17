@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     public class TypeInfo {
         public PropertyInfo[] PropertyInfos { get; set; }
         public int PropertyLength { get; set; }

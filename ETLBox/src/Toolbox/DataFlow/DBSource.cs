@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks.Dataflow;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A database source defines either a table or sql query that returns data from a database. While reading the result set or the table, data is asnychronously posted
     /// into the targets.
