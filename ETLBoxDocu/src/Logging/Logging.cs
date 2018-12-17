@@ -27,11 +27,7 @@ namespace ALE.ETLBoxDemo {
             EndLoadProcessTask.End("Everything successful");
 
             string jsonLP = GetLoadProcessAsJSONTask.GetJSON();
-            string jsonLog = GetLogAsJSONTask.GetJSON(1);
-            Console.ReadLine();
-
-            
-
+            string jsonLog = GetLogAsJSONTask.GetJSON(1);            
         }    
     }
 }

@@ -78,7 +78,7 @@ namespace ALE.ETLBoxDemo {
 
         
         public void Start() {
-            CSVSource sourceOrderData = new CSVSource("DataFlow/DemoData.csv");
+            CSVSource sourceOrderData = new CSVSource("src/DataFlow/DemoData.csv");
             sourceOrderData.Delimiter = ";";
             RowTransformation<string[], Order> transIntoObject = new RowTransformation<string[], Order>(CSVIntoObject);
             DBSource<Customer> sourceCustomerData = new DBSource<Customer>(CustomerTableDef);
@@ -108,8 +108,6 @@ namespace ALE.ETLBoxDemo {
             sourceOrderData.ExecuteAsync();
             destOrderTable.Wait();
             destRating.Wait();
-
-
         }
 
         private Order CSVIntoObject(string[] csvLine) {
