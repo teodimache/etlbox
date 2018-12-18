@@ -9,16 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="articles\overview_controlflow.md" />
-    <None Remove="articles\overview_dataflow.md" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="articles\overview_dataflow.md" />
-    <Compile Include="articles\overview_controlflow.md" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="docfx.console" Version="2.40.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

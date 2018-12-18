@@ -37,7 +37,8 @@ All logging capabilites are based on nlog. You can visit the [NLog homepage](nlo
 
 ## Overview Data Flow Tasks
 
-Another feature of the ETLBox library is to create your own data flow pipeline. 
+All components in the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline - 
+where data is extracted from the source(s), asynchrounously transformed and then loaded into your destinations.
 Plese read the [Overview Data Flow](overview_dataflow.md) to get started. There is also an [Example Data Flow](https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow).
 To understand the dataflow components, you can also visit the API reference and look at the description and details of each dataflow component.
 
@@ -51,13 +52,6 @@ already give you a quite good understanding of the code.
 It is possible to create your own tasks. If you are in need for further details, please give me some feedback via github (open an issuee) and 
 I will happily give you detailled instructions how to do so. 
 
-
-A big part of ETLBox is the Data Flow library. All Data Flow taks reside in the 'ALE.ETLBox.DataFlow' namespace.
-
-All componentsin the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline - where data is extracted from the source(s), asynchrounously transformed and then loaded into your destinations.
-
-Another feature of the etlbox library is to create your own data flow pipeline. See the [Example Data Flow](https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow) to get started. All pipeline elements are shown in 
- [Data Flow Tasks](https://github.com/roadrunnerlenny/etlbox/wiki/Data-Flow-Tasks)
 
 
 
