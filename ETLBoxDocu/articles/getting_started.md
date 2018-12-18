@@ -52,6 +52,12 @@ It is possible to create your own tasks. If you are in need for further details,
 I will happily give you detailled instructions how to do so. 
 
 
+A big part of ETLBox is the Data Flow library. All Data Flow taks reside in the 'ALE.ETLBox.DataFlow' namespace.
+
+All componentsin the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline - where data is extracted from the source(s), asynchrounously transformed and then loaded into your destinations.
+
+Another feature of the etlbox library is to create your own data flow pipeline. See the [Example Data Flow](https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow) to get started. All pipeline elements are shown in 
+ [Data Flow Tasks](https://github.com/roadrunnerlenny/etlbox/wiki/Data-Flow-Tasks)
 
 
 
