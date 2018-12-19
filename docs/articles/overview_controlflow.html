@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Overview Control flow tasks </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Overview Control flow tasks ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar ale-navbar ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="overview-control-flow-tasks">Overview Control flow tasks</h1>
+
+<p>To get aquainted with ETLBox, you should start with the Control Flow tasks.</p>
+<h2 id="idea-behind">Idea behind</h2>
+<p>Control Flow task can be split in &quot;General&quot; task - it is a comprehensive set of task to manage, alter or query a database.
+Tasks are a simple to manage or query or database. The idea behind them is that you don't have to write over and over again the same code again for opening up a connection and doing
+some things on database like counting the rows in a table. For instance, the code for establishing a connection and doing a simple row count on a table would look like this:</p>
+<pre><code class="lang-C#">string connectionString = &quot;Data Source=.; Database=Sample; Integrated Security=SSPI&quot;;
+using (SqlConnection con = new SqlConnection(connectionString))
+{
+   SqlCommand cmd = new SqlCommand(&quot;select count(*) from dbo.tbl&quot;, con);
+   con.Open();
+   int numrows = (int)cmd.ExecuteScalar();   
+}
+</code></pre>
+<h2 id="set-up-a-connection">Set up a connection</h2>
+<p>With Control Flow Task you only have to set up your database connection string once, like this:</p>
+<pre><code class="lang-C#">ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.; Database=Sample; Integrated Security=SSPI&quot;&quot;));
+</code></pre>
+<p><em>The connection will be stored in a static property and used by all subsequent tasks if no other connection is passed when a tasks is executed.</em></p>
+<h2 id="using-the-rowcounttask">Using the RowCountTask</h2>
+<p>Now you can use a <code>RowCountTask</code> to query the number of rows within a table with only one line.</p>
+<pre><code class="lang-C#">int count = RowCountTask.Count(&quot;dbo.tbl&quot;);
+</code></pre>
+<p>Internally, an ADO.NET connection is opened up (the default ADO.NET connection pooling is used) and a <code>select count(*) from dbo.tbl</code> is executed on the database.
+The result is return from the RowCountTask.</p>
+<h2 id="using-the-instances">Using the instances</h2>
+<p>[!NOTE]
+&lt;For every Control Flow Tasks, there are static accessors to simplify the use of the tasks. In order to have access to all functionalities of a task, sometime you
+have to create a new instance of the task object.&gt;</p>
+<p>If you want to do a rowcount with an instance instead of the static accessor, it would look like this:</p>
+<pre><code class="lang-C#">RowCountTask task = new RowCountTask(&quot;dbo.tbl&quot;);
+int count = task.Count().Rows;
+</code></pre>
+<p>So whenever you don't find a static accessor satisfing your needs, try to create an instance and check the properties and methods of the object.</p>
+<h2 id="confgure-a-tasks">Confgure a tasks</h2>
+<p>But there is more. Let's assume you want to count the rows on a pretty big table, a &quot;normal&quot; row count perhaps would take some time. So RowCount has a property called
+<code>QuickQueryMode</code>. If set to true, a sql statement that queries the partition tables is then executed.</p>
+<pre><code class="lang-C#">RowCountTask task = new RowCountTask(&quot;dbo.tbl&quot;) 
+	{ QuickQueryMode = true };
+int count = task.Count().Rows;
+</code></pre>
+<p>This would give you the same result, but insteal of doing a <code>select count(*) from dbo.tbl</code> the following sql is fired on the database</p>
+<pre><code class="lang-sql">select cast(sum([rows]) as int) from sys.partitions where [object_id] = object_id(N'dbo.tbl') and index_id in (0,1)
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBoxDocu/articles/overview_controlflow.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>(C) 2018 Andreas Lennartz<br>
+      		Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

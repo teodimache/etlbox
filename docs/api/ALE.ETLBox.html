@@ -26,7 +26,7 @@
     <div id="wrapper">
       <header>
         
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+        <nav id="autocollapse" class="navbar ale-navbar ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -85,10 +85,6 @@
 </section>
       <h4><a class="xref" href="ALE.ETLBox.AdomdConnectionManager.html">AdomdConnectionManager</a></h4>
       <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.BlockTransformation-1.html">BlockTransformation&lt;TInput&gt;</a></h4>
-      <section><p>A block transformation will wait for all data to be loaded into the buffer before the transformation is applied. After all data is in the buffer, the transformation
-is execution and the result posted into the targets.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.CalculateDatabaseHashTask.html">CalculateDatabaseHashTask</a></h4>
       <section><p>Calculates a hash value of the database. It will use only the schemas given in the property SchemaName for the calculation.
 The hash calcualtion is based only on the user tables in the schema.</p>
@@ -127,15 +123,6 @@ If logging is configured via a NLog config, these tables contain log information
       <h4><a class="xref" href="ALE.ETLBox.CRUDViewTask.html">CRUDViewTask</a></h4>
       <section><p>Creates or updates a view.</p>
 </section>
-      <h4><a class="xref" href="ALE.ETLBox.CSVSource.html">CSVSource</a></h4>
-      <section><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CustomDestination-1.html">CustomDestination&lt;TInput&gt;</a></h4>
-      <section><p>Define your own destination block.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CustomSource-1.html">CustomSource&lt;TOutput&gt;</a></h4>
-      <section><p>Define your own source block.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.CustomTask.html">CustomTask</a></h4>
       <section><p>A custom task allows you to run your own code (defined as an Action object), with additionally logging in place. (TaskType: CUSTOM)</p>
 </section>
@@ -143,13 +130,6 @@ If logging is configured via a NLog config, these tables contain log information
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.DbConnectionManager-2.html">DbConnectionManager&lt;Connection, Command&gt;</a></h4>
       <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.DBDestination-1.html">DBDestination&lt;TInput&gt;</a></h4>
-      <section><p>A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.DBSource-1.html">DBSource&lt;TOutput&gt;</a></h4>
-      <section><p>A database source defines either a table or sql query that returns data from a database. While reading the result set or the table, data is asnychronously posted
-into the targets.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.DbTask.html">DbTask</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.DropDatabaseTask.html">DropDatabaseTask</a></h4>
@@ -191,17 +171,6 @@ into the targets.</p>
       <h4><a class="xref" href="ALE.ETLBox.LogTask.html">LogTask</a></h4>
       <section><p>Used this task for custom log messages.</p>
 </section>
-      <h4><a class="xref" href="ALE.ETLBox.Lookup-3.html">Lookup&lt;TTransformationInput, TTransformationOutput, TSourceOutput&gt;</a></h4>
-      <section><p>A lookup task - data from the input can be enriched with data retrieved from the lookup source. The result is then posted into the output.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.MergeJoin-3.html">MergeJoin&lt;TInput1, TInput2, TOutput&gt;</a></h4>
-      <section><p>Will join data from the two inputs into one output - on a row by row base. Make sure both inputs are sorted or in the right order.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.MergeJoinTarget-1.html">MergeJoinTarget&lt;TInput&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.Multicast-1.html">Multicast&lt;TInput&gt;</a></h4>
-      <section><p>A multicast duplicates data from the input into two outputs.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.Package.html">Package</a></h4>
       <section><p>A package is a shortcute for custom task, but with the TaskType &quot;PACKAGE&quot;.</p>
 </section>
@@ -227,9 +196,6 @@ into the targets.</p>
       <section><p>Count the row in a table. This task can either use the normal COUNT(*) method (could take some time on big tables)<br>
 or query the sys.partition table to get the count  (much faster).</p>
 </section>
-      <h4><a class="xref" href="ALE.ETLBox.RowTransformation-2.html">RowTransformation&lt;TInput, TOutput&gt;</a></h4>
-      <section><p>Transforms the data row-by-row with the help of the transformation function.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.Sequence.html">Sequence</a></h4>
       <section><p>A sequence is a shortcute for custom task, but with the TaskType &quot;SEQUENCE&quot;.</p>
 </section>
@@ -237,9 +203,6 @@ or query the sys.partition table to get the count  (much faster).</p>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.SMOConnectionManager.html">SMOConnectionManager</a></h4>
       <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.Sort-1.html">Sort&lt;TInput&gt;</a></h4>
-      <section><p>Sort the input with the given sort function.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.SqlConnectionManager.html">SqlConnectionManager</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.SqlHelper.html">SqlHelper</a></h4>
@@ -269,8 +232,6 @@ ExecuteReader for SQL that returns a result set.</p>
       <h4><a class="xref" href="ALE.ETLBox.TruncateTableTask.html">TruncateTableTask</a></h4>
       <section><p>Truncates a table.</p>
 </section>
-      <h4><a class="xref" href="ALE.ETLBox.TypeInfo.html">TypeInfo</a></h4>
-      <section></section>
       <h4><a class="xref" href="ALE.ETLBox.XmlaTask.html">XmlaTask</a></h4>
       <section><p>This task can exeucte any XMLA.</p>
 </section>
@@ -279,16 +240,6 @@ ExecuteReader for SQL that returns a result set.</p>
       <h4><a class="xref" href="ALE.ETLBox.IConnectionManager.html">IConnectionManager</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ICubeConnectionManager.html">ICubeConnectionManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.IDataFlowDestination-1.html">IDataFlowDestination&lt;TInput&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.IDataFlowLinkSource-1.html">IDataFlowLinkSource&lt;TOutput&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.IDataFlowLinkTarget-1.html">IDataFlowLinkTarget&lt;TInput&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.IDataFlowSource-1.html">IDataFlowSource&lt;TOutput&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.IDataFlowTransformation-2.html">IDataFlowTransformation&lt;TInput, TOutput&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.IDbConnectionManager.html">IDbConnectionManager</a></h4>
       <section></section>
@@ -329,7 +280,8 @@ ExecuteReader for SQL that returns a result set.</p>
               <a href="#top">Back to top</a>
             </span>
             
-            <span>Generated by <strong>DocFX</strong></span>
+            <span>(C) 2018 Andreas Lennartz<br>
+      		Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>

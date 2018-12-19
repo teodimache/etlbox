@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Logging </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Logging ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar ale-navbar ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="logging">Logging</h1>
+
+<h2 id="nlog">NLog</h2>
+<p>By default, ETLBox uses NLog. NLog already comes with different log targets that be configured either via your app.config or programatically.
+Please see the NLog-documentation for a full reference. <a href="https://nlog-project.org/">https://nlog-project.org/</a>
+ETLBox already comes with NLog as dependency.
+So the needed packages will be retrieved from nuget.</p>
+<h2 id="nlogconfig">nlog.config</h2>
+<p>In order to use logging, you have to create a nlog.config file with the exact same name and put it into the root folder of your project. Then</p>
+<h2 id="simple-configuration-file">Simple Configuration file</h2>
+<p>A simple nlog.config could look like this</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;nlog&gt;
+  &lt;rules&gt;
+    &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;debugger&quot; /&gt;
+  &lt;/rules&gt;
+  &lt;targets&gt;
+    &lt;target name=&quot;debugger&quot; xsi:type=&quot;Debugger&quot; /&gt;     
+  &lt;/targets&gt;
+&lt;/nlog&gt;
+</code></pre>
+<p>After adding a file with this configuration, you will already get some logging output to your debugger output.</p>
+<h2 id="logging-to-database">Logging to database</h2>
+<p>But there is more. If you want to have logging tables in your database, ETLBox comes with some handy stuff that helps you to do this.</p>
+<h3 id="extend-the-nlogconfig">Extend the nlog.config</h3>
+<p>As a first step to have nlog log into your database, you must exend your nlog configuration. It should then look like this:</p>
+<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;nlog&gt;
+  &lt;targets&gt;
+    &lt;target xsi:type=&quot;Database&quot; name=&quot;database&quot;
+       useTransactions=&quot;false&quot; keepConnection=&quot;true&quot;&gt;
+      &lt;commandText&gt;
+        insert into etl.Log (LogDate, Level, Stage, Message, TaskType, TaskAction, TaskHash, Source, LoadProcessKey)
+        select @LogDate
+        , @Level
+        , cast(@Stage as nvarchar(20))
+        , cast(@Message as nvarchar(4000))
+        , cast(@Type as nvarchar(40))
+        , @Action
+        , @Hash
+        , cast(@Logger as nvarchar(20))
+        , case when @LoadProcessKey=0 then null else @LoadProcessKey end
+      &lt;/commandText&gt;
+      &lt;parameter name=&quot;@LogDate&quot; layout=&quot;${date:format=yyyy-MM-ddTHH\:mm\:ss.fff}&quot; /&gt;
+      &lt;parameter name=&quot;@Level&quot; layout=&quot;${level}&quot; /&gt;
+      &lt;parameter name=&quot;@Stage&quot; layout=&quot;${etllog:LogType=Stage}&quot; /&gt;
+      &lt;parameter name=&quot;@Message&quot; layout=&quot;${etllog}&quot; /&gt;
+      &lt;parameter name=&quot;@Type&quot; layout=&quot;${etllog:LogType=Type}&quot; /&gt;
+      &lt;parameter name=&quot;@Action&quot; layout=&quot;${etllog:LogType=Action}&quot; /&gt;
+      &lt;parameter name=&quot;@Hash&quot; layout=&quot;${etllog:LogType=Hash}&quot; /&gt;
+      &lt;parameter name=&quot;@LoadProcessKey&quot; layout=&quot;${etllog:LogType=LoadProcessKey}&quot; /&gt;
+      &lt;parameter name=&quot;@Logger&quot; layout=&quot;${logger}&quot; /&gt;
+    &lt;/target&gt;
+  &lt;/targets&gt;
+  &lt;rules&gt;
+    &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;database&quot; /&gt;
+  &lt;/rules&gt;
+&lt;/nlog&gt;
+```xml
+
+### Create database tables
+
+Now you need some tables in the database to store your log information.
+You can use the task `CreateLogTables`. This task will create two tables: 
+`etl.LoadProcess` and `etl.Log`.
+It will also create some stored procedure to access this tables. 
+
+[!Note]
+&lt;Don't forget the setup the connection for the control flow.&gt;
+
+```C#
+CreateLogTablesTask.CreateLog();
+</code></pre>
+<h3 id="loadprocess-table">LoadProcess table</h3>
+<p>The table etl.LoadProcess contains information about the etl processes that you started programatically with the <code>StartLoadProcessTask</code>.
+To end or abort a process, you can use the <code>EndLoadProcessTask</code> or <code>AbortLoadProcessTask</code>. To set the TransferCompletedDate in this table, use
+the <code>TransferCompletedForLoadProcessTask</code></p>
+<p>This is an example for logging into the load process table</p>
+<pre><code class="lang-C#">StartLoadProcessTask.Start(&quot;Process 1 started&quot;);
+/*..*/
+TransferCompletedForLoadProcessTask.Complete();
+/*..*/
+if (error)
+   AbortLoadProcessTask.Abort(&quot;This is the abort message&quot;);
+else 
+  EndLoadProcessTask.End(&quot;Process 1 ended successfully&quot;);
+</code></pre>
+<h3 id="log-table">Log Table</h3>
+<p>The etl.Log table will store all log message generated from any control flow or data flow task.
+You can even use your own LogTask to create your own log message in there.
+The following example with create 6 rows in your <code>etl.Log</code> table. Everytime a Control Flow Tasks starts, it will create a log entry with an action
+'START'. When it's done with its execution, it will create another log entry with action type 'END'</p>
+<pre><code class="lang-C#">SqlTask.ExecuteNonQuery(&quot;some sql&quot;, &quot;Select 1 as test&quot;);
+Sequence.Execute(&quot;some custom code&quot;, () =&gt; { });
+LogTask.Warn(&quot;Some warning!&quot;);
+</code></pre>
+<p>Output should be inserted here.</p>
+<h2 id="further-log-tasks">Further log tasks</h2>
+<h3 id="clean-up-or-remove-log-table">Clean up or remove log table</h3>
+<p>You can clean up your log with the CleanUpLogTask.</p>
+<pre><code class="lang-C#">CleanUpLogTask.Clean();
+</code></pre>
+<p>Or you can remove the log tables and all its procedure from the database.</p>
+<pre><code class="lang-C#">RemoveLogTablesTask
+</code></pre>
+<h3 id="get-log-and-loadprocess-table-in-json">Get log and loadprocess table in JSON</h3>
+<p>If you want to get the content of the etl.LoadProcess table or etl.Log in JSON-Format, there are two tasks for that:</p>
+<pre><code>GetLoadProcessAsJSONTask.GetJSON();
+GetLogAsJSONTask.GetJSON();
+</code></pre>
+<h3 id="custom-log-messages">Custom log messages</h3>
+<p>If you want to create an entry in the etl.Log table (just one entry, no START/END messages) you can do this using the LogTask.
+Also you can define the nlog level.</p>
+<pre><code class="lang-C#">LogTask.Trace(&quot;Some text!&quot;);
+LogTask.Debug(&quot;Some text!&quot;);
+LogTask.Info(&quot;Some text!&quot;);
+LogTask.Warn(&quot;Some text!&quot;);
+LogTask.Error(&quot;Some text!&quot;);
+LogTask.Fatal(&quot;Some text!&quot;);
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBoxDocu/articles/overview_logging.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>(C) 2018 Andreas Lennartz<br>
+      		Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

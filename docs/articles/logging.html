@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="logging-control-flow-tasks">Logging Control Flow Tasks</h2>
 
-<p>By default, ETLBox uses NLog. NLog already comes with different log targets that be configured either via your app.config or programatically. Please see the NLog-documentation for a full reference: (<a href="https://nlog-project.org/">https://nlog-project.org/</a>)[https://nlog-project.org/]</p>
+<p>By default, ETLBox uses NLog. NLog already comes with different log targets that be configured either via your app.config or programatically. Please see the NLog-documentation for a full reference: (https://nlog-project.org/)[<a href="https://nlog-project.org/">https://nlog-project.org/</a>]</p>
 <p>ETLBox already comes with NLog as dependency. So the needed packages will be retrieved from nuget. But in order to use it, you have to set up a nlog configuration section in your app.config, and create a target and a logger rule.</p>
 <p>This could look like</p>
 <pre><code class="lang-xml">&lt;nlog&gt;
@@ -80,8 +80,7 @@
     &lt;target name=&quot;debugger&quot; xsi:type=&quot;Debugger&quot; /&gt;     
   &lt;/targets&gt;
 &lt;/nlog&gt;
-</code></pre>
-<p>After adding this section, you will already get some logging output.</p>
+</code></pre><p>After adding this section, you will already get some logging output. </p>
 <p>But there is more. If you want to have logging in your database, you can use the CreateLogTables - Task. This task will create two tables: etl.LoadProcess and etl.Log</p>
 <p>The etl.LoadProcess contains information about the etl processes that you started programatically with the StartLoadProcessTask. To end or abort a process, you can use the EndLoadProcessTask or AbortLoadProcessTask.</p>
 <p>The etl.Log table will store all log message generated from any control flow or data flow task. You can even use your own LogTask to create your own log message in there.</p>
@@ -93,9 +92,8 @@ Sequence.Execute(&quot;some custom code&quot;, () =&gt; { });
 LogTask.Warn(&quot;Some warning!&quot;);
 
 EndLoadProcessTask.End(&quot;Process 1 ended successfully&quot;);
-</code></pre>
-<p>After running this code, you will one line with process information in your etl.LoadProcess Table and several lines of log information (for each task like SqlTask, Sequence or LogTask) in your etl.Log table.</p>
-<p>Attention: Before running this code, you must configure a nlog target for your database. Please see the wiki for the complete example.</p>
+</code></pre><p>After running this code, you will one line with process information in your etl.LoadProcess Table and several lines of log information (for each task like SqlTask, Sequence or LogTask) in your etl.Log table.</p>
+<p>Attention: Before running this code, you must configure a nlog target for your database. Please see the wiki for the complete example. </p>
 <h3 id="create-log-tables">Create log tables</h3>
 <pre><code class="lang-C#">CreateLogTablesTask.CreateLog();
 
@@ -104,22 +102,19 @@ RemoveLogTablesTask
 ReadLodProcessTableTask
 ReadLogTableTask
 GetLogAsJSONTask
-</code></pre>
-<h3 id="start--end-load-processes">Start / End load processes</h3>
+</code></pre><h3 id="start--end-load-processes">Start / End load processes</h3>
 <pre><code class="lang-C#">StartLoadProcessTask.Start(&quot;Process 1&quot;);
 TransferCompletedForLoadProcessTask.Complete();
 EndLoadProcessTask.End(&quot;Everything successful&quot;);
 AbortLoadProcessTask.Abort()
-</code></pre>
-<h3 id="custom-log-message">Custom log message</h3>
+</code></pre><h3 id="custom-log-message">Custom log message</h3>
 <pre><code class="lang-C#">LogTask.Trace(&quot;Some text!&quot;);
 LogTask.Debug(&quot;Some text!&quot;);
 LogTask.Info(&quot;Some text!&quot;);
 LogTask.Warn(&quot;Some text!&quot;);
 LogTask.Error(&quot;Some text!&quot;);
 LogTask.Fatal(&quot;Some text!&quot;);
-</code></pre>
-</article>
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

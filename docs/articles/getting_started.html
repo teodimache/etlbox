@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar ale-navbar ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="introduction">Introduction</h1>
+
+<p>This introductional page will gives you an introduction to the basic concepts of ETLBox.</p>
+<h2 id="etlbox-components">ETLBox components</h2>
+<p>ETLBox is split into two main components: Control Flow Tasks and Data Flow Tasks. Some taks in the Control Flow part are for logging purposes only,
+they will be explained in detail in its own artice.</p>
+<h3 id="namespaces">Namespaces</h3>
+<p>Everything in ETLBox except the Data Flow tasks are within the namespace <code>ALE.ETLBox</code>.
+All Data Flow components (sometimes referred as components) can be found in the namespace <code>ALE.ETLBox.DataFlow</code>.</p>
+<h3 id="clean-coding">Clean coding</h3>
+<p>At first glance, it can look like that some of the taks are not really adding big value to your project. But in accordance to clean coding,
+having written everything in a format which is easy-to-read and easy-to-understand, you are able to produce code that is easiert to maintain. Having your code &quot;clean&quot;
+allows you to focus on the important parts of your logic and not be distracted by code lines that your brain need to &quot;unravel&quot; every time you go over them.
+If you are interested in clean coding, you should read the &quot;bible&quot; on that topic, writte by Robert C. Martin: <a href="amazonlinkhere">Clean Code</a></p>
+<h1 id="getting-started">Getting started</h1>
+<h2 id="overview-control-flow-tasks">Overview Control Flow Tasks</h2>
+<p>You will find an introduction into the Control Flow Tasks in the artice <a href="overview_controlflow.html">Overview Control Flow</a>.
+This will give you all the basics you need to understand how the Control Flow tasks are designed.
+If you want to dig deeper, please see the API reference for detailled information about the tasks.
+If you are in need of some examples of how to use Control Flow tasks, see the <a href="example_controlflow.html">Example Control Flow</a></p>
+<h2 id="overview-logging">Overview Logging</h2>
+<p>All Control Flow and Data Flow Tasks come with the ability to produce log.
+There are also some special task that enables you to create or query the log tables easily.
+To get an introduction into logging, please have a look at the <a href="overview_logging.html">Overview Logging</a>
+All logging capabilites are based on nlog. You can visit the <a href="nlog-project.org">NLog homepage</a> if you are interested in more details how to set up and configure NLog.</p>
+<h2 id="overview-data-flow-tasks">Overview Data Flow Tasks</h2>
+<p>All components in the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline -
+where data is extracted from the source(s), asynchrounously transformed and then loaded into your destinations.
+Plese read the <a href="overview_dataflow.html">Overview Data Flow</a> to get started. There is also an <a href="https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow">Example Data Flow</a>.
+To understand the dataflow components, you can also visit the API reference and look at the description and details of each dataflow component.</p>
+<h1 id="api-reference">API Reference</h1>
+<p>If you are in doubt how to use a certain task, you can have a look at the API reference. All property and method names should be self explanatory and
+already give you a quite good understanding of the code.</p>
+<h2 id="creating-your-own-task">Creating your own task</h2>
+<p>It is possible to create your own tasks. If you are in need for further details, please give me some feedback via github (open an issuee) and
+I will happily give you detailled instructions how to do so.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBoxDocu/articles/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>(C) 2018 Andreas Lennartz<br>
+      		Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
