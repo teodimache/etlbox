@@ -7,3 +7,20 @@
     background-color: #666 !important;
     border-color: #aaa !important;
 }
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover { 
+    background-color: #666 !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    background-color: #666 !important;
+}
+
+@media (max-width:767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+        border-color: #aaa !important
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+        background-color: #aaa !important
+    }
+}
