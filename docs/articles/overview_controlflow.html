@@ -70,10 +70,17 @@
 <h1 id="overview-control-flow-tasks">Overview Control flow tasks</h1>
 
 <p>To get aquainted with ETLBox, you should start with the Control Flow tasks.</p>
-<h2 id="idea-behind">Idea behind</h2>
-<p>Control Flow task can be split in &quot;General&quot; task - it is a comprehensive set of task to manage, alter or query a database.
-Tasks are a simple to manage or query or database. The idea behind them is that you don't have to write over and over again the same code again for opening up a connection and doing
-some things on database like counting the rows in a table. For instance, the code for establishing a connection and doing a simple row count on a table would look like this:</p>
+<h2 id="namespace">Namespace</h2>
+<p>Control Flow task can be split in &quot;General&quot; task and &quot;Logging&quot; tasks. Control Flow Tasks reside in the <code>ALE.ETLBox.ControlFlow</code> namespace -
+task for logging in the <code>ALE.ETLBox.Logging</code> namespace.</p>
+<h2 id="idea-behind-control-flow-task">Idea behind Control Flow Task</h2>
+<p>Control Flow Tasks are a comprehensive set of tasks to manage, alter or query a database.
+With one single line of code you will be able to create a table or fire a sql on your database.
+If you have ever did this before using ADO.NET, you probably found out that the is some boilerplate code you have to write over and over again.
+The idea behind the Control Flow Tasks is that you don't have to write the same code again and again, e.g. just for doing something trivial like opening up a connection
+and counting the rows in table. This should be doable with only one line of code.</p>
+<h3 id="adonet---the-old-way">ADO.NET - the old way</h3>
+<p>For instance, the code for establishing a connection and doing a simple row count on a table with a classic ADO.NET connection would look like this:</p>
 <pre><code class="lang-C#">string connectionString = &quot;Data Source=.; Database=Sample; Integrated Security=SSPI&quot;;
 using (SqlConnection con = new SqlConnection(connectionString))
 {
@@ -82,18 +89,19 @@ using (SqlConnection con = new SqlConnection(connectionString))
    int numrows = (int)cmd.ExecuteScalar();   
 }
 </code></pre>
-<h2 id="set-up-a-connection">Set up a connection</h2>
-<p>With Control Flow Task you only have to set up your database connection string once, like this:</p>
+<h3 id="rowcount-with-control-flow-tasks">RowCount with Control Flow Tasks</h3>
+<p>Now let's have a look how to make a row count with the Control Flow Tasks library.</p>
+<p>First, we need to setup a connection
+With Control Flow Task you only have to set up your database connection string once, like this:</p>
 <pre><code class="lang-C#">ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(&quot;Data Source=.; Database=Sample; Integrated Security=SSPI&quot;&quot;));
 </code></pre>
 <p><em>The connection will be stored in a static property and used by all subsequent tasks if no other connection is passed when a tasks is executed.</em></p>
-<h2 id="using-the-rowcounttask">Using the RowCountTask</h2>
 <p>Now you can use a <code>RowCountTask</code> to query the number of rows within a table with only one line.</p>
 <pre><code class="lang-C#">int count = RowCountTask.Count(&quot;dbo.tbl&quot;);
 </code></pre>
 <p>Internally, an ADO.NET connection is opened up (the default ADO.NET connection pooling is used) and a <code>select count(*) from dbo.tbl</code> is executed on the database.
 The result is return from the RowCountTask.</p>
-<h2 id="using-the-instances">Using the instances</h2>
+<h3 id="using-the-instances">Using the instances</h3>
 <p>[!NOTE]
 &lt;For every Control Flow Tasks, there are static accessors to simplify the use of the tasks. In order to have access to all functionalities of a task, sometime you
 have to create a new instance of the task object.&gt;</p>
@@ -102,7 +110,13 @@ have to create a new instance of the task object.&gt;</p>
 int count = task.Count().Rows;
 </code></pre>
 <p>So whenever you don't find a static accessor satisfing your needs, try to create an instance and check the properties and methods of the object.</p>
-<h2 id="confgure-a-tasks">Confgure a tasks</h2>
+<h2 id="why-not-entitiy-framework">Why not Entitiy Framework</h2>
+<p>ETLBox was designed to be used as an ETL object library. Therefore, the user normally deals with big data, some kind of datawarehouse structures and is used to
+have full control over the database. With the underlying power of ADO.NET - which is used by ETLBox - you have full access to the database and basically can do anything
+you are used to do with sql on the server. As EF (Entity Framework) is a high sophisticated ORM tool, it comes with the downside that you can only do things on a database that
+EF allows you to do. But as EF does not incorporate all the possibilites that you can do with SQL and ADO.NET on a Sql Server, Entitity Framework normally isn't a
+good choice for creating ETL jobs. This is also true for other ORM tools.</p>
+<h2 id="configure-a-tasks">Configure a tasks</h2>
 <p>But there is more. Let's assume you want to count the rows on a pretty big table, a &quot;normal&quot; row count perhaps would take some time. So RowCount has a property called
 <code>QuickQueryMode</code>. If set to true, a sql statement that queries the partition tables is then executed.</p>
 <pre><code class="lang-C#">RowCountTask task = new RowCountTask(&quot;dbo.tbl&quot;) 
@@ -112,6 +126,9 @@ int count = task.Count().Rows;
 <p>This would give you the same result, but insteal of doing a <code>select count(*) from dbo.tbl</code> the following sql is fired on the database</p>
 <pre><code class="lang-sql">select cast(sum([rows]) as int) from sys.partitions where [object_id] = object_id(N'dbo.tbl') and index_id in (0,1)
 </code></pre>
+<h3 id="further-reading">Further reading</h3>
+<p>Now you familiar with the basic concepts of Control Flow Task. Either continue with the <a href="example_controlflow.html">Control Flow Example</a>
+or have a look at the <a href="../api/index.html">API reference</a>.</p>
 </article>
           </div>
           

@@ -69,14 +69,11 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="logging">Logging</h1>
 
-<h2 id="nlog">NLog</h2>
 <p>By default, ETLBox uses NLog. NLog already comes with different log targets that be configured either via your app.config or programatically.
 Please see the NLog-documentation for a full reference. <a href="https://nlog-project.org/">https://nlog-project.org/</a>
-ETLBox already comes with NLog as dependency.
-So the needed packages will be retrieved from nuget.</p>
-<h2 id="nlogconfig">nlog.config</h2>
-<p>In order to use logging, you have to create a nlog.config file with the exact same name and put it into the root folder of your project. Then</p>
-<h2 id="simple-configuration-file">Simple Configuration file</h2>
+ETLBox already comes with NLog as dependency - so the necessary packages will be retrieved from nuget automatically through your package manager.</p>
+<h2 id="simple-configuration-file">Simple Configuration File</h2>
+<p>In order to use logging, you have to create a nlog.config file with the exact same name and put it into the root folder of your project.</p>
 <p>A simple nlog.config could look like this</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;nlog&gt;
@@ -132,7 +129,8 @@ So the needed packages will be retrieved from nuget.</p>
 Now you need some tables in the database to store your log information.
 You can use the task `CreateLogTables`. This task will create two tables: 
 `etl.LoadProcess` and `etl.Log`.
-It will also create some stored procedure to access this tables. 
+It will also create some stored procedure to access this tables. This can be useful if you want
+to log into these table in your sql code or stored procedures.
 
 [!Note]
 &lt;Don't forget the setup the connection for the control flow.&gt;
@@ -144,7 +142,7 @@ CreateLogTablesTask.CreateLog();
 <p>The table etl.LoadProcess contains information about the etl processes that you started programatically with the <code>StartLoadProcessTask</code>.
 To end or abort a process, you can use the <code>EndLoadProcessTask</code> or <code>AbortLoadProcessTask</code>. To set the TransferCompletedDate in this table, use
 the <code>TransferCompletedForLoadProcessTask</code></p>
-<p>This is an example for logging into the load process table</p>
+<p>This is an example for logging into the load process table.</p>
 <pre><code class="lang-C#">StartLoadProcessTask.Start(&quot;Process 1 started&quot;);
 /*..*/
 TransferCompletedForLoadProcessTask.Complete();
@@ -163,7 +161,7 @@ The following example with create 6 rows in your <code>etl.Log</code> table. Eve
 Sequence.Execute(&quot;some custom code&quot;, () =&gt; { });
 LogTask.Warn(&quot;Some warning!&quot;);
 </code></pre>
-<p>Output should be inserted here.</p>
+<p>The sql task will produce two log entries - one entry when it started and one entry when it ended its execution.</p>
 <h2 id="further-log-tasks">Further log tasks</h2>
 <h3 id="clean-up-or-remove-log-table">Clean up or remove log table</h3>
 <p>You can clean up your log with the CleanUpLogTask.</p>

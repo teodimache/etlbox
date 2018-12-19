@@ -1,17 +1,12 @@
 # Logging 
 
-## NLog
-
 By default, ETLBox uses NLog. NLog already comes with different log targets that be configured either via your app.config or programatically. 
 Please see the NLog-documentation for a full reference. [https://nlog-project.org/](https://nlog-project.org/)
-ETLBox already comes with NLog as dependency. 
-So the needed packages will be retrieved from nuget. 
+ETLBox already comes with NLog as dependency - so the necessary packages will be retrieved from nuget automatically through your package manager. 
 
-## nlog.config
+## Simple Configuration File
 
-In order to use logging, you have to create a nlog.config file with the exact same name and put it into the root folder of your project. Then 
-
-## Simple Configuration file
+In order to use logging, you have to create a nlog.config file with the exact same name and put it into the root folder of your project. 
 
 A simple nlog.config could look like this
 
@@ -77,7 +72,8 @@ As a first step to have nlog log into your database, you must exend your nlog co
 Now you need some tables in the database to store your log information.
 You can use the task `CreateLogTables`. This task will create two tables: 
 `etl.LoadProcess` and `etl.Log`.
-It will also create some stored procedure to access this tables. 
+It will also create some stored procedure to access this tables. This can be useful if you want
+to log into these table in your sql code or stored procedures.
 
 [!Note]
 <Don't forget the setup the connection for the control flow.>
@@ -92,7 +88,7 @@ The table etl.LoadProcess contains information about the etl processes that you 
 To end or abort a process, you can use the `EndLoadProcessTask` or `AbortLoadProcessTask`. To set the TransferCompletedDate in this table, use
 the `TransferCompletedForLoadProcessTask`
 
-This is an example for logging into the load process table
+This is an example for logging into the load process table.
 
 ```C#
 StartLoadProcessTask.Start("Process 1 started");
@@ -118,7 +114,7 @@ Sequence.Execute("some custom code", () => { });
 LogTask.Warn("Some warning!");
 ```
 
-Output should be inserted here. 
+The sql task will produce two log entries - one entry when it started and one entry when it ended its execution.
 
 ## Further log tasks
 

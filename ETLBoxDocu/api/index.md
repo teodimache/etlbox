@@ -9,12 +9,18 @@ Check the [Github page](https://github.com/roadrunnerlenny/etlbox) to see the fu
 
 ETLBox is .NET Core app (2.1 or higher).
 
-## Dependencies
+## Namespaces
 
-Other
-* CsvHelper 
-* Newtonsoft.Json
-* NLog 
+ETLBox is divided in several namepsace. 
+
+The important ones are the namespace for the Control Flow `ALE.ETLBox.ControlFlow` where the Control Flow Tasks reside. 
+All Data Flow Tasks (sometimes referred as components) can be found in the namespace `ALE.ETLBox.DataFlow`.
+You'll find tasks related to logging in the namespace `ALE.ETLBox.Logging`.
+Classes with helpful (mostly static) methods are in the namespace `ALE.ETLBox.Helper`.
+To establish connection to a database, file or Analysis Services you'll need a connection manager from the `ALE.ETLBox.ConnectionManager` namespace.
+Everything else like generic classes or definitions are in the namespace `ALE.ETLBox`.
+
+## Dependencies
 
 Microsoft
 * Microsoft.SqlServer.SqlManagementObjects 
@@ -23,6 +29,11 @@ Microsoft
 * System.Threading.Tasks.Dataflow 
 * Unofficial.Microsoft.AnalysisServices.AdomdClientNetCore 
 * Docfx
+
+Other
+* CsvHelper 
+* Newtonsoft.Json
+* NLog 
 
 ## Docfx
 

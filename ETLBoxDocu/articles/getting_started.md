@@ -1,16 +1,12 @@
-# Overview 
+# Preamble
 
 Welcome to the getting started pages of ETLBox. This artice will give you a brief overview how ETLBox is organized. 
 See the Table Of Content if you already know what you are looking for. 
 
 ## ETLBox Components
 
-ETLBox is split into two main components: **Control Flow Tasks** and **Data Flow Tasks**. Some tasks in the Control Flow part are for logging purposes only. 
-
-## Namespaces
-
-Everything in ETLBox except the Data Flow tasks are within the namespace `ALE.ETLBox`.
-All Data Flow components (sometimes referred as components) can be found in the namespace `ALE.ETLBox.DataFlow`.
+ETLBox is split into two main components: **Control Flow Tasks** and **Data Flow Tasks**. Some tasks in the Control Flow part are for logging purposes only.
+As there are advanced logging capabilities in ETLBox, logging itself is treated in separate articles.
 
 ## Clean coding
 
@@ -56,7 +52,7 @@ already give you a quite good understanding of the code.
 
 ## Creating your own task
 
-It is possible to create your own tasks. If you are in need for further details, please give me some feedback via github (open an issuee) and 
+It is possible to create your own tasks. If you are in need for further details, please give me some feedback via github (open an issue) and 
 I will happily give you detailled instructions how to do so. 
 
 
