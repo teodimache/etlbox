@@ -4,6 +4,6 @@
  */
 .navbar-inverse
 {
-    background-color: #666;
-    border-color: #aaa
+    background-color: #666 !important;
+    border-color: #aaa !important;
 }
