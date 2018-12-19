@@ -122,21 +122,16 @@ ETLBox already comes with NLog as dependency - so the necessary packages will be
     &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;database&quot; /&gt;
   &lt;/rules&gt;
 &lt;/nlog&gt;
-```xml
-
-### Create database tables
-
-Now you need some tables in the database to store your log information.
-You can use the task `CreateLogTables`. This task will create two tables: 
-`etl.LoadProcess` and `etl.Log`.
+</code></pre>
+<h3 id="create-database-tables">Create database tables</h3>
+<p>Now you need some tables in the database to store your log information.
+You can use the task <code>CreateLogTables</code>. This task will create two tables:
+<code>etl.LoadProcess</code> and <code>etl.Log</code>.
 It will also create some stored procedure to access this tables. This can be useful if you want
-to log into these table in your sql code or stored procedures.
-
-[!Note]
-&lt;Don't forget the setup the connection for the control flow.&gt;
-
-```C#
-CreateLogTablesTask.CreateLog();
+to log into these table in your sql code or stored procedures.</p>
+<p>[!Note]
+&lt;Don't forget the setup the connection for the control flow.&gt;</p>
+<pre><code class="lang-C#">CreateLogTablesTask.CreateLog();
 </code></pre>
 <h3 id="loadprocess-table">LoadProcess table</h3>
 <p>The table etl.LoadProcess contains information about the etl processes that you started programatically with the <code>StartLoadProcessTask</code>.
@@ -168,7 +163,7 @@ LogTask.Warn(&quot;Some warning!&quot;);
 <pre><code class="lang-C#">CleanUpLogTask.Clean();
 </code></pre>
 <p>Or you can remove the log tables and all its procedure from the database.</p>
-<pre><code class="lang-C#">RemoveLogTablesTask
+<pre><code class="lang-C#">RemoveLogTablesTask.Remove();
 </code></pre>
 <h3 id="get-log-and-loadprocess-table-in-json">Get log and loadprocess table in JSON</h3>
 <p>If you want to get the content of the etl.LoadProcess table or etl.Log in JSON-Format, there are two tasks for that:</p>

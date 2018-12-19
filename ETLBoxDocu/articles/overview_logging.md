@@ -65,7 +65,7 @@ As a first step to have nlog log into your database, you must exend your nlog co
     <logger name="*" minlevel="Debug" writeTo="database" />
   </rules>
 </nlog>
-```xml
+```
 
 ### Create database tables
 
@@ -129,7 +129,7 @@ CleanUpLogTask.Clean();
 Or you can remove the log tables and all its procedure from the database. 
 
 ```C#
-RemoveLogTablesTask
+RemoveLogTablesTask.Remove();
 ```
 
 ### Get log and loadprocess table in JSON

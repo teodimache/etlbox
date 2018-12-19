@@ -2,13 +2,13 @@
   href: getting_started.md
 - name: Overview Control Flow
   href: overview_controlflow.md
-- name: Example Control Flow
-  href: example_controlflow.md
 - name: Overview Data Flow
   href: overview_dataflow.md
-- name: Example Data Flow
-  href: example_dataflow.md
 - name: Overview Logging
   href: overview_logging.md
+- name: Example Control Flow
+  href: example_controlflow.md
+- name: Example Data Flow
+  href: example_dataflow.md
 - name: Example Logging
   href: example_logging.md
