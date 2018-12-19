@@ -1,4 +1,4 @@
-#  <span><img src="./docs/images/logo_orig_32x32.png" alt="ETLBox logo" height="32" /> Welcome to ETLBox</span>
+#  <span><img src="https://github.com/roadrunnerlenny/etlbox/raw/master/docs/images/logo_orig_32x32.png" alt="ETLBox logo" height="32" /> Welcome to ETLBox</span>
 
 It's all in the box! Run all your ETL jobs with this awesome C# class library.
 
@@ -144,8 +144,8 @@ It will basically create two log tables - the table etl.Log for the "normal" log
 Once you have data in these log tables, you can use the [ETLBox LogViewer](https://github.com/roadrunnerlenny/etlboxlogviewer) to easily access and analyze your logs.
 
 <span>
-    <img src="./docs/images/LogViewer Screen1.PNG" width=350 alt="Process Overview of ETLBox LogViewer" />
-    <img src="./docs/images/LogViewer Screen2.PNG" width=350 alt="Process Details of ETLBox LogViewer" />
+    <img src="https://github.com/roadrunnerlenny/etlbox/raw/master/docs/images/logviewer_screen1.png" width=350 alt="Process Overview of ETLBox LogViewer" />
+    <img src="https://github.com/roadrunnerlenny/etlbox/raw/master/docs/images/logviewer_screen2.png" width=350 alt="Process Details of ETLBox LogViewer" />
 </span>
 
 
