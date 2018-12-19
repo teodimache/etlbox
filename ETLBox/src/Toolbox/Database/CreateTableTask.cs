@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ALE.ETLBox.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates a table. If the tables exists, this task won't change the table.
     /// </summary>

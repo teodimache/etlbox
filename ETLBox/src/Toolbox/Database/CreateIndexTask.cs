@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates an index if the index doesn't exists.
     /// </summary>

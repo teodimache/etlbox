@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ConnectionManager {
     public class FileConnectionManager {
         internal string FileName { get; set; }
 

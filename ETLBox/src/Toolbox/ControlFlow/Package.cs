@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// A package is a shortcute for custom task, but with the TaskType "PACKAGE".
     /// </summary>

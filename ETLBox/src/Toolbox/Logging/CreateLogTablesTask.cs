@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ALE.ETLBox.ControlFlow;
+using System;
 using System.Collections.Generic;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Will create two tables: etl.Log and etl.LoadProcess. Also it will create some procedure for starting, stopping and aborting load processes.
     /// If logging is configured via a NLog config, these tables contain log information from the tasks.

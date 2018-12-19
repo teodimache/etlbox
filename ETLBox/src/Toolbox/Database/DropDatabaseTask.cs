@@ -1,4 +1,4 @@
-﻿namespace ALE.ETLBox {
+﻿namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Tries to drop a database if the database exists.
     /// </summary>

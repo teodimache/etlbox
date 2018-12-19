@@ -2,7 +2,7 @@
 using System.Data;
 using System.Text.RegularExpressions;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Helper {
     public class DataTypeConverter {
         public const int DefaultTinyIntegerLength = 5;
         public const int DefaultSmallIntegerLength = 7;

@@ -2,7 +2,7 @@
 using System.Text;
 
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Helper {
     public static class HashHelper {
         public static string Encrypt_Char40(string text) {
             if (text != null) {

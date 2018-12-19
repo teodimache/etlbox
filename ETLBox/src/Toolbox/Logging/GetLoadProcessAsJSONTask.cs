@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Returns the content of the etl.LoadProcess table as JSON.
     /// </summary>

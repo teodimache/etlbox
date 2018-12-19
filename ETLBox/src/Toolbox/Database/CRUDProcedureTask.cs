@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates or updates a procedure.
     /// </summary>

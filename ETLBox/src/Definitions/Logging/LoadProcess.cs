@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Logging {
     public class LoadProcess {
         public int? LoadProcessKey { get; set; }
         public DateTime StartDate { get; set; }

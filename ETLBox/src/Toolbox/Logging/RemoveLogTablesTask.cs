@@ -1,4 +1,6 @@
-﻿namespace ALE.ETLBox {
+﻿using ALE.ETLBox.ControlFlow;
+
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Removes the log tables and all the log procedures.
     /// </summary>

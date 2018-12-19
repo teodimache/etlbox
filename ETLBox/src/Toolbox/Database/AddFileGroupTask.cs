@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// This task will add a filegroup to the database.
     /// </summary>

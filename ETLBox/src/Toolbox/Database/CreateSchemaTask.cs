@@ -1,4 +1,4 @@
-﻿namespace ALE.ETLBox {
+﻿namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates a schema if the schema doesn't exists.
     /// </summary>

@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Count the row in a table. This task can either use the normal COUNT(*) method (could take some time on big tables)    
     /// or query the sys.partition table to get the count  (much faster).    

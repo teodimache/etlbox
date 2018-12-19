@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ConnectionManager {
     public class AdomdConnectionManager : DbConnectionManager<AdomdConnection, AdomdCommand> {
 
         public AdomdConnectionManager() : base() { }

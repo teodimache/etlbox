@@ -1,4 +1,6 @@
 ﻿using ALE.ETLBox;
+using ALE.ETLBox.ConnectionManager;
+using ALE.ETLBox.ControlFlow;
 using ALE.ETLBox.DataFlow;
 using System;
 using System.Collections.Generic;

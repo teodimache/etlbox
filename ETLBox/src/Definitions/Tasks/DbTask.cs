@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ALE.ETLBox.ConnectionManager;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     public abstract class DbTask : GenericTask {
 
         /* Public Properties */

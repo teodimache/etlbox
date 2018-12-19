@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Will create a database if the database doesn't exists.
     /// </summary>

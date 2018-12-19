@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ALE.ETLBox.ConnectionManager;
+using System;
 using System.Data;
 using System.Linq;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// This task can exeucte any XMLA.
     /// </summary>

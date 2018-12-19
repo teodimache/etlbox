@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ConnectionManager {
     public class SMOConnectionManager : IDbConnectionManager, IDisposable {
         public ConnectionString ConnectionString { get; set; }
         public bool IsConnectionOpen => SqlConnectionManager.DbConnection?.State == ConnectionState.Open;

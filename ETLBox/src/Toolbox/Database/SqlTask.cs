@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ALE.ETLBox.ConnectionManager;
+using System;
 using System.Collections.Generic;
 using System.Data;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data, ExecuteScalar for statements with one row and one column or
     /// ExecuteReader for SQL that returns a result set. 

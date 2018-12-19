@@ -1,8 +1,9 @@
-﻿using System;
+﻿using ALE.ETLBox.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Calculates a hash value of the database. It will use only the schemas given in the property SchemaName for the calculation.
     /// The hash calcualtion is based only on the user tables in the schema.

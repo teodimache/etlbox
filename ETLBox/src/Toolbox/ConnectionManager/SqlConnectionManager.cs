@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ConnectionManager {
     public class SqlConnectionManager : DbConnectionManager<SqlConnection, SqlCommand> {
 
         public SqlConnectionManager() :base(){ } 

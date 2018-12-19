@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Helper {
     public static class SqlHelperExtensions {
         public static string AsString(this ITableColumn column, string tblName = "", string prefix = "", string suffix = "") =>
           (tblName != "" ? tblName + "." : "") + "[" + prefix + column.Name + suffix + "]";

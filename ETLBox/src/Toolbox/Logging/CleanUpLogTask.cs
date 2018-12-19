@@ -1,4 +1,6 @@
-﻿namespace ALE.ETLBox {
+﻿using ALE.ETLBox.ControlFlow;
+
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Removes log data older than the specified days to keep. 
     /// </summary>

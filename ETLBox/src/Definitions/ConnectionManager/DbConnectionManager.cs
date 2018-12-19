@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Threading.Tasks;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.ConnectionManager {
     public abstract class DbConnectionManager<Connection, Command> : IDisposable, IDbConnectionManager
         where Connection : class, IDbConnection, new()
         where Command : class, IDbCommand, new() {

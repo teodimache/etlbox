@@ -1,4 +1,4 @@
-﻿namespace ALE.ETLBox {
+﻿namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates or updates a view.
     /// </summary>

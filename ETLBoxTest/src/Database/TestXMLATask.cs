@@ -1,4 +1,6 @@
 ﻿using ALE.ETLBox;
+using ALE.ETLBox.ConnectionManager;
+using ALE.ETLBox.ControlFlow;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ALE.ETLBoxTest {

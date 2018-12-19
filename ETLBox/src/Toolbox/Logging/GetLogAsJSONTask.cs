@@ -3,7 +3,7 @@ using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Returns the content of the etl.Log table as a JSON string. 
     /// </summary>
@@ -56,7 +56,7 @@ namespace ALE.ETLBox {
         public int? _loadProcessKey;
         public int? LoadProcessKey {
             get {
-                return _loadProcessKey ?? ControlFlow.CurrentLoadProcess?.LoadProcessKey;
+                return _loadProcessKey ?? ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey;
             }
             set {
                 _loadProcessKey = value;

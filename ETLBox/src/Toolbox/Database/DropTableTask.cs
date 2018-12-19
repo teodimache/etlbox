@@ -1,4 +1,4 @@
-﻿namespace ALE.ETLBox {
+﻿namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Drops a table if the table exists.
     /// </summary>

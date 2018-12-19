@@ -1,11 +1,13 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using ALE.ETLBox.ConnectionManager;
+using ALE.ETLBox.Logging;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Extensions.Logging;
 using System;
 using System.Linq;
 
-namespace ALE.ETLBox
+namespace ALE.ETLBox.ControlFlow
 {
     /// <summary>
     /// Contains static information which affects all ETLBox tasks. 

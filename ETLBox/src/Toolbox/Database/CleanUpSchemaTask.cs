@@ -1,4 +1,4 @@
-﻿namespace ALE.ETLBox {
+﻿namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Tries to remove all database objects from the given schema(s).
     /// </summary>

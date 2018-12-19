@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ALE.ETLBox.ControlFlow;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks.Dataflow;
@@ -107,12 +108,12 @@ namespace ALE.ETLBox.DataFlow {
 
         void NLogStart() {
             if (!DisableLogging)
-                NLogger.Debug(TaskName, TaskType, "START", TaskHash, ControlFlow.STAGE, ControlFlow.CurrentLoadProcess?.LoadProcessKey);
+                NLogger.Debug(TaskName, TaskType, "START", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
 
         void NLogFinish() {
             if (!DisableLogging)
-                NLogger.Debug(TaskName, TaskType, "END", TaskHash, ControlFlow.STAGE, ControlFlow.CurrentLoadProcess?.LoadProcessKey);
+                NLogger.Debug(TaskName, TaskType, "END", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
     }
 

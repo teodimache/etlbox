@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Helper {
     public class SqlHelper {
         public static string Headline1(string headline) {
             return string.Format(@"

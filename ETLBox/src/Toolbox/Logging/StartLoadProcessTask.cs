@@ -1,4 +1,7 @@
-﻿namespace ALE.ETLBox {
+﻿using ALE.ETLBox.ControlFlow;
+using ALE.ETLBox.Helper;
+
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Starts a load process.
     /// </summary>
@@ -10,7 +13,7 @@
             LoadProcessKey = new SqlTask(this, Sql) { DisableLogging = true }.ExecuteScalar<int>();
             var rlp = new ReadLoadProcessTableTask(LoadProcessKey) { TaskType = this.TaskType, TaskHash = this.TaskHash, DisableLogging = true };
             rlp.Execute();
-            ControlFlow.CurrentLoadProcess = rlp.LoadProcess;
+            ControlFlow.ControlFlow.CurrentLoadProcess = rlp.LoadProcess;
         }
 
         /* Public properties */
@@ -21,7 +24,7 @@
         public int? _loadProcessKey;
         public int? LoadProcessKey {
             get {
-                return _loadProcessKey ?? ControlFlow.CurrentLoadProcess?.LoadProcessKey;
+                return _loadProcessKey ?? ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey;
             }
             set {
                 _loadProcessKey = value;

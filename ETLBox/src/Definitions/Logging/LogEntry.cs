@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Logging {
     [DebuggerDisplay("#{LogKey} {TaskType} - {TaskAction} {LogDate}")]
     public class LogEntry {
         public int LogKey { get; set; }

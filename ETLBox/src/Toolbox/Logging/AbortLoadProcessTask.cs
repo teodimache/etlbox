@@ -1,4 +1,7 @@
-﻿namespace ALE.ETLBox {
+﻿using ALE.ETLBox.ControlFlow;
+using ALE.ETLBox.Helper;
+
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Will set the table entry for current load process to aborted.
     /// </summary>
@@ -10,14 +13,14 @@
             new SqlTask(this, Sql) { DisableLogging = true }.ExecuteNonQuery();
             var rlp = new ReadLoadProcessTableTask(LoadProcessKey) { TaskType = this.TaskType, TaskHash = this.TaskHash, DisableLogging = true };            
             rlp.Execute();
-            ControlFlow.CurrentLoadProcess = rlp.LoadProcess;
+            ControlFlow.ControlFlow.CurrentLoadProcess = rlp.LoadProcess;
         }
 
         /* Public properties */
         public int? _loadProcessKey;
         public int? LoadProcessKey {
             get {
-                return _loadProcessKey ?? ControlFlow.CurrentLoadProcess?.LoadProcessKey;
+                return _loadProcessKey ?? ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey;
             }
             set {
                 _loadProcessKey = value;
@@ -27,7 +30,7 @@
 
 
         public string Sql => $@"EXECUTE etl.AbortLoadProcess
-	 @LoadProcessKey = '{LoadProcessKey ?? ControlFlow.CurrentLoadProcess.LoadProcessKey}',
+	 @LoadProcessKey = '{LoadProcessKey ?? ControlFlow.ControlFlow.CurrentLoadProcess.LoadProcessKey}',
 	 @AbortMessage = {AbortMessage.NullOrSqlString()}";
 
         public AbortLoadProcessTask() {

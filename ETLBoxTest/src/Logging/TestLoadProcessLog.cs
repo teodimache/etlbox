@@ -1,4 +1,7 @@
 ﻿using ALE.ETLBox;
+using ALE.ETLBox.ConnectionManager;
+using ALE.ETLBox.ControlFlow;
+using ALE.ETLBox.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Threading.Tasks;

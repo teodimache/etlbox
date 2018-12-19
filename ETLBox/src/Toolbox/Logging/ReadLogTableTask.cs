@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ALE.ETLBox.ControlFlow;
+using System;
 using System.Collections.Generic;
 
-namespace ALE.ETLBox {
+namespace ALE.ETLBox.Logging {
     /// <summary>
     /// Reads data from the etl.Log table.
     /// </summary>
@@ -36,7 +37,7 @@ namespace ALE.ETLBox {
         public int? _loadProcessKey;
         public int? LoadProcessKey {
             get {
-                return _loadProcessKey ?? ControlFlow.CurrentLoadProcess?.LoadProcessKey;
+                return _loadProcessKey ?? ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey;
             }
             set {
                 _loadProcessKey = value;

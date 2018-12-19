@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ALE.ETLBox.ConnectionManager;
+using ALE.ETLBox.Helper;
+using ALE.ETLBox.ControlFlow;
+using System;
 
 namespace ALE.ETLBox {
     public abstract class GenericTask : ITask {
@@ -24,7 +27,7 @@ namespace ALE.ETLBox {
         internal virtual IDbConnectionManager DbConnectionManager {
             get {
                 if (ConnectionManager == null) 
-                    return (IDbConnectionManager)ControlFlow.CurrentDbConnection;
+                    return (IDbConnectionManager)ControlFlow.ControlFlow.CurrentDbConnection;
                else
                     return (IDbConnectionManager)ConnectionManager;
             }
@@ -33,10 +36,10 @@ namespace ALE.ETLBox {
         public bool _disableLogging;
         public virtual bool DisableLogging {
             get {
-                if (ControlFlow.DisableAllLogging == false)
+                if (ControlFlow.ControlFlow.DisableAllLogging == false)
                     return _disableLogging;
                 else
-                    return ControlFlow.DisableAllLogging;
+                    return ControlFlow.ControlFlow.DisableAllLogging;
             }
             set {
                 _disableLogging = value;
