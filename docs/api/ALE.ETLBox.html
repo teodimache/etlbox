@@ -77,146 +77,19 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="ALE.ETLBox.AbortLoadProcessTask.html">AbortLoadProcessTask</a></h4>
-      <section><p>Will set the table entry for current load process to aborted.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.AddFileGroupTask.html">AddFileGroupTask</a></h4>
-      <section><p>This task will add a filegroup to the database.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.AdomdConnectionManager.html">AdomdConnectionManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.CalculateDatabaseHashTask.html">CalculateDatabaseHashTask</a></h4>
-      <section><p>Calculates a hash value of the database. It will use only the schemas given in the property SchemaName for the calculation.
-The hash calcualtion is based only on the user tables in the schema.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CleanUpLogTask.html">CleanUpLogTask</a></h4>
-      <section><p>Removes log data older than the specified days to keep.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CleanUpSchemaTask.html">CleanUpSchemaTask</a></h4>
-      <section><p>Tries to remove all database objects from the given schema(s).</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.ConnectionString.html">ConnectionString</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.ControlFlow.html">ControlFlow</a></h4>
-      <section><p>Contains static information which affects all ETLBox tasks.
-Here you can set default connections string, disbale the logging for all processes or set the current stage used in your logging configuration.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CreateDatabaseTask.html">CreateDatabaseTask</a></h4>
-      <section><p>Will create a database if the database doesn't exists.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CreateIndexTask.html">CreateIndexTask</a></h4>
-      <section><p>Creates an index if the index doesn't exists.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CreateLogTablesTask.html">CreateLogTablesTask</a></h4>
-      <section><p>Will create two tables: etl.Log and etl.LoadProcess. Also it will create some procedure for starting, stopping and aborting load processes.
-If logging is configured via a NLog config, these tables contain log information from the tasks.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CreateSchemaTask.html">CreateSchemaTask</a></h4>
-      <section><p>Creates a schema if the schema doesn't exists.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CreateTableTask.html">CreateTableTask</a></h4>
-      <section><p>Creates a table. If the tables exists, this task won't change the table.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CRUDProcedureTask.html">CRUDProcedureTask</a></h4>
-      <section><p>Creates or updates a procedure.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CRUDViewTask.html">CRUDViewTask</a></h4>
-      <section><p>Creates or updates a view.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.CustomTask.html">CustomTask</a></h4>
-      <section><p>A custom task allows you to run your own code (defined as an Action object), with additionally logging in place. (TaskType: CUSTOM)</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.DataTypeConverter.html">DataTypeConverter</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.DbConnectionManager-2.html">DbConnectionManager&lt;Connection, Command&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.DbTask.html">DbTask</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.DropDatabaseTask.html">DropDatabaseTask</a></h4>
-      <section><p>Tries to drop a database if the database exists.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.DropTableTask.html">DropTableTask</a></h4>
-      <section><p>Drops a table if the table exists.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.EndLoadProcessTask.html">EndLoadProcessTask</a></h4>
-      <section><p>Will set the table entry for current load process to ended.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.ETLLogLayoutRenderer.html">ETLLogLayoutRenderer</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ExtensionFile.html">ExtensionFile</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ExtensionFileLoader.html">ExtensionFileLoader</a></h4>
       <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.FileConnectionManager.html">FileConnectionManager</a></h4>
-      <section></section>
       <h4><a class="xref" href="ALE.ETLBox.GenericTask.html">GenericTask</a></h4>
       <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.GetDatabaseListTask.html">GetDatabaseListTask</a></h4>
-      <section><p>Returns a list of all databases on the server (make sure to connect with the correct permissions).</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.GetLoadProcessAsJSONTask.html">GetLoadProcessAsJSONTask</a></h4>
-      <section><p>Returns the content of the etl.LoadProcess table as JSON.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.GetLogAsJSONTask.html">GetLogAsJSONTask</a></h4>
-      <section><p>Returns the content of the etl.Log table as a JSON string.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.HashHelper.html">HashHelper</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.LoadProcess.html">LoadProcess</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.LogEntry.html">LogEntry</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.LogHierarchyEntry.html">LogHierarchyEntry</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.LogTask.html">LogTask</a></h4>
-      <section><p>Used this task for custom log messages.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.Package.html">Package</a></h4>
-      <section><p>A package is a shortcute for custom task, but with the TaskType &quot;PACKAGE&quot;.</p>
-</section>
       <h4><a class="xref" href="ALE.ETLBox.ProcedureDefinition.html">ProcedureDefinition</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ProcedureParameter.html">ProcedureParameter</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.QueryParameter.html">QueryParameter</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.ReadLoadProcessTableTask.html">ReadLoadProcessTableTask</a></h4>
-      <section><p>Reads data from the etl.LoadProcessTable.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.ReadLogTableTask.html">ReadLogTableTask</a></h4>
-      <section><p>Reads data from the etl.Log table.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.RemoveLogTablesTask.html">RemoveLogTablesTask</a></h4>
-      <section><p>Removes the log tables and all the log procedures.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.RestoreDatabaseTask.html">RestoreDatabaseTask</a></h4>
-      <section><p>Restores a database from a backup.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.RowCountTask.html">RowCountTask</a></h4>
-      <section><p>Count the row in a table. This task can either use the normal COUNT(*) method (could take some time on big tables)<br>
-or query the sys.partition table to get the count  (much faster).</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.Sequence.html">Sequence</a></h4>
-      <section><p>A sequence is a shortcute for custom task, but with the TaskType &quot;SEQUENCE&quot;.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.Sequence-1.html">Sequence&lt;T&gt;</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.SMOConnectionManager.html">SMOConnectionManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.SqlConnectionManager.html">SqlConnectionManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.SqlHelper.html">SqlHelper</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.SqlHelperExtensions.html">SqlHelperExtensions</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.SqlTask.html">SqlTask</a></h4>
-      <section><p>Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data, ExecuteScalar for statements with one row and one column or
-ExecuteReader for SQL that returns a result set.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.StartLoadProcessTask.html">StartLoadProcessTask</a></h4>
-      <section><p>Starts a load process.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.StringExtension.html">StringExtension</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.TableColumn.html">TableColumn</a></h4>
       <section></section>
@@ -226,34 +99,11 @@ ExecuteReader for SQL that returns a result set.</p>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.TableDefinition.html">TableDefinition</a></h4>
       <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.TransferCompletedForLoadProcessTask.html">TransferCompletedForLoadProcessTask</a></h4>
-      <section><p>Sets the TransferCompletedDate for the current load process.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.TruncateTableTask.html">TruncateTableTask</a></h4>
-      <section><p>Truncates a table.</p>
-</section>
-      <h4><a class="xref" href="ALE.ETLBox.XmlaTask.html">XmlaTask</a></h4>
-      <section><p>This task can exeucte any XMLA.</p>
-</section>
     <h3 id="interfaces">Interfaces
   </h3>
-      <h4><a class="xref" href="ALE.ETLBox.IConnectionManager.html">IConnectionManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.ICubeConnectionManager.html">ICubeConnectionManager</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.IDbConnectionManager.html">IDbConnectionManager</a></h4>
-      <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ITableColumn.html">ITableColumn</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ITask.html">ITask</a></h4>
-      <section></section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="ALE.ETLBox.ReadOptions.html">ReadOptions</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.RecoveryModel.html">RecoveryModel</a></h4>
-      <section></section>
-      <h4><a class="xref" href="ALE.ETLBox.RowCountOptions.html">RowCountOptions</a></h4>
       <section></section>
 </article>
           </div>

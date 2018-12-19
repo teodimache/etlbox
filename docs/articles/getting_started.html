@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Introduction </title>
+    <title>Overview </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Introduction ">
+    <meta name="title" content="Overview ">
     <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,36 +67,41 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="introduction">Introduction</h1>
+<h1 id="overview">Overview</h1>
 
-<p>This introductional page will gives you an introduction to the basic concepts of ETLBox.</p>
-<h2 id="etlbox-components">ETLBox components</h2>
-<p>ETLBox is split into two main components: Control Flow Tasks and Data Flow Tasks. Some taks in the Control Flow part are for logging purposes only,
-they will be explained in detail in its own artice.</p>
-<h3 id="namespaces">Namespaces</h3>
+<p>Welcome to the getting started pages of ETLBox. This artice will give you a brief overview how ETLBox is organized.
+See the Table Of Content if you already know what you are looking for.</p>
+<h2 id="etlbox-components">ETLBox Components</h2>
+<p>ETLBox is split into two main components: <strong>Control Flow Tasks</strong> and <strong>Data Flow Tasks</strong>. Some tasks in the Control Flow part are for logging purposes only.</p>
+<h2 id="namespaces">Namespaces</h2>
 <p>Everything in ETLBox except the Data Flow tasks are within the namespace <code>ALE.ETLBox</code>.
 All Data Flow components (sometimes referred as components) can be found in the namespace <code>ALE.ETLBox.DataFlow</code>.</p>
-<h3 id="clean-coding">Clean coding</h3>
+<h2 id="clean-coding">Clean coding</h2>
 <p>At first glance, it can look like that some of the taks are not really adding big value to your project. But in accordance to clean coding,
-having written everything in a format which is easy-to-read and easy-to-understand, you are able to produce code that is easiert to maintain. Having your code &quot;clean&quot;
+having written everything in a format which is easy-to-read and easy-to-understand, you are able to produce code that is easier to maintain. Having your code &quot;clean&quot;
 allows you to focus on the important parts of your logic and not be distracted by code lines that your brain need to &quot;unravel&quot; every time you go over them.
-If you are interested in clean coding, you should read the &quot;bible&quot; on that topic, writte by Robert C. Martin: <a href="amazonlinkhere">Clean Code</a></p>
+If you are interested in clean coding, you should read the &quot;bible&quot; on that topic, written by
+<a href="http://www.amazon.de/gp/product/0132350882/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0132350882&amp;linkCode=as2&amp;tag=andreaslennar-21&amp;linkId=CAKVL4PO6YCRW53L">Robert C. Martin: Clean Code</a></p>
+<h3 id="books-written-by-me">Books written by me</h3>
+<p>If you are able to understand and read german, I recommend you mein own book:
+<a href="http://www.amazon.de/gp/product/3735736513/ref=as_li_tl?ie=UTF8&amp;camp=1638&amp;creative=6742&amp;creativeASIN=3735736513&amp;linkCode=as2&amp;tag=andreaslennar-21&amp;linkId=D6HR6S6YAQ65Q3S6">Mehr als Clean Code - Gedanken zur Softwareentwicklung</a></p>
 <h1 id="getting-started">Getting started</h1>
 <h2 id="overview-control-flow-tasks">Overview Control Flow Tasks</h2>
-<p>You will find an introduction into the Control Flow Tasks in the artice <a href="overview_controlflow.html">Overview Control Flow</a>.
+<p>You will find an introduction into the Control Flow Tasks <a href="overview_controlflow.html">in the article Overview Control Flow</a>.
 This will give you all the basics you need to understand how the Control Flow tasks are designed.
 If you want to dig deeper, please see the API reference for detailled information about the tasks.
-If you are in need of some examples of how to use Control Flow tasks, see the <a href="example_controlflow.html">Example Control Flow</a></p>
-<h2 id="overview-logging">Overview Logging</h2>
-<p>All Control Flow and Data Flow Tasks come with the ability to produce log.
-There are also some special task that enables you to create or query the log tables easily.
-To get an introduction into logging, please have a look at the <a href="overview_logging.html">Overview Logging</a>
-All logging capabilites are based on nlog. You can visit the <a href="nlog-project.org">NLog homepage</a> if you are interested in more details how to set up and configure NLog.</p>
+If you are in need of some examples of how to use Control Flow tasks, <a href="example_controlflow.html">see the Example Control Flow</a></p>
 <h2 id="overview-data-flow-tasks">Overview Data Flow Tasks</h2>
 <p>All components in the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline -
 where data is extracted from the source(s), asynchrounously transformed and then loaded into your destinations.
-Plese read the <a href="overview_dataflow.html">Overview Data Flow</a> to get started. There is also an <a href="https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow">Example Data Flow</a>.
+Plese read the <a href="overview_dataflow.html">Overview Data Flow</a> to get started. <a href="https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow">There is also an Example Data Flow</a>.
 To understand the dataflow components, you can also visit the API reference and look at the description and details of each dataflow component.</p>
+<h2 id="overview-logging">Overview Logging</h2>
+<p>All Control Flow and Data Flow Tasks come with the ability to produce log.
+There are also some special task that enables you to create or query the log tables easily.
+To get an introduction into logging, <a href="overview_logging.html">please have a look at the Overview Logging</a>
+To see a simple and working example of ETL code producing some log information, <a href="example_logging">see the Example for Logging</a>.
+All logging capabilites are based on nlog. You can <a href="nlog-project.org">visit the NLog homepage</a> if you are interested in more details how to set up and configure NLog.</p>
 <h1 id="api-reference">API Reference</h1>
 <p>If you are in doubt how to use a certain task, you can have a look at the API reference. All property and method names should be self explanatory and
 already give you a quite good understanding of the code.</p>
