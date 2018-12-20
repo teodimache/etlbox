@@ -129,7 +129,7 @@ dest.Wait();
 
 When ``dest.Wait()` returns, all data was read from the source and written into the database table. 
 
-# Predicates 
+## Predicates 
 
 Whenever you link components in a dataflow, you can add a filter expression to the link -
 this is called a predicate for the link.
