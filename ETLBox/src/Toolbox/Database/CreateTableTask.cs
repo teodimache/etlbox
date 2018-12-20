@@ -10,7 +10,7 @@ namespace ALE.ETLBox.ControlFlow {
     /// </summary>
     /// <example>
     /// <code>
-    /// CreateTableTask.Create("demo.table1", new List<TableColumn>() {
+    /// CreateTableTask.Create("demo.table1", new List&lt;TableColumn&gt;() {
     /// new TableColumn(name:"key", dataType:"int", allowNulls:false, isPrimaryKey:true, isIdentity:true),
     ///     new TableColumn(name:"value", dataType:"nvarchar(100)", allowNulls:true)
     /// });

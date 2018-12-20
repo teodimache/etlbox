@@ -10,7 +10,7 @@ namespace ALE.ETLBox.ControlFlow {
     /// </summary>
     /// <example>
     /// <code>
-    /// CalculateDatabaseHashTask.Calculate(new List<string>() { "demo", "dbo" });
+    /// CalculateDatabaseHashTask.Calculate(new List&lt;string&gt;() { "demo", "dbo" });
     /// </code>
     /// </example>
     public class CalculateDatabaseHashTask : GenericTask, ITask {
