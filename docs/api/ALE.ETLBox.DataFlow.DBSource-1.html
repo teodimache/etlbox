@@ -73,7 +73,9 @@
   
   <h1 id="ALE_ETLBox_DataFlow_DBSource_1" data-uid="ALE.ETLBox.DataFlow.DBSource`1" class="text-break">Class DBSource&lt;TOutput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A database source defines either a table or sql query that returns data from a database. While reading the result set or the table, data is asnychronously posted
+into the targets.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -143,10 +145,16 @@
     <tbody>
       <tr>
         <td><span class="parametername">TOutput</span></td>
-        <td></td>
+        <td><p>Type of data output.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_DBSource_1_examples"><strong>Examples</strong></h5>
+  <pre><code>DBSource&lt;MyRow> source = new DBSource&lt;MyRow>(&quot;dbo.table&quot;);
+source.LinkTo(dest); //Transformation or Destination
+source.Execute(); //Start the data flow</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

@@ -78,7 +78,9 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.BlockTransformation-1.html">BlockTransformation&lt;TInput&gt;</a></h4>
-      <section></section>
+      <section><p>A block transformation will wait for all data to be loaded into the buffer before the transformation is applied. After all data is in the buffer, the transformation
+is execution and the result posted into the targets.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.CSVSource.html">CSVSource</a></h4>
       <section><p>Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.</p>
 </section>
@@ -89,21 +91,29 @@
       <section><p>Define your own source block.</p>
 </section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.DBDestination-1.html">DBDestination&lt;TInput&gt;</a></h4>
-      <section></section>
+      <section><p>A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.DBSource-1.html">DBSource&lt;TOutput&gt;</a></h4>
-      <section></section>
+      <section><p>A database source defines either a table or sql query that returns data from a database. While reading the result set or the table, data is asnychronously posted
+into the targets.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.Lookup-3.html">Lookup&lt;TTransformationInput, TTransformationOutput, TSourceOutput&gt;</a></h4>
-      <section></section>
+      <section><p>A lookup task - data from the input can be enriched with data retrieved from the lookup source. The result is then posted into the output.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.MergeJoin-3.html">MergeJoin&lt;TInput1, TInput2, TOutput&gt;</a></h4>
-      <section></section>
+      <section><p>Will join data from the two inputs into one output - on a row by row base. Make sure both inputs are sorted or in the right order.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.MergeJoinTarget-1.html">MergeJoinTarget&lt;TInput&gt;</a></h4>
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.Multicast-1.html">Multicast&lt;TInput&gt;</a></h4>
-      <section></section>
+      <section><p>A multicast duplicates data from the input into two outputs.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.RowTransformation-2.html">RowTransformation&lt;TInput, TOutput&gt;</a></h4>
-      <section></section>
+      <section><p>Transforms the data row-by-row with the help of the transformation function.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.Sort-1.html">Sort&lt;TInput&gt;</a></h4>
-      <section></section>
+      <section><p>Sort the input with the given sort function.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.DataFlow.TypeInfo.html">TypeInfo</a></h4>
       <section></section>
     <h3 id="interfaces">Interfaces

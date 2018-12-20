@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_DataFlow_MergeJoin_3" data-uid="ALE.ETLBox.DataFlow.MergeJoin`3" class="text-break">Class MergeJoin&lt;TInput1, TInput2, TOutput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Will join data from the two inputs into one output - on a row by row base. Make sure both inputs are sorted or in the right order.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -142,18 +143,27 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput1</span></td>
-        <td></td>
+        <td><p>Type of data for input block one.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TInput2</span></td>
-        <td></td>
+        <td><p>Type of data for input block two.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TOutput</span></td>
-        <td></td>
+        <td><p>Type of output data.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_MergeJoin_3_examples"><strong>Examples</strong></h5>
+  <pre><code>MergeJoin&lt;MyDataRow1, MyDataRow2, MyDataRow1> join = new MergeJoin&lt;MyDataRow1, MyDataRow2, MyDataRow1>(Func&lt;TInput1, TInput2, TOutput> mergeJoinFunc);
+source1.LinkTo(join.Target1);;
+source2.LinkTo(join.Target2);;
+join.LinkTo(dest);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

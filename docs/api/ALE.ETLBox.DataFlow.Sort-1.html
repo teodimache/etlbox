@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_DataFlow_Sort_1" data-uid="ALE.ETLBox.DataFlow.Sort`1" class="text-break">Class Sort&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Sort the input with the given sort function.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -143,10 +144,17 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td></td>
+        <td><p>Type of input data (equal type of output data).</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_Sort_1_examples"><strong>Examples</strong></h5>
+  <pre><code>Comparison&lt;MyDataRow> comp = new Comparison&lt;MyDataRow>(
+    (x, y) => y.Value2 - x.Value2
+);
+Sort&lt;MyDataRow> block = new Sort&lt;MyDataRow>(comp);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

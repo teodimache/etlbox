@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_DataFlow_Lookup_3" data-uid="ALE.ETLBox.DataFlow.Lookup`3" class="text-break">Class Lookup&lt;TTransformationInput, TTransformationOutput, TSourceOutput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A lookup task - data from the input can be enriched with data retrieved from the lookup source. The result is then posted into the output.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -144,18 +145,26 @@
     <tbody>
       <tr>
         <td><span class="parametername">TTransformationInput</span></td>
-        <td></td>
+        <td><p>Type of data input</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TTransformationOutput</span></td>
-        <td></td>
+        <td><p>Type of data output</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TSourceOutput</span></td>
-        <td></td>
+        <td><p>Type of lookup data</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_Lookup_3_examples"><strong>Examples</strong></h5>
+  <pre><code>Lookup&lt;MyInputDataRow, MyOutputDataRow, MyLookupRow> lookup = new Lookup&lt;MyInputDataRow, MyOutputDataRow,MyLookupRow>(                
+    testClass.TestTransformationFunc, lookupSource, testClass.LookupData                
+);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

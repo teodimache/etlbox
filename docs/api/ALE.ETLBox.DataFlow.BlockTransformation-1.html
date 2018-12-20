@@ -73,7 +73,9 @@
   
   <h1 id="ALE_ETLBox_DataFlow_BlockTransformation_1" data-uid="ALE.ETLBox.DataFlow.BlockTransformation`1" class="text-break">Class BlockTransformation&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A block transformation will wait for all data to be loaded into the buffer before the transformation is applied. After all data is in the buffer, the transformation
+is execution and the result posted into the targets.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -143,10 +145,19 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td></td>
+        <td><p>Type of data input (equal type of data output)</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_BlockTransformation_1_examples"><strong>Examples</strong></h5>
+  <pre><code>    
+BlockTransformation&lt;MyDataRow> block = new BlockTransformation&lt;MyDataRow>(
+    inputData => {
+        return inputData.Select( row => new MyDataRow() { Value1 = row.Value1, Value2 = 3 }).ToList();
+    });
+block.LinkTo(dest);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

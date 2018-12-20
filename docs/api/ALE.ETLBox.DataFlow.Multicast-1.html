@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_DataFlow_Multicast_1" data-uid="ALE.ETLBox.DataFlow.Multicast`1" class="text-break">Class Multicast&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A multicast duplicates data from the input into two outputs.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -144,10 +145,16 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td></td>
+        <td><p>Type of input data.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_Multicast_1_examples"><strong>Examples</strong></h5>
+  <pre><code>Multicast&lt;MyDataRow> multicast = new Multicast&lt;MyDataRow>();
+multicast.LinkTo(dest1);
+multicast.LinkTo(dest2);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

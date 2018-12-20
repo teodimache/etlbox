@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_DataFlow_RowTransformation_2" data-uid="ALE.ETLBox.DataFlow.RowTransformation`2" class="text-break">Class RowTransformation&lt;TInput, TOutput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Transforms the data row-by-row with the help of the transformation function.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -144,14 +145,23 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td></td>
+        <td><p>Type of input data.</p>
+</td>
       </tr>
       <tr>
         <td><span class="parametername">TOutput</span></td>
-        <td></td>
+        <td><p>Type of output data.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_RowTransformation_2_examples"><strong>Examples</strong></h5>
+  <pre><code>RowTransformation&lt;string[], MyDataRow> trans = new RowTransformation&lt;string[], MyDataRow>(
+    csvdata => {
+      return new MyDataRow() { Value1 = csvdata[0], Value2 = int.Parse(csvdata[1]) };
+});    
+trans.LinkTo(dest);    </code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">

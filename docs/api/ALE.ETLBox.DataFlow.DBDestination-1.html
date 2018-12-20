@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_DataFlow_DBDestination_1" data-uid="ALE.ETLBox.DataFlow.DBDestination`1" class="text-break">Class DBDestination&lt;TInput&gt;
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -143,10 +144,15 @@
     <tbody>
       <tr>
         <td><span class="parametername">TInput</span></td>
-        <td></td>
+        <td><p>Type of data input.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h5 id="ALE_ETLBox_DataFlow_DBDestination_1_examples"><strong>Examples</strong></h5>
+  <pre><code>DBDestination&lt;MyRow> dest = new DBDestination&lt;MyRow>(&quot;dbo.table&quot;);
+dest.Wait(); //Wait for all data to arrive</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
