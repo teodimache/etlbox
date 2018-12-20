@@ -2,6 +2,11 @@
     /// <summary>
     /// Tries to remove all database objects from the given schema(s).
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CleanUpSchemaTask.CleanUp("demo");
+    /// </code>
+    /// </example>
     public class CleanUpSchemaTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CLEANSCHEMA";

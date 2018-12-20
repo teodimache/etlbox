@@ -2,6 +2,11 @@
     /// <summary>
     /// Tries to drop a database if the database exists.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// DropDatabaseTask.Delete("DemoDB");
+    /// </code>
+    /// </example>
     public class DropDatabaseTask : GenericTask, ITask
     {
         /* ITask Interface */

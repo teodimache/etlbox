@@ -5,6 +5,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates an index if the index doesn't exists.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CreateIndexTask.Create("indexname","tablename", indexColumns)
+    /// </code>
+    /// </example>
     public class CreateIndexTask: GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATEINDEX";

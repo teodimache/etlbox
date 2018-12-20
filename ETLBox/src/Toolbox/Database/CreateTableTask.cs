@@ -8,6 +8,14 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates a table. If the tables exists, this task won't change the table.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CreateTableTask.Create("demo.table1", new List<TableColumn>() {
+    /// new TableColumn(name:"key", dataType:"int", allowNulls:false, isPrimaryKey:true, isIdentity:true),
+    ///     new TableColumn(name:"value", dataType:"nvarchar(100)", allowNulls:true)
+    /// });
+    /// </code>
+    /// </example>
     public class CreateTableTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATETABLE";

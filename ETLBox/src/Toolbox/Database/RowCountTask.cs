@@ -6,6 +6,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// Count the row in a table. This task can either use the normal COUNT(*) method (could take some time on big tables)    
     /// or query the sys.partition table to get the count  (much faster).    
     /// </summary>
+    /// <example>
+    /// <code>
+    /// int count = RowCountTask.Count("demo.table1").Value;
+    /// </code>
+    /// </example>
     public class RowCountTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "ROWCOUNT";

@@ -5,6 +5,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Returns a list of all databases on the server (make sure to connect with the correct permissions).
     /// </summary>
+    /// <example>
+    /// <code>
+    /// GetDatabaseListTask.List();
+    /// </code>
+    /// </example>
     public class GetDatabaseListTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "GETDBLIST";

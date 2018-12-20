@@ -8,6 +8,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// Calculates a hash value of the database. It will use only the schemas given in the property SchemaName for the calculation.
     /// The hash calcualtion is based only on the user tables in the schema.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CalculateDatabaseHashTask.Calculate(new List<string>() { "demo", "dbo" });
+    /// </code>
+    /// </example>
     public class CalculateDatabaseHashTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CALCDBHASH";

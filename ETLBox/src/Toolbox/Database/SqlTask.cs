@@ -8,6 +8,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// Executes any sql on the database. Use ExecuteNonQuery for SQL statements returning no data, ExecuteScalar for statements with one row and one column or
     /// ExecuteReader for SQL that returns a result set. 
     /// </summary>
+    /// <example>
+    /// <code>
+    /// SqlTask.ExecuteNonQuery("Description","insert into demo.table1 select * from demo.table2");
+    /// </code>
+    /// </example>
     public class SqlTask : DbTask {
         public override string TaskType { get; set; } = "SQL";
         public override string TaskName { get; set; } = "Run some sql";

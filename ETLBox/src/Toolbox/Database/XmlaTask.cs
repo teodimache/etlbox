@@ -7,6 +7,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// This task can exeucte any XMLA.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// XmlaTask.ExecuteNonQuery("Log description here","Xmla goes here...")
+    /// </code>
+    /// </example>
     public class XmlaTask : DbTask {
         public override string TaskType { get; set; } = "XMLA";
         public override string TaskName { get; set; } = "Run some xmla";

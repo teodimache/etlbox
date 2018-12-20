@@ -4,6 +4,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Will create a database if the database doesn't exists.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CreateDatabaseTask.Create("DemoDB");
+    /// </code>
+    /// </example>
     public class CreateDatabaseTask : GenericTask, ITask
     {
         /* ITask Interface */

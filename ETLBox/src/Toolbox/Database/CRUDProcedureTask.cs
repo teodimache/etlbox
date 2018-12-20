@@ -6,6 +6,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// Creates or updates a procedure.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CRUDProcedureTask.CreateOrAlter("demo.proc1", "select 1 as test");
+    /// </code>
+    /// </example>
     public class CRUDProcedureTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CRUDPROC";

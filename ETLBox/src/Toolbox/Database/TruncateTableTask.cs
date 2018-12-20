@@ -2,6 +2,11 @@
     /// <summary>
     /// Truncates a table.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// TruncateTableTask.Truncate("demo.table1");
+    /// </code>
+    /// </example>
     public class TruncateTableTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "TRUNCATE";

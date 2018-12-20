@@ -4,6 +4,11 @@ namespace ALE.ETLBox.ControlFlow {
     /// <summary>
     /// This task will add a filegroup to the database.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// AddFileGroupTask.AddFileGroup("FGName", "DemoDB", "200MB", "10MB", isDefaultFileGroup: true);
+    /// </code>
+    /// </example>
     public class AddFileGroupTask : GenericTask, ITask {
         /* ITask Interface */
         public override string TaskType { get; set; } = "CREATEFG";

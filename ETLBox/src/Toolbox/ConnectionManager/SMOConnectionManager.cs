@@ -11,6 +11,7 @@ namespace ALE.ETLBox.ConnectionManager {
     /// <example>
     /// <code>
     /// ControlFlow.CurrentDbConnection = new SMOConnectionManager(new ConnectionString("Data Source=.;"));
+    /// SqlTask.ExecuteNonQuery("sql with go keyword", @"insert into demo.table1 (value) select '####'; go 2");
     /// </code>
     /// </example>
     public class SMOConnectionManager : IDbConnectionManager, IDisposable {
