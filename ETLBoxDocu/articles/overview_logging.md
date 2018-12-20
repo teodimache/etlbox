@@ -75,8 +75,7 @@ You can use the task `CreateLogTables`. This task will create two tables:
 It will also create some stored procedure to access this tables. This can be useful if you want
 to log into these table in your sql code or stored procedures.
 
-[!Note]
-<Don't forget the setup the connection for the control flow.>
+**Note**: Don't forget the setup the connection for the control flow.
 
 ```C#
 CreateLogTablesTask.CreateLog();
