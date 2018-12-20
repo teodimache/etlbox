@@ -83,11 +83,11 @@ Source data will look like this:
 
 ```csv
 OrderNumber;OrderItem;OrderAmount;CustomerName
-4711;Yellow Shoes;30.00€;Sandra Kettler
-4712;Green T-Shirt;14.99€;Nick Thiemann
-4713;Blue Jeans;29.99€;Zoe Rehbein
-4714;White Jeans;29.99€;Margit Gries
-4807;Green Shoes;32.00€;Margit Gries
+4711;Yellow Shoes;30.00&euro;;Sandra Kettler
+4712;Green T-Shirt;14.99&euro;;Nick Thiemann
+4713;Blue Jeans;29.99&euro;;Zoe Rehbein
+4714;White Jeans;29.99&euro;;Margit Gries
+4807;Green Shoes;32.00&euro;;Margit Gries
 ```
 ...
 

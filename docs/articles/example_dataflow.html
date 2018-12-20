@@ -137,11 +137,11 @@ sourceOrderData.Delimiter = &quot;;&quot;;
 </code></pre>
 <p>Source data will look like this:</p>
 <pre><code class="lang-csv">OrderNumber;OrderItem;OrderAmount;CustomerName
-4711;Yellow Shoes;30.00�;Sandra Kettler
-4712;Green T-Shirt;14.99�;Nick Thiemann
-4713;Blue Jeans;29.99�;Zoe Rehbein
-4714;White Jeans;29.99�;Margit Gries
-4807;Green Shoes;32.00�;Margit Gries
+4711;Yellow Shoes;30.00&amp;euro;;Sandra Kettler
+4712;Green T-Shirt;14.99&amp;euro;;Nick Thiemann
+4713;Blue Jeans;29.99&amp;euro;;Zoe Rehbein
+4714;White Jeans;29.99&amp;euro;;Margit Gries
+4807;Green Shoes;32.00&amp;euro;;Margit Gries
 </code></pre>
 <p>...</p>
 <p>We add a row transformation - and connect it with source. Data will be read from the source and moved into the row transformation. A row transformation will go through each row and modificates it by a given function. Furthermore, a row transformation can change the object type of the input into something different - we use this to transform our string array into our POCO.</p>
