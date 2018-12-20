@@ -12,7 +12,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <typeparam name="TSourceOutput">Type of lookup data</typeparam>
     /// <example>
     /// <code>
-    /// Lookup<MyInputDataRow, MyOutputDataRow, MyLookupRow> lookup = new Lookup<MyInputDataRow, MyOutputDataRow,MyLookupRow>(                
+    /// Lookup&lt;MyInputDataRow, MyOutputDataRow, MyLookupRow&gt; lookup = new Lookup&lt;MyInputDataRow, MyOutputDataRow,MyLookupRow&gt;(                
     ///     testClass.TestTransformationFunc, lookupSource, testClass.LookupData                
     /// );
     /// </code>

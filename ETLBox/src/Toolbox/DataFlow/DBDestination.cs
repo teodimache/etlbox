@@ -11,7 +11,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <typeparam name="TInput">Type of data input.</typeparam>
     /// <example>
     /// <code>
-    /// DBDestination<MyRow> dest = new DBDestination<MyRow>("dbo.table");
+    /// DBDestination&lt;MyRow&gt; dest = new DBDestination&lt;MyRow&gt;("dbo.table");
     /// dest.Wait(); //Wait for all data to arrive
     /// </code>
     /// </example>

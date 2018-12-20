@@ -11,7 +11,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <typeparam name="TOutput">Type of output data.</typeparam>
     /// <example>
     /// <code>
-    /// MergeJoin<MyDataRow1, MyDataRow2, MyDataRow1> join = new MergeJoin<MyDataRow1, MyDataRow2, MyDataRow1>(Func<TInput1, TInput2, TOutput> mergeJoinFunc);
+    /// MergeJoin&lt;MyDataRow1, MyDataRow2, MyDataRow1&gt; join = new MergeJoin&lt;MyDataRow1, MyDataRow2, MyDataRow1&gt;(Func&lt;TInput1, TInput2, TOutput&gt; mergeJoinFunc);
     /// source1.LinkTo(join.Target1);;
     /// source2.LinkTo(join.Target2);;
     /// join.LinkTo(dest);

@@ -10,7 +10,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <typeparam name="TOutput">Type of output data.</typeparam>
     /// <example>
     /// <code>
-    /// RowTransformation<string[], MyDataRow> trans = new RowTransformation<string[], MyDataRow>(
+    /// RowTransformation&lt;string[], MyDataRow&gt; trans = new RowTransformation&lt;string[], MyDataRow&gt;(
     ///     csvdata => {
     ///       return new MyDataRow() { Value1 = csvdata[0], Value2 = int.Parse(csvdata[1]) };
     /// });    

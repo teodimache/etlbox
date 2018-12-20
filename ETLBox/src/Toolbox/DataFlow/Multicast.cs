@@ -10,7 +10,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <typeparam name="TInput">Type of input data.</typeparam>
     /// <example>
     /// <code>
-    /// Multicast<MyDataRow> multicast = new Multicast<MyDataRow>();
+    /// Multicast&lt;MyDataRow&gt; multicast = new Multicast&lt;MyDataRow&gt;();
     /// multicast.LinkTo(dest1);
     /// multicast.LinkTo(dest2);
     /// </code>

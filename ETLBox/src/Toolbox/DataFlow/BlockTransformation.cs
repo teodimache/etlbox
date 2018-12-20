@@ -11,7 +11,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <typeparam name="TInput">Type of data input (equal type of data output)</typeparam>
     /// <example>
     /// <code>    
-    /// BlockTransformation<MyDataRow> block = new BlockTransformation<MyDataRow>(
+    /// BlockTransformation&lt;MyDataRow&gt; block = new BlockTransformation&lt;MyDataRow&gt;(
     ///     inputData => {
     ///         return inputData.Select( row => new MyDataRow() { Value1 = row.Value1, Value2 = 3 }).ToList();
     ///     });
