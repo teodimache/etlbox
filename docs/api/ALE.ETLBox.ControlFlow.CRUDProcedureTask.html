@@ -131,6 +131,9 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class CRUDProcedureTask : GenericTask, ITask</code></pre>
   </div>
+  <h5 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_examples"><strong>Examples</strong></h5>
+  <pre><code>CRUDProcedureTask.CreateOrAlter(&quot;demo.proc1&quot;, &quot;select 1 as test&quot;);</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -138,7 +141,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L33">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L38">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor">CRUDProcedureTask()</h4>
@@ -153,7 +156,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_ALE_ETLBox_ProcedureDefinition_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.%23ctor(ALE.ETLBox.ProcedureDefinition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L45">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L50">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_ALE_ETLBox_ProcedureDefinition_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor(ALE.ETLBox.ProcedureDefinition)">CRUDProcedureTask(ProcedureDefinition)</h4>
@@ -185,7 +188,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_System_String_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.%23ctor(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L36">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L41">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_System_String_System_String_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor(System.String,System.String)">CRUDProcedureTask(String, String)</h4>
@@ -222,7 +225,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_System_String_System_String_System_Collections_Generic_IList_ALE_ETLBox_ProcedureParameter__.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.%23ctor(System.String%2CSystem.String%2CSystem.Collections.Generic.IList%7BALE.ETLBox.ProcedureParameter%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L41">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L46">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask__ctor_System_String_System_String_System_Collections_Generic_IList_ALE_ETLBox_ProcedureParameter__" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.#ctor(System.String,System.String,System.Collections.Generic.IList{ALE.ETLBox.ProcedureParameter})">CRUDProcedureTask(String, String, IList&lt;ProcedureParameter&gt;)</h4>
@@ -266,7 +269,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureDefinition.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L20">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L25">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureDefinition_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureDefinition*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureDefinition" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureDefinition">ProcedureDefinition</h4>
@@ -296,7 +299,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureName.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L19">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L24">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureName_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureName*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureName" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureName">ProcedureName</h4>
@@ -326,7 +329,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureParameters.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureParameters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L21">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L26">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureParameters_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureParameters*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_ProcedureParameters" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.ProcedureParameters">ProcedureParameters</h4>
@@ -356,7 +359,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_Sql.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.Sql%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L22">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L27">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_Sql_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.Sql*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_Sql" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.Sql">Sql</h4>
@@ -386,7 +389,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_TaskName.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.TaskName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L12">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L17">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_TaskName_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.TaskName*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_TaskName" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.TaskName">TaskName</h4>
@@ -418,7 +421,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_TaskType.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.TaskType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L11">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L16">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_TaskType_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.TaskType*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_TaskType" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.TaskType">TaskType</h4>
@@ -452,7 +455,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_ALE_ETLBox_ProcedureDefinition_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter(ALE.ETLBox.ProcedureDefinition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L55">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L60">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_ALE_ETLBox_ProcedureDefinition_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter(ALE.ETLBox.ProcedureDefinition)">CreateOrAlter(ProcedureDefinition)</h4>
@@ -484,7 +487,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_System_String_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L51">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L56">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_System_String_System_String_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter(System.String,System.String)">CreateOrAlter(String, String)</h4>
@@ -521,7 +524,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_System_String_System_String_System_Collections_Generic_IList_ALE_ETLBox_ProcedureParameter__.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter(System.String%2CSystem.String%2CSystem.Collections.Generic.IList%7BALE.ETLBox.ProcedureParameter%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L52">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L57">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_CreateOrAlter_System_String_System_String_System_Collections_Generic_IList_ALE_ETLBox_ProcedureParameter__" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.CreateOrAlter(System.String,System.String,System.Collections.Generic.IList{ALE.ETLBox.ProcedureParameter})">CreateOrAlter(String, String, IList&lt;ProcedureParameter&gt;)</h4>
@@ -563,7 +566,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask_Execute.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask.Execute%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L13">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L18">View Source</a>
   </span>
   <a id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_Execute_" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.Execute*"></a>
   <h4 id="ALE_ETLBox_ControlFlow_CRUDProcedureTask_Execute" data-uid="ALE.ETLBox.ControlFlow.CRUDProcedureTask.Execute">Execute()</h4>
@@ -590,7 +593,7 @@
                     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ControlFlow_CRUDProcedureTask.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ControlFlow.CRUDProcedureTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/Database/CRUDProcedureTask.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
