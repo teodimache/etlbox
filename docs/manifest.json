@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html",
-          "hash": "ekm8fDvTWpzhfgyUUwRmow=="
+          "hash": "Myp5PQTEK2+vcrugkzh4yQ=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.ConnectionManager.FileConnectionManager.html",
-          "hash": "mAp/n6Esc4p2oiljdlMnyg=="
+          "hash": "D+T/hgtUvTEihFdVumRE/g=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html",
-          "hash": "tO0YhPDitf0RXJgI8HCkKw=="
+          "hash": "bYtTa5+pCkF4aBWqn8MIkA=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html",
-          "hash": "B6LEo0L2cM/zVsC0bxSLzg=="
+          "hash": "WyuMQakWfG+KU+TTYmnj4Q=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.ConnectionManager.html",
-          "hash": "olje6gVg/NO8ETPVsbJDEg=="
+          "hash": "i0QxXzH9s9y47THMWrTwWg=="
         }
       },
       "is_incremental": false,
@@ -441,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.BlockTransformation-1.html",
-          "hash": "zSr2vU+3yelBYZVAbspAag=="
+          "hash": "JYk1HvvUxVQGYwYTHGNdvQ=="
         }
       },
       "is_incremental": false,
@@ -453,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.CSVSource.html",
-          "hash": "nQpY/flgsnrAjAmfwXRHXw=="
+          "hash": "HrcMWcXlmr3RANF/ZQD4aw=="
         }
       },
       "is_incremental": false,
@@ -465,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.CustomDestination-1.html",
-          "hash": "c95t4qeGrJ88VlaTx86eVQ=="
+          "hash": "YDxSHekCwe7PvrSsRQR7Lw=="
         }
       },
       "is_incremental": false,
@@ -477,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.CustomSource-1.html",
-          "hash": "A5TgzSmF/9ZSvOuDF6SdTQ=="
+          "hash": "6SM708/TfFqsC81LYymUcA=="
         }
       },
       "is_incremental": false,
@@ -489,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.DBDestination-1.html",
-          "hash": "l6GTvCXO6y4UFH/AxC3xLA=="
+          "hash": "W0b5UUJ+DOnHAvHc9dh3Mg=="
         }
       },
       "is_incremental": false,
@@ -501,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.DBSource-1.html",
-          "hash": "Nh4uOh0/qVmM5RXr9m7FiA=="
+          "hash": "TuEHMwgOiA5vmRWmIuxEBg=="
         }
       },
       "is_incremental": false,
@@ -573,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.Lookup-3.html",
-          "hash": "VDrjl1Q+vPwoF2Dm5puiLw=="
+          "hash": "8DYw0C3f5N0JFWXcNzTX7A=="
         }
       },
       "is_incremental": false,
@@ -585,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.MergeJoin-3.html",
-          "hash": "4Qhe9rTdrNG/x5W0yZzTjw=="
+          "hash": "V8tDEsnwJrUFAS4qei0HaA=="
         }
       },
       "is_incremental": false,
@@ -597,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.MergeJoinTarget-1.html",
-          "hash": "6LKXxWXQS7vD7Y/ucHr2Qw=="
+          "hash": "9IjuX11P27VC02heIZu8ow=="
         }
       },
       "is_incremental": false,
@@ -609,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.Multicast-1.html",
-          "hash": "7l2YFlTpkIBPMPXxWEgj4w=="
+          "hash": "ncpZh2t7E6j3x22Hp/a3rg=="
         }
       },
       "is_incremental": false,
@@ -621,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.RowTransformation-2.html",
-          "hash": "cX/RkViul3DgbhOhNGMOXg=="
+          "hash": "0cc0SxAPL383BgxhdDqkKg=="
         }
       },
       "is_incremental": false,
@@ -633,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.Sort-1.html",
-          "hash": "th4TojoTBmNJUuj48rIH8g=="
+          "hash": "tkZ88+Hd91Z3qkDw1saYDw=="
         }
       },
       "is_incremental": false,
@@ -657,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/ALE.ETLBox.DataFlow.html",
-          "hash": "/OxDEZACcOqRkolwW+p2Gg=="
+          "hash": "Aq1dum55z65edT+iQIP1Rg=="
         }
       },
       "is_incremental": false,
@@ -1232,6 +1232,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/logo_bw.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo_bw.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/logo_bw.png",
       "output": {
         "resource": {
@@ -1318,17 +1329,17 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "TocDocumentProcessor": {

@@ -73,7 +73,8 @@
   
   <h1 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager" class="text-break">Class AdomdConnectionManager
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Connection manager for Adomd connection to a sql server analysis server.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -153,6 +154,9 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class AdomdConnectionManager : DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;, IDbConnectionManager, IConnectionManager, IDisposable</code></pre>
   </div>
+  <h5 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_examples"><strong>Examples</strong></h5>
+  <pre><code>ControlFlow.CurrentDbConnection = new AdmoConnectionManager(new ConnectionString(&quot;..connection string..&quot;));</code></pre>
+
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
@@ -160,7 +164,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager__ctor.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L8">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L16">View Source</a>
   </span>
   <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager__ctor_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.#ctor*"></a>
   <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager__ctor" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.#ctor">AdomdConnectionManager()</h4>
@@ -175,7 +179,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager__ctor_ALE_ETLBox_ConnectionString_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.%23ctor(ALE.ETLBox.ConnectionString)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L10">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L18">View Source</a>
   </span>
   <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager__ctor_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.#ctor*"></a>
   <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager__ctor_ALE_ETLBox_ConnectionString_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.#ctor(ALE.ETLBox.ConnectionString)">AdomdConnectionManager(ConnectionString)</h4>
@@ -209,7 +213,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader%2CSystem.Data.IColumnMappingCollection%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L12">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L20">View Source</a>
   </span>
   <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert*"></a>
   <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)">BulkInsert(IDataReader, IColumnMappingCollection, String)</h4>
@@ -253,7 +257,7 @@
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_Clone.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L16">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L24">View Source</a>
   </span>
   <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_Clone_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.Clone*"></a>
   <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_Clone" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.Clone">Clone()</h4>
@@ -301,7 +305,7 @@
                     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
