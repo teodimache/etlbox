@@ -27,7 +27,7 @@ Microsoft
 * System.Data.Common 
 * System.Data.SqlClient
 * System.Threading.Tasks.Dataflow 
-* Unofficial.Microsoft.AnalysisServices.AdomdClientNetCore 
+* Unofficial.Microsoft. AnalysisServices. AdomdClientNetCore 
 * Docfx
 
 Other
