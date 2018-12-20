@@ -6,8 +6,17 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Transforms the data row-by-row with the help of the transformation function.
     /// </summary>
-    /// <typeparam name="TInput">Input block.</typeparam>
-    /// <typeparam name="TOutput">Output block.</typeparam>
+    /// <typeparam name="TInput">Type of input data.</typeparam>
+    /// <typeparam name="TOutput">Type of output data.</typeparam>
+    /// <example>
+    /// <code>
+    /// RowTransformation<string[], MyDataRow> trans = new RowTransformation<string[], MyDataRow>(
+    ///     csvdata => {
+    ///       return new MyDataRow() { Value1 = csvdata[0], Value2 = int.Parse(csvdata[1]) };
+    /// });    
+    /// trans.LinkTo(dest);    
+    /// </code>
+    /// </example>
     public class RowTransformation<TInput, TOutput> : GenericTask, ITask, IDataFlowTransformation<TInput, TOutput> {        
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_ROWTRANSFORMATION";

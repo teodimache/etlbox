@@ -5,7 +5,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Define your own source block.
     /// </summary>
-    /// <typeparam name="TOutput"></typeparam>
+    /// <typeparam name="TOutput">Type of data output.</typeparam>
     public class CustomSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_CSVSOURCE";

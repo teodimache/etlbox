@@ -7,7 +7,15 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Sort the input with the given sort function. 
     /// </summary>
-    /// <typeparam name="TInput">Input block type.</typeparam>
+    /// <typeparam name="TInput">Type of input data (equal type of output data).</typeparam>
+    /// <example>
+    /// <code>
+    /// Comparison<MyDataRow> comp = new Comparison<MyDataRow>(
+    ///     (x, y) => y.Value2 - x.Value2
+    /// );
+    /// Sort<MyDataRow> block = new Sort<MyDataRow>(comp);
+    /// </code>
+    /// </example>
     public class Sort<TInput> : GenericTask, ITask, IDataFlowLinkTarget<TInput>, IDataFlowLinkSource<TInput> {
         
 

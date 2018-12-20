@@ -7,8 +7,15 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A database source defines either a table or sql query that returns data from a database. While reading the result set or the table, data is asnychronously posted
     /// into the targets.
-    /// </summary>
-    /// <typeparam name="TOutput"></typeparam>
+    /// </summary>    
+    /// <typeparam name="TOutput">Type of data output.</typeparam>
+    /// <example>
+    /// <code>
+    /// DBSource<MyRow> source = new DBSource<MyRow>("dbo.table");
+    /// source.LinkTo(dest); //Transformation or Destination
+    /// source.Execute(); //Start the data flow
+    /// </code>
+    /// </example>
     public class DBSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> where TOutput : new() {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_DBSOURCE";

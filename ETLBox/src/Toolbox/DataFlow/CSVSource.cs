@@ -10,6 +10,13 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
     /// </summary>
+    /// <example>
+    /// <code>
+    /// CSVSource source = new CSVSource("demodata.csv");
+    /// source.LinkTo(dest); //Link to transformation or destination
+    /// source.Execute(); //Start the dataflow
+    /// </code>
+    /// </example>
     public class CSVSource : GenericTask, ITask, IDataFlowSource<string[]> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_CSVSOURCE";

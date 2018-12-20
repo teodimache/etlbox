@@ -3,6 +3,14 @@ using System;
 using System.Data;
 
 namespace ALE.ETLBox.ConnectionManager {
+    /// <summary>
+    /// Connection manager for Adomd connection to a sql server analysis server.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// ControlFlow.CurrentDbConnection = new AdmoConnectionManager(new ConnectionString("..connection string.."));
+    /// </code>
+    /// </example>
     public class AdomdConnectionManager : DbConnectionManager<AdomdConnection, AdomdCommand> {
 
         public AdomdConnectionManager() : base() { }

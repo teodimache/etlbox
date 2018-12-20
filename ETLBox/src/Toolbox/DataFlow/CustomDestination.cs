@@ -5,7 +5,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Define your own destination block.
     /// </summary>
-    /// <typeparam name="TInput"></typeparam>
+    /// <typeparam name="TInput">Type of datasoure input.</typeparam>
     public class CustomDestination<TInput> : GenericTask, ITask, IDataFlowDestination<TInput> {       
 
         /* ITask Interface */

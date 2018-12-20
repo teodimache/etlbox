@@ -7,9 +7,16 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A lookup task - data from the input can be enriched with data retrieved from the lookup source. The result is then posted into the output.
     /// </summary>
-    /// <typeparam name="TTransformationInput">Input block</typeparam>
-    /// <typeparam name="TTransformationOutput">Output block</typeparam>
-    /// <typeparam name="TSourceOutput">Lookup source</typeparam>
+    /// <typeparam name="TTransformationInput">Type of data input</typeparam>
+    /// <typeparam name="TTransformationOutput">Type of data output</typeparam>
+    /// <typeparam name="TSourceOutput">Type of lookup data</typeparam>
+    /// <example>
+    /// <code>
+    /// Lookup<MyInputDataRow, MyOutputDataRow, MyLookupRow> lookup = new Lookup<MyInputDataRow, MyOutputDataRow,MyLookupRow>(                
+    ///     testClass.TestTransformationFunc, lookupSource, testClass.LookupData                
+    /// );
+    /// </code>
+    /// </example>
     public class Lookup<TTransformationInput, TTransformationOutput, TSourceOutput>
         : GenericTask, ITask, IDataFlowTransformation<TTransformationInput, TTransformationOutput>
         where TSourceOutput : new() {

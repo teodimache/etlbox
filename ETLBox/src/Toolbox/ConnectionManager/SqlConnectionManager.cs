@@ -2,6 +2,14 @@
 using System.Data.SqlClient;
 
 namespace ALE.ETLBox.ConnectionManager {
+    /// <summary>
+    /// Connection manager of a classic ADO.NET connection to a sql server.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;"));
+    /// </code>
+    /// </example>
     public class SqlConnectionManager : DbConnectionManager<SqlConnection, SqlCommand> {
 
         public SqlConnectionManager() :base(){ } 

@@ -8,7 +8,13 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).
     /// </summary>
-    /// <typeparam name="TInput"></typeparam>
+    /// <typeparam name="TInput">Type of data input.</typeparam>
+    /// <example>
+    /// <code>
+    /// DBDestination<MyRow> dest = new DBDestination<MyRow>("dbo.table");
+    /// dest.Wait(); //Wait for all data to arrive
+    /// </code>
+    /// </example>
     public class DBDestination<TInput> : GenericTask, ITask, IDataFlowDestination<TInput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_DBDEST";

@@ -6,9 +6,17 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Will join data from the two inputs into one output - on a row by row base. Make sure both inputs are sorted or in the right order.
     /// </summary>
-    /// <typeparam name="TInput1">Input block one.</typeparam>
-    /// <typeparam name="TInput2">Input block two.</typeparam>
-    /// <typeparam name="TOutput">Output block.</typeparam>
+    /// <typeparam name="TInput1">Type of data for input block one.</typeparam>
+    /// <typeparam name="TInput2">Type of data for input block two.</typeparam>
+    /// <typeparam name="TOutput">Type of output data.</typeparam>
+    /// <example>
+    /// <code>
+    /// MergeJoin<MyDataRow1, MyDataRow2, MyDataRow1> join = new MergeJoin<MyDataRow1, MyDataRow2, MyDataRow1>(Func<TInput1, TInput2, TOutput> mergeJoinFunc);
+    /// source1.LinkTo(join.Target1);;
+    /// source2.LinkTo(join.Target2);;
+    /// join.LinkTo(dest);
+    /// </code>
+    /// </example>
     public class MergeJoin<TInput1, TInput2, TOutput> : GenericTask, ITask, IDataFlowLinkSource<TOutput> {
         private Func<TInput1, TInput2, TOutput> _mergeJoinFunc;
 

@@ -7,7 +7,14 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A multicast duplicates data from the input into two outputs.
     /// </summary>
-    /// <typeparam name="TInput">Input block</typeparam>
+    /// <typeparam name="TInput">Type of input data.</typeparam>
+    /// <example>
+    /// <code>
+    /// Multicast<MyDataRow> multicast = new Multicast<MyDataRow>();
+    /// multicast.LinkTo(dest1);
+    /// multicast.LinkTo(dest2);
+    /// </code>
+    /// </example>
     public class Multicast<TInput> : GenericTask, ITask, IDataFlowTransformation<TInput, TInput> where TInput : new() {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_MULTICAST";

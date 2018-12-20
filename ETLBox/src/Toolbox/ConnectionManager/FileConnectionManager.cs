@@ -2,6 +2,9 @@
 using System.IO;
 
 namespace ALE.ETLBox.ConnectionManager {
+    /// <summary>
+    /// Connection manager to a file
+    /// </summary>    
     public class FileConnectionManager {
         internal string FileName { get; set; }
 

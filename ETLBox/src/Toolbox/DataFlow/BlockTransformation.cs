@@ -8,7 +8,16 @@ namespace ALE.ETLBox.DataFlow {
     /// A block transformation will wait for all data to be loaded into the buffer before the transformation is applied. After all data is in the buffer, the transformation
     /// is execution and the result posted into the targets.
     /// </summary>
-    /// <typeparam name="TInput"></typeparam>
+    /// <typeparam name="TInput">Type of data input (equal type of data output)</typeparam>
+    /// <example>
+    /// <code>    
+    /// BlockTransformation<MyDataRow> block = new BlockTransformation<MyDataRow>(
+    ///     inputData => {
+    ///         return inputData.Select( row => new MyDataRow() { Value1 = row.Value1, Value2 = 3 }).ToList();
+    ///     });
+    /// block.LinkTo(dest);
+    /// </code>
+    /// </example>
     public class BlockTransformation<TInput> : GenericTask, ITask, IDataFlowLinkTarget<TInput>, IDataFlowLinkSource<TInput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_BLOCKTRANSFORMATION";

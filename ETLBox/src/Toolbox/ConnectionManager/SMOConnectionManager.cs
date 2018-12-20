@@ -5,6 +5,14 @@ using System.Collections.Generic;
 using System.Data;
 
 namespace ALE.ETLBox.ConnectionManager {
+    /// <summary>
+    /// Connection manager for Sql Server Managed Objects (SMO) connection to a sql server.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// ControlFlow.CurrentDbConnection = new SMOConnectionManager(new ConnectionString("Data Source=.;"));
+    /// </code>
+    /// </example>
     public class SMOConnectionManager : IDbConnectionManager, IDisposable {
         public ConnectionString ConnectionString { get; set; }
         public bool IsConnectionOpen => SqlConnectionManager.DbConnection?.State == ConnectionState.Open;
