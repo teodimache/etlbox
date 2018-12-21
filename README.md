@@ -194,4 +194,4 @@ Feel free to make changes or to fix bugs. Every particiation in this open source
 
 To dig deeper into it, have a look at the ETLBox tests within the solution. There is a test for (almost) everything that you can do with ETLToolbox.
 
-See the [ETLBox Wiki](https://github.com/roadrunnerlenny/etlbox/wiki) for detailed documentation of every task or component, including examples.
+[See the ETLBox Project website](https://etlbox.net) for detailed documentation of every task and component, including examples. There are also introductional articles to give you a quick start with ETLBox. Enjoy!
