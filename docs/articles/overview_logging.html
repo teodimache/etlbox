@@ -123,6 +123,15 @@ ETLBox already comes with NLog as dependency - so the necessary packages will be
   &lt;/rules&gt;
 &lt;/nlog&gt;
 </code></pre>
+<h3 id="copy-to-output-directory">Copy to output directory</h3>
+<p>Make sure the config file is copied into the output directory where you build executables are dropped. Your project configuration file .csproj should contain something like this:</p>
+<pre><code class="lang-C#">&lt;Itemgroup&gt;
+...
+  &lt;None Update=&quot;nlog.config&quot;&gt;
+    &lt;CopyToOutputDirectory&gt;PreserveNewest&lt;/CopyToOutputDirectory&gt;
+  &lt;/None&gt;
+&lt;/Itemgroup&gt;
+</code></pre>
 <h3 id="create-database-tables">Create database tables</h3>
 <p>Now you need some tables in the database to store your log information.
 You can use the task <code>CreateLogTables</code>. This task will create two tables:
