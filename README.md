@@ -1,6 +1,6 @@
 # ETLBox.net
 
-There is a new project homepage for ETLBox availabe: [etlbox.net contains all the information you need about ETLBox](https://etlbox.net). There is a whole set of [introductional articles](https://etlbox.net/articles/getting_started.html), examples for [Control Flow Tasks](https://etlbox.net/articles/example_controlflow.html), [Data Flow Tasks](https://etlbox.net/articles/example_dataflow.html) and [Logging](https://etlbox.net/articles/example_logging.html), and finally a [complete API documentation](https://etlbox.net/api/index.html)!
+There is a new project homepage for ETLBox availabe: [etlbox.net](https://etlbox.net) contains all the information you need about ETLBox. There is a whole set of [introductional articles](https://etlbox.net/articles/getting_started.html), examples for [Control Flow Tasks](https://etlbox.net/articles/example_controlflow.html), [Data Flow Tasks](https://etlbox.net/articles/example_dataflow.html) and [Logging](https://etlbox.net/articles/example_logging.html), and finally a [complete API documentation](https://etlbox.net/api/index.html)!
 
 #  <span><img src="https://github.com/roadrunnerlenny/etlbox/raw/master/docs/images/logo_orig_32x32.png" alt="ETLBox logo" height="32" /> Welcome to ETLBox</span>
 
@@ -196,6 +196,10 @@ Feel free to make changes or to fix bugs. Every particiation in this open source
 
 # Going further
 
+## Test project
+
 To dig deeper into it, have a look at the ETLBox tests within the solution. There is a test for (almost) everything that you can do with ETLToolbox.
 
-[See the ETLBox Project website](https://etlbox.net) for detailed documentation of every task and component, including examples. There are also introductional articles to give you a quick start with ETLBox. Enjoy!
+## ETLBox.net
+
+[See the ETLBox Project website](https://etlbox.net) for [introductional articles](https://etlbox.net/articles/getting_started.html) and examples for [Control Flow Tasks](https://etlbox.net/articles/example_controlflow.html), [Data Flow Tasks](https://etlbox.net/articles/example_dataflow.html) and [Logging](https://etlbox.net/articles/example_logging.html). There is also a [complete API documentation](https://etlbox.net/api/index.html). Enjoy!
