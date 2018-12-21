@@ -66,6 +66,18 @@ As a first step to have nlog log into your database, you must exend your nlog co
   </rules>
 </nlog>
 ```
+### Copy to output directory
+
+Make sure the config file is copied into the output directory where you build executables are dropped. Your project configuration file .csproj should contain something like this:
+
+```C#
+<Itemgroup>
+...
+  <None Update="nlog.config">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </None>
+</Itemgroup>
+```
 
 ### Create database tables
 
