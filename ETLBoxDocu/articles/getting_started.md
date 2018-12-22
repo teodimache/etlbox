@@ -34,7 +34,7 @@ If you are in need of some examples of how to use Control Flow tasks, [see the E
 
 All components in the Data Flow allow you to create your ETL (Extract, Transform, Load) pipeline - 
 where data is extracted from the source(s), asynchrounously transformed and then loaded into your destinations.
-Plese read the [Overview Data Flow](overview_dataflow.md) to get started. [There is also an Example Data Flow](https://github.com/roadrunnerlenny/etlbox/wiki/Example-Data-Flow).
+Plese read the [Overview Data Flow](overview_dataflow.md) to get started. [There is also an Example Data Flow](example_dataflow.md).
 To understand the dataflow components, you can also visit the API reference and look at the description and details of each dataflow component.
 
 ## Overview Logging 
@@ -42,8 +42,8 @@ To understand the dataflow components, you can also visit the API reference and 
 All Control Flow and Data Flow Tasks come with the ability to produce log. 
 There are also some special task that enables you to create or query the log tables easily. 
 To get an introduction into logging, [please have a look at the Overview Logging](overview_logging.md)
-To see a simple and working example of ETL code producing some log information, [see the Example for Logging](example_logging).
-All logging capabilites are based on nlog. You can [visit the NLog homepage](nlog-project.org) if you are interested in more details how to set up and configure NLog.
+To see a simple and working example of ETL code producing some log information, [see the Example for Logging](example_logging.md).
+All logging capabilites are based on nlog. You can [visit the NLog homepage](https://nlog-project.org) if you are interested in more details how to set up and configure NLog.
 
 # API Reference
 
