@@ -12,12 +12,14 @@ A simple nlog.config could look like this
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<nlog>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xsi:schemaLocation="NLog NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <rules>
-    <logger name="*" minlevel="Debug" writeTo="debugger" />
+    <logger name="*" minlevel="Info" writeTo="console" />
   </rules>
   <targets>
-    <target name="debugger" xsi:type="Debugger" />     
+    <target name="console" xsi:type="Console" />     
   </targets>
 </nlog>
 ```
@@ -34,8 +36,11 @@ As a first step to have nlog log into your database, you must exend your nlog co
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
-<nlog>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xsi:schemaLocation="NLog NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <targets>
+    <target name="console" xsi:type="Console" />  
     <target xsi:type="Database" name="database"
        useTransactions="false" keepConnection="true">
       <commandText>
@@ -63,6 +68,7 @@ As a first step to have nlog log into your database, you must exend your nlog co
   </targets>
   <rules>
     <logger name="*" minlevel="Debug" writeTo="database" />
+    <logger name="*" minlevel="Info" writeTo="console" />
   </rules>
 </nlog>
 ```
