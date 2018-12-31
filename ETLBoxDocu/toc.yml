@@ -1,9 +1,7 @@
-- name: Articles
+- name: Getting started
   href: articles/
-- name: Api Documentation
+- name: API Documentation
   href: api/
   homepage: api/index.md
-- name: Download on Nuget
+- name:  -->   Download on Nuget
   href: https://www.nuget.org/packages/ETLBox
-- name: Github project home
-  href: https://github.com/roadrunnerlenny/etlbox

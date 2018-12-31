@@ -1,4 +1,4 @@
-# Preamble
+# Getting started
 
 Welcome to the getting started pages of ETLBox. This artice will give you a brief overview how ETLBox is organized. 
 See the Table Of Content if you already know what you are looking for. 
@@ -14,12 +14,12 @@ At first glance, it can look like that some of the taks are not really adding bi
 having written everything in a format which is easy-to-read and easy-to-understand, you are able to produce code that is easier to maintain. Having your code "clean" 
 allows you to focus on the important parts of your logic and not be distracted by code lines that your brain need to "unravel" every time you go over them.
 If you are interested in clean coding, you should read the "bible" on that topic, written by 
-[Robert C. Martin: Clean Code](http://www.amazon.de/gp/product/0132350882/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0132350882&linkCode=as2&tag=andreaslennar-21&linkId=CAKVL4PO6YCRW53L)
+[Robert C. Martin: Clean Code](https://www.amazon.de/gp/product/0132350882/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=0132350882&linkCode=as2&tag=andreaslennar-21&linkId=CAKVL4PO6YCRW53L)
 
 ### Books written by me
 
 If you are able to understand and read german, I recommend you mein own book: 
-[Mehr als Clean Code - Gedanken zur Softwareentwicklung](http://www.amazon.de/gp/product/3735736513/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3735736513&linkCode=as2&tag=andreaslennar-21&linkId=D6HR6S6YAQ65Q3S6)
+[Mehr als Clean Code - Gedanken zur Softwareentwicklung](https://www.amazon.de/gp/product/3735736513/ref=as_li_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3735736513&linkCode=as2&tag=andreaslennar-21&linkId=D6HR6S6YAQ65Q3S6)
 
 # Getting started
 
@@ -44,6 +44,11 @@ There are also some special task that enables you to create or query the log tab
 To get an introduction into logging, [please have a look at the Overview Logging](overview_logging.md)
 To see a simple and working example of ETL code producing some log information, [see the Example for Logging](example_logging.md).
 All logging capabilites are based on nlog. You can [visit the NLog homepage](https://nlog-project.org) if you are interested in more details how to set up and configure NLog.
+
+## See the video
+
+To get a quick overview and a basic introduction into ETLBox, you can [watch the video on Youtube.](https://www.youtube.com/watch?v=CsWZuRpl6PA)
+You'll find the [full code of the video in the basic example](example_basics.md).
 
 # API Reference
 

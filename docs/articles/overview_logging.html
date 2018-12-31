@@ -76,12 +76,14 @@ ETLBox already comes with NLog as dependency - so the necessary packages will be
 <p>In order to use logging, you have to create a nlog.config file with the exact same name and put it into the root folder of your project.</p>
 <p>A simple nlog.config could look like this</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;nlog&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xsi:schemaLocation=&quot;NLog NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
   &lt;rules&gt;
-    &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;debugger&quot; /&gt;
+    &lt;logger name=&quot;*&quot; minlevel=&quot;Info&quot; writeTo=&quot;console&quot; /&gt;
   &lt;/rules&gt;
   &lt;targets&gt;
-    &lt;target name=&quot;debugger&quot; xsi:type=&quot;Debugger&quot; /&gt;     
+    &lt;target name=&quot;console&quot; xsi:type=&quot;Console&quot; /&gt;     
   &lt;/targets&gt;
 &lt;/nlog&gt;
 </code></pre>
@@ -91,8 +93,11 @@ ETLBox already comes with NLog as dependency - so the necessary packages will be
 <h3 id="extend-the-nlogconfig">Extend the nlog.config</h3>
 <p>As a first step to have nlog log into your database, you must exend your nlog configuration. It should then look like this:</p>
 <pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;nlog&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xsi:schemaLocation=&quot;NLog NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
   &lt;targets&gt;
+    &lt;target name=&quot;console&quot; xsi:type=&quot;Console&quot; /&gt;  
     &lt;target xsi:type=&quot;Database&quot; name=&quot;database&quot;
        useTransactions=&quot;false&quot; keepConnection=&quot;true&quot;&gt;
       &lt;commandText&gt;
@@ -120,6 +125,7 @@ ETLBox already comes with NLog as dependency - so the necessary packages will be
   &lt;/targets&gt;
   &lt;rules&gt;
     &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;database&quot; /&gt;
+    &lt;logger name=&quot;*&quot; minlevel=&quot;Info&quot; writeTo=&quot;console&quot; /&gt;
   &lt;/rules&gt;
 &lt;/nlog&gt;
 </code></pre>

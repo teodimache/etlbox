@@ -6,6 +6,10 @@ It's all in the box! Run all your ETL jobs with this awesome C# class library.
 
 There is a new project homepage for ETLBox availabe: [etlbox.net](https://etlbox.net) contains all the information you need about ETLBox. There is a whole set of [introductional articles](https://etlbox.net/articles/getting_started.html), examples for [Control Flow Tasks](https://etlbox.net/articles/example_controlflow.html), [Data Flow Tasks](https://etlbox.net/articles/example_dataflow.html) and [Logging](https://etlbox.net/articles/example_logging.html), and finally a [complete API documentation](https://etlbox.net/api/index.html)!
 
+## See the video
+
+Watch a short video that introduces you into the basic concepts of ETLBox and how to create your own ETL process. [See the video on Youtube!](https://www.youtube.com/watch?v=CsWZuRpl6PA)
+
 ## What is ETLBox
 
 ETLBox is a comprehensive C# class library that is able to manage your whole ETL or ELT. You can use it to run some simple (or complex) sql against your database. You can easily manage your database using some easy-to-use and easy-to-understand objects. Or you can create your own dataflow pipeline, where data is send from a source to a target and transformed on its way. All that comes with extended logging capabilites, that allow you to monitor and anlayze your ETL job runs.
