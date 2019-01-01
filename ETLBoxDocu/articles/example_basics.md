@@ -4,7 +4,7 @@ This example will give you a brief overview of the basic concepts of ETLBox.
 
 ## See the video
 
-There is also a video demonstrating this example.
+[There is also a video demonstrating this example](https://www.youtube.com/watch?v=CsWZuRpl6PA).
 
 ### Environment
 

@@ -12,11 +12,23 @@
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
-    background-color: #666 !important;
+    background-color: #777 !important;
 }
 
+
+.navbar-inverse .navbar-nav > li > a {
+    /*
+    border-radius: 4px;
+    background: #555;
+    padding: 7px;
+    margin: 7px;
+        */
+    font-size: 16px;
+}
+
+  
 @media (max-width:767px) {
-    .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+        .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
         border-color: #aaa !important
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
@@ -26,8 +38,13 @@
 
 
 /* Buttons on start page */
+.buttons-unit {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .buttons-unit .button {
-    font-size: 24px;
+    font-size: 16px;
     border-radius: 4px;
     padding: 8px 16px;
     margin: 0 12px;
