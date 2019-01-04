@@ -10,6 +10,8 @@ Reorganization of namespaces.
 
 ## Version 1.0.2
 
+* `DropDatabaseTask` -> static "convenience" method name changed from delete to drop 
+
 
 
 
