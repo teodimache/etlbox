@@ -50,7 +50,7 @@ end
        
 
         /* Static methods for convenience */
-        public static void Delete(string databaseName) => new DropDatabaseTask(databaseName).Execute();
+        public static void Drop(string databaseName) => new DropDatabaseTask(databaseName).Execute();
 
         /* Implementation & stuff */
        
