@@ -23,24 +23,27 @@ namespace ALE.ETLBox.ConnectionManager {
 
         public void Open() {
             DbConnection = new Connection();
-            if (!IsConnectionOpen) {
-                DbConnection.ConnectionString = ConnectionString.Value;
-                bool successfullyConnected = false;
-                Exception lastException = null;
-                for (int i = 1; i <= MaxLoginAttempts; i++) {
-                    try {
-                        DbConnection.Open();
-                        successfullyConnected = true;
-                    } catch (Exception e) {
-                        successfullyConnected = false;
-                        lastException = e;
-                        Task.Delay(500 * i).Wait();
-                    }
-                    if (successfullyConnected) break;
+            //if (!IsConnectionOpen) {
+            DbConnection.ConnectionString = ConnectionString.Value;
+            bool successfullyConnected = false;
+            Exception lastException = null;
+            for (int i = 1; i <= MaxLoginAttempts; i++) {
+                try {
+                    DbConnection.Open();
+                    successfullyConnected = true;
+                } catch (Exception e) {
+                    successfullyConnected = false;
+                    lastException = e;
+                    Task.Delay(500 * i).Wait();
                 }
-                if (!successfullyConnected)
-                    throw lastException ?? new Exception("Could not connect to database!");
+                if (successfullyConnected) {
+                    break;
+                }
             }
+            if (!successfullyConnected) {
+                throw lastException ?? new Exception("Could not connect to database!");
+            }
+            //}
         }
 
         //public void CloseConnection() => Close();
@@ -72,7 +75,7 @@ namespace ALE.ETLBox.ConnectionManager {
         }
 
         public IDataReader ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null) {
-            Command cmd = CreateCommand(commandText, parameterList);            
+            Command cmd = CreateCommand(commandText, parameterList);
             return cmd.ExecuteReader();
 
         }
@@ -85,16 +88,23 @@ namespace ALE.ETLBox.ConnectionManager {
         protected void Dispose(bool disposing) {
             if (!disposedValue) {
                 if (disposing) {
-                    if (DbConnection != null)
+                    if (DbConnection != null) {
                         DbConnection.Close();
+                    }
+
                     DbConnection = null;
                 }
                 disposedValue = true;
             }
         }
 
-        public void Dispose() => Dispose(true);
-        public void Close() => Dispose();
+        public void Dispose() {
+            Dispose(true);
+        }
+
+        public void Close() {
+            Dispose();
+        }
 
         public abstract IDbConnectionManager Clone();
         #endregion
