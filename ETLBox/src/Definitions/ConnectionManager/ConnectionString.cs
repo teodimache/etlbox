@@ -1,6 +1,10 @@
 ﻿using System.Data.SqlClient;
 
 namespace ALE.ETLBox {
+    /// <summary>
+    /// A helper class for encapsulating a conection string in an object.
+    /// Internally the SqlConnectionStringBuilder is used to access the values of the given connection string.
+    /// </summary>
     public class ConnectionString {
 
         SqlConnectionStringBuilder _builder; 
