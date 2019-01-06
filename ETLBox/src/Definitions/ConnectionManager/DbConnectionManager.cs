@@ -7,7 +7,7 @@ namespace ALE.ETLBox.ConnectionManager {
     public abstract class DbConnectionManager<Connection, Command> : IDisposable, IDbConnectionManager
         where Connection : class, IDbConnection, new()
         where Command : class, IDbCommand, new() {
-        public int MaxLoginAttempts { get; set; } = 20;
+        public int MaxLoginAttempts { get; set; } = 3;
 
         public ConnectionString ConnectionString { get; set; }
 
@@ -23,7 +23,6 @@ namespace ALE.ETLBox.ConnectionManager {
 
         public void Open() {
             DbConnection = new Connection();
-            //if (!IsConnectionOpen) {
             DbConnection.ConnectionString = ConnectionString.Value;
             bool successfullyConnected = false;
             Exception lastException = null;
@@ -34,7 +33,7 @@ namespace ALE.ETLBox.ConnectionManager {
                 } catch (Exception e) {
                     successfullyConnected = false;
                     lastException = e;
-                    Task.Delay(500 * i).Wait();
+                    Task.Delay(1000 * i).Wait();
                 }
                 if (successfullyConnected) {
                     break;
@@ -43,10 +42,7 @@ namespace ALE.ETLBox.ConnectionManager {
             if (!successfullyConnected) {
                 throw lastException ?? new Exception("Could not connect to database!");
             }
-            //}
         }
-
-        //public void CloseConnection() => Close();
 
         public Command CreateCommand(string commandText, IEnumerable<QueryParameter> parameterList = null) {
             var cmd = DbConnection.CreateCommand();
