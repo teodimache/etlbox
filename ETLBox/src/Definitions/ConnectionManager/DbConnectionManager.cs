@@ -13,7 +13,7 @@ namespace ALE.ETLBox.ConnectionManager {
 
         internal Connection DbConnection { get; set; }
 
-        internal bool IsConnectionOpen => DbConnection?.State == ConnectionState.Open;
+        //internal bool IsConnectionOpen => DbConnection?.State == ConnectionState.Open;
 
         public DbConnectionManager() { }
 
@@ -22,8 +22,10 @@ namespace ALE.ETLBox.ConnectionManager {
         }
 
         public void Open() {
-            DbConnection = new Connection();
-            DbConnection.ConnectionString = ConnectionString.Value;
+            DbConnection?.Close();
+            DbConnection = new Connection {
+                ConnectionString = ConnectionString.Value
+            };
             bool successfullyConnected = false;
             Exception lastException = null;
             for (int i = 1; i <= MaxLoginAttempts; i++) {
