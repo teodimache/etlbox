@@ -6,6 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 
 namespace ALE.ETLBoxTest {
     [TestClass]
@@ -51,6 +52,32 @@ namespace ALE.ETLBoxTest {
             AssertOpenConnectionCount(1);
             con.Close();
             AssertOpenConnectionCount(1);
+            SqlConnection.ClearAllPools();
+            AssertOpenConnectionCount(0);
+        }
+
+        [TestMethod]
+        public void TestOpeningConnectionsParallelOnSqlTask() {
+            AssertOpenConnectionCount(0);
+            List<int> array = new List<int>() { 1, 2, 3, 4 };
+            Parallel.ForEach(array, new ParallelOptions { MaxDegreeOfParallelism = 2 },
+                    curNr => new SqlTask($"Test statement {curNr}", $@"
+                    DECLARE @counter INT = 0;
+                    CREATE TABLE dbo.test{curNr} (
+                        Col1 nvarchar(50)
+                    )
+                    WHILE @counter <= 10000
+                    BEGIN
+                        SET @counter = @counter + 1;
+                         INSERT INTO dbo.test{curNr}
+                            values('Lorem ipsum Lorem ipsum Lorem ipsum Lorem')
+                    END
+            ") {
+                        ConnectionManager = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter)),
+                        DisableLogging = true
+                    }.ExecuteNonQuery()
+                 );
+            AssertOpenConnectionCount(2);
             SqlConnection.ClearAllPools();
             AssertOpenConnectionCount(0);
         }
