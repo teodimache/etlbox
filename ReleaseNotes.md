@@ -11,6 +11,7 @@ Reorganization of namespaces.
 ## Version 1.0.2
 
 * `DropDatabaseTask` -> static "convenience" method name changed from delete to drop 
+* ConnectionManager improved - verified that the underlying ADO.NET connection pooling is working (see Issue#1)
 
 
 
