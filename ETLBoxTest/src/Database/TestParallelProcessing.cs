@@ -20,7 +20,7 @@ namespace ALE.ETLBoxTest {
       
         [TestMethod]
         public void TestFastExecutingSqlTaskInParallel() {
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString(TestContext.Properties["connectionString"].ToString()));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(TestContext.Properties["connectionString"].ToString()));
             List<int> array = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             Parallel.ForEach(array, new ParallelOptions { MaxDegreeOfParallelism = 8 },
                 curNr => SqlTask.ExecuteNonQuery($"Test statement {curNr}", $"select 1")
@@ -29,7 +29,7 @@ namespace ALE.ETLBoxTest {
 
         [TestMethod]
         public void TestLongExecutingSqlTaskInParallel() {
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString(TestContext.Properties["connectionString"].ToString()));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(TestContext.Properties["connectionString"].ToString()));
             List<int> array = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             Parallel.ForEach(array, new ParallelOptions { MaxDegreeOfParallelism = 8 },
                 curNr => SqlTask.ExecuteNonQuery($"Test statement {curNr}", $@"

@@ -9,7 +9,7 @@ namespace ALE.ETLBoxTest
     {
         public static void AssertOpenConnectionCount(int allowedOpenConnections, string connectionString)
         {
-            SqlConnectionString conString = new SqlConnectionString(connectionString);
+            ConnectionString conString = new ConnectionString(connectionString);
             SqlConnectionManager master = new SqlConnectionManager(conString.GetMasterConnection());
             string dbName = conString.SqlConnectionStringBuilder.InitialCatalog;
             int? openConnections =

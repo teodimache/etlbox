@@ -16,7 +16,7 @@ namespace ALE.ETLBoxTest {
         [ClassInitialize]
         public static void TestInit(TestContext testContext) {
             TestHelper.RecreateDatabase(testContext);
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString(testContext.Properties["connectionString"].ToString()));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(testContext.Properties["connectionString"].ToString()));
         }
       
         [TestMethod]
@@ -120,7 +120,7 @@ namespace ALE.ETLBoxTest {
         [TestMethod]
         public void TestLoggingWithoutCFConnection() {
             ControlFlow.CurrentDbConnection = null;
-            var connection = new SqlConnectionManager(new SqlConnectionString(TestContext.Properties["connectionString"].ToString()));            
+            var connection = new SqlConnectionManager(new ConnectionString(TestContext.Properties["connectionString"].ToString()));            
             new RemoveLogTablesTask() { ConnectionManager = connection }.Execute();
             new CreateLogTablesTask() { ConnectionManager = connection }.Execute();
             new SqlTask("Test select", $"select 1 as test") { ConnectionManager = connection }.ExecuteNonQuery();

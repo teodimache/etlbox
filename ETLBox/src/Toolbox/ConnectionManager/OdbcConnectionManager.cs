@@ -2,6 +2,8 @@
 using System.Data.Odbc;
 using System.Text;
 using System.Linq;
+using System.Collections.Generic;
+using System;
 
 namespace ALE.ETLBox.ConnectionManager
 {
@@ -24,24 +26,30 @@ namespace ALE.ETLBox.ConnectionManager
 
         public override void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName)
         {
-            //    foreach (IColumnMapping colMap in columnMapping)
-            //        bulkCopy.ColumnMappings.Add(colMap.SourceColumn, colMap.DataSetColumn);
+
+            List<string> sourceColumnNames = columnMapping.Cast<IColumnMapping>().Select(cm => cm.SourceColumn).ToList();
+            List<string> destColumnNames = columnMapping.Cast<IColumnMapping>().Select(cm => cm.DataSetColumn).ToList();
             StringBuilder sb = new StringBuilder();
-            sb.Append($"insert into {tableName} (");
-            foreach (IColumnMapping c in columnMapping) {
-                sb.Append($"{c.SourceColumn},");
-            }
-            sb.Remove(sb.Length - 1,1);
-            sb.Append(") ");
+            sb.Append($"insert into {tableName} ({string.Join(",",sourceColumnNames)}) values ");
             while (data.Read()) {
-                using (var insertCommand = new OdbcCommand()) {
-                    object[] r = new object[columnMapping.Count];
-                    data.GetValues(r);
-                    insertCommand.CommandText = "";
-                    //insertCommand.Parameters.Add()
-                }
+                List<string> values = new List<string>();
+                foreach (string destColumnName in destColumnNames) {
+                    int colIndex = data.GetOrdinal(destColumnName);
+                    string dataTypeName = data.GetDataTypeName(colIndex);
+                    if (data.IsDBNull(colIndex))
+                        values.Add("NULL");
+                    else
+                        values.Add($"'{data.GetString(colIndex)}'");
+
+                }              
+                sb.Append("("+string.Join(",", values)+")" );
+                if (data.NextResult())
+                    sb.Append("," + Environment.NewLine);
             }
-           
+
+            var cmd = DbConnection.CreateCommand();
+            cmd.CommandText = sb.ToString();
+            cmd.ExecuteNonQuery(); 
         }
 
         public override IDbConnectionManager Clone()

@@ -15,14 +15,14 @@ namespace ALE.ETLBox.ConnectionManager {
 
         public AdomdConnectionManager() : base() { }
 
-        public AdomdConnectionManager(SqlConnectionString connectionString) : base(connectionString) { }
+        public AdomdConnectionManager(ConnectionString connectionString) : base(connectionString) { }
 
         public override void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName) {
             throw new NotImplementedException();
         }
 
         public override IDbConnectionManager Clone() {
-            AdomdConnectionManager clone = new AdomdConnectionManager((SqlConnectionString)ConnectionString) {
+            AdomdConnectionManager clone = new AdomdConnectionManager((ConnectionString)ConnectionString) {
                 MaxLoginAttempts = this.MaxLoginAttempts
             };
             return clone;

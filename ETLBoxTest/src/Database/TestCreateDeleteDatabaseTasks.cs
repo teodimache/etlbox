@@ -13,7 +13,7 @@ namespace ALE.ETLBoxTest {
         public static void TestInit(TestContext testContext)
         {
             string connectionString = testContext.Properties["connectionString"].ToString();
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString(connectionString).GetMasterConnection());
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(connectionString).GetMasterConnection());
         }
 
         [TestMethod]

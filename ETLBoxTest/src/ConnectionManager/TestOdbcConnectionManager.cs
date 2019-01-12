@@ -41,26 +41,30 @@ namespace ALE.ETLBoxTest {
         public void CSV_DB_WithOdbcConnection() {
             CreateSchemaTask.Create("test");
             TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {
-                new TableColumn("Col1", "nvarchar(100)", allowNulls: false),
-                new TableColumn("Col2", "int", allowNulls: true)
+                new TableColumn("ID", "int", allowNulls: false,isPrimaryKey:true,isIdentity:true),
+                new TableColumn("Col1", "bit", allowNulls: true),
+                new TableColumn("Col2", "decimal(10,5)", allowNulls: true),
+                new TableColumn("Col3", "tinyint", allowNulls: true),
+                new TableColumn("Col4", "int", allowNulls: true),
+                new TableColumn("Col5", "uniqueidentifier", allowNulls: true),
+                new TableColumn("Col6", "nvarchar(100)", allowNulls: true)
             });
             stagingTable.CreateTable();
-            CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
-            DBDestination<string[]> dest = new DBDestination<string[]>(batchSize: 2) {
-                DestinationTableDefinition = stagingTable,
-                BeforeBatchWrite =
-                rowArray => {
-                    rowArray[0][0] = "NewValue";
-                    return rowArray;
-                }
-            };
-            source.LinkTo(dest);
+            CSVSource source = new CSVSource("src/ConnectionManager/DatatypeCSV.csv");
+            RowTransformation<string[], string[]> trans = new RowTransformation<string[], string[]>("Set empty values to null",
+                row => {
+                    for (int i=0;i<row.Length;i++)
+                        if (row[i] == String.Empty) row[i] = null;
+                    return row;
+                });
+            DBDestination<string[]> dest = new DBDestination<string[]>(stagingTable, 2);
+            source.LinkTo(trans);
+            trans.LinkTo(dest);
 
             source.Execute();
             dest.Wait();
 
-            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
-            Assert.AreEqual(2, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 = 'NewValue'"));
+            Assert.AreEqual(3, RowCountTask.Count(stagingTable.Name));
         }
 
         [TestMethod]

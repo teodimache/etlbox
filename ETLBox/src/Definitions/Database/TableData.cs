@@ -16,7 +16,8 @@ namespace ALE.ETLBox {
             get {
                 var mapping = new DataColumnMappingCollection();
                 foreach (var col in Definition.Columns)
-                    mapping.Add(new DataColumnMapping(col.SourceColumn, col.DataSetColumn));
+                    if (!col.IsIdentity)
+                        mapping.Add(new DataColumnMapping(col.SourceColumn, col.DataSetColumn));
                 return mapping;
             }
         }
@@ -99,7 +100,7 @@ namespace ALE.ETLBox {
         }
 
         public bool NextResult() {
-            return Rows?.Count > (ReadIndex + 1);
+            return (ReadIndex + 1) <= Rows?.Count;
         }
 
         public bool Read() {

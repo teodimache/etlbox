@@ -29,7 +29,7 @@ namespace ALE.ETLBoxTest {
  This second call creates a new SqlConnection() object
  It then checks to ensure that it's not open, which it is not because its a new one...
  */
-            SqlConnectionManager con = new SqlConnectionManager(new SqlConnectionString(ConnectionStringParameter));
+            SqlConnectionManager con = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter));
 
             ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
             con.Open();
@@ -45,7 +45,7 @@ namespace ALE.ETLBoxTest {
 
         [TestMethod]
         public void TestOpeningConnectionTwice() {
-            SqlConnectionManager con = new SqlConnectionManager(new SqlConnectionString(ConnectionStringParameter));
+            SqlConnectionManager con = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter));
             ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
             con.Open();
             con.Open();
@@ -73,7 +73,7 @@ namespace ALE.ETLBoxTest {
                             values('Lorem ipsum Lorem ipsum Lorem ipsum Lorem')
                     END
             ") {
-                        ConnectionManager = new SqlConnectionManager(new SqlConnectionString(ConnectionStringParameter)),
+                        ConnectionManager = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter)),
                         DisableLogging = true
                     }.ExecuteNonQuery()
                  );

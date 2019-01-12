@@ -11,7 +11,7 @@ namespace ALE.ETLBoxTest {
         [ClassInitialize]
         public static void TestInit(TestContext testContext) {
             string connectionString = testContext.Properties["connectionString"].ToString();
-            ControlFlow.CurrentDbConnection = new AdomdConnectionManager(new SqlConnectionString(connectionString).GetConnectionWithoutCatalog());
+            ControlFlow.CurrentDbConnection = new AdomdConnectionManager(new ConnectionString(connectionString).GetConnectionWithoutCatalog());
         }
 
 

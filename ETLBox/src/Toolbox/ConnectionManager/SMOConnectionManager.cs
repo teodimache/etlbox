@@ -18,7 +18,7 @@ namespace ALE.ETLBox.ConnectionManager {
         public IDbConnectionString ConnectionString { get; set; }
         public bool IsConnectionOpen => SqlConnectionManager.DbConnection?.State == ConnectionState.Open;
 
-        public SMOConnectionManager(SqlConnectionString connectionString) {
+        public SMOConnectionManager(ConnectionString connectionString) {
             //RuntimePolicyHelper.SetNET20Compatibilty();
             ConnectionString = connectionString;
             SqlConnectionManager = new SqlConnectionManager(connectionString);
@@ -36,7 +36,7 @@ namespace ALE.ETLBox.ConnectionManager {
         }
 
         public void Open() {
-            SqlConnectionManager = new SqlConnectionManager((SqlConnectionString)ConnectionString);
+            SqlConnectionManager = new SqlConnectionManager((ConnectionString)ConnectionString);
             SqlConnectionManager.Open();
             Server = new Server(new ServerConnection(SqlConnectionManager.DbConnection));
             Context.StatementTimeout = 0;
@@ -75,7 +75,7 @@ namespace ALE.ETLBox.ConnectionManager {
         public void Close() => Dispose();
 
         public IDbConnectionManager Clone() {
-            SMOConnectionManager clone = new SMOConnectionManager((SqlConnectionString)ConnectionString) { };
+            SMOConnectionManager clone = new SMOConnectionManager((ConnectionString)ConnectionString) { };
             return clone;
         }
 

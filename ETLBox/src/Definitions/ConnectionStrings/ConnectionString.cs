@@ -2,10 +2,10 @@
 
 namespace ALE.ETLBox {
     /// <summary>
-    /// A helper class for encapsulating a conection string in an object.
+    /// A helper class for encapsulating a conection string to a sql server in an object.
     /// Internally the SqlConnectionStringBuilder is used to access the values of the given connection string.
     /// </summary>
-    public class SqlConnectionString : IDbConnectionString{
+    public class ConnectionString : IDbConnectionString{
 
         SqlConnectionStringBuilder _builder; 
 
@@ -20,28 +20,28 @@ namespace ALE.ETLBox {
 
         public SqlConnectionStringBuilder SqlConnectionStringBuilder => _builder;
         
-        public SqlConnectionString() {
+        public ConnectionString() {
             _builder = new SqlConnectionStringBuilder();
         }
 
-        public SqlConnectionString(string connectionString) {
+        public ConnectionString(string connectionString) {
             this.Value = connectionString;
         }
 
-        public SqlConnectionString GetMasterConnection() {
+        public ConnectionString GetMasterConnection() {
             SqlConnectionStringBuilder con = new SqlConnectionStringBuilder(Value);
             con.InitialCatalog = "master";
-            return new SqlConnectionString(con.ConnectionString);
+            return new ConnectionString(con.ConnectionString);
         }
 
-        public SqlConnectionString GetConnectionWithoutCatalog() {
+        public ConnectionString GetConnectionWithoutCatalog() {
             SqlConnectionStringBuilder con = new SqlConnectionStringBuilder(Value);
             con.InitialCatalog = "";
-            return new SqlConnectionString(con.ConnectionString);
+            return new ConnectionString(con.ConnectionString);
         }
 
-        public static implicit operator SqlConnectionString(string v) {
-            return new SqlConnectionString(v);
+        public static implicit operator ConnectionString(string v) {
+            return new ConnectionString(v);
         }
 
         public override string ToString() {

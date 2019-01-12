@@ -19,7 +19,7 @@ namespace ALE.ETLBoxTest {
 
         internal static void RecreateDatabase(TestContext testContext) {
             string dbName = testContext.Properties["dbName"].ToString();
-            var connectionString = new SqlConnectionString(testContext.Properties["connectionString"].ToString());
+            var connectionString = new ConnectionString(testContext.Properties["connectionString"].ToString());
             var masterConnection = new SqlConnectionManager(connectionString.GetMasterConnection());
             ControlFlow.SetLoggingDatabase(masterConnection);
             new DropDatabaseTask(dbName) { DisableLogging =true, ConnectionManager = masterConnection }.Execute();
