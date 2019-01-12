@@ -10,11 +10,11 @@ namespace ALE.ETLBoxDemo {
     public class Logging {
         public void Start() {
             //Recreate database
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;"));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString("Data Source=.;Integrated Security=SSPI;"));
             DropDatabaseTask.Drop("DemoDB");
             CreateDatabaseTask.Create("DemoDB");
 
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB;"));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB;"));
             
             //Logging (only works with existing configuration nlog config in App.config)
 

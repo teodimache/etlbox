@@ -8,6 +8,7 @@
 
   <TestRunParameters>
     <Parameter name="connectionString" value="Data Source=.;Integrated Security=SSPI;Initial Catalog=ETLBox;" />
+    <Parameter name="odbcConnectionString" value="Driver={SQL Server};Server=.;Database=ETLBox;Trusted_Connection=Yes;" />
     <Parameter name="dbName" value="ETLBox" />    
   </TestRunParameters>
 </RunSettings>

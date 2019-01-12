@@ -9,11 +9,11 @@ namespace ALE.ETLBoxDemo {
     public class ControlFlowTasks {
         public void Start() {
             //Basics
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;"));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString("Data Source=.;Integrated Security=SSPI;"));
             DropDatabaseTask.Drop("DemoDB");
             CreateDatabaseTask.Create("DemoDB");
 
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB;"));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB;"));
             CreateSchemaTask.Create("demo");
             CreateTableTask.Create("demo.table1", new List<TableColumn>() {
                 new TableColumn(name:"key",dataType:"int",allowNulls:false,isPrimaryKey:true, isIdentity:true),
@@ -34,7 +34,7 @@ namespace ALE.ETLBoxDemo {
             //SqlTask.ExecuteNonQuery("sql with go keyword", @"insert into demo.table1 (value) select '####';
             //go 2");
 
-            ControlFlow.CurrentDbConnection = new SMOConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB;"));
+            ControlFlow.CurrentDbConnection = new SMOConnectionManager(new SqlConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB;"));
             SqlTask.ExecuteNonQuery("sql with go keyword", @"insert into demo.table1 (value) select '####';
             go 2");
 

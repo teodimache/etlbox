@@ -9,7 +9,7 @@ namespace ALE.ETLBox.ConnectionManager {
         where Command : class, IDbCommand, new() {
         public int MaxLoginAttempts { get; set; } = 3;
 
-        public ConnectionString ConnectionString { get; set; }
+        public IDbConnectionString ConnectionString { get; set; }
 
         internal Connection DbConnection { get; set; }
 
@@ -17,7 +17,7 @@ namespace ALE.ETLBox.ConnectionManager {
 
         public DbConnectionManager() { }
 
-        public DbConnectionManager(ConnectionString connectionString) : this() {
+        public DbConnectionManager(IDbConnectionString connectionString) : this() {
             this.ConnectionString = connectionString;
         }
 

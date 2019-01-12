@@ -29,15 +29,15 @@ namespace ALE.ETLBoxTest {
  This second call creates a new SqlConnection() object
  It then checks to ensure that it's not open, which it is not because its a new one...
  */
-            SqlConnectionManager con = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter));
-            
-            AssertOpenConnectionCount(0);
+            SqlConnectionManager con = new SqlConnectionManager(new SqlConnectionString(ConnectionStringParameter));
+
+            ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
             con.Open();
-            AssertOpenConnectionCount(1);
+            ConnectionManagerHelper.AssertOpenConnectionCount(1, ConnectionStringParameter);
             con.Close(); //won't close any connection - ado.net will keep the connection open in it's pool in case it's needed again
-            AssertOpenConnectionCount(1);
+            ConnectionManagerHelper.AssertOpenConnectionCount(1, ConnectionStringParameter);
             SqlConnection.ClearAllPools();
-            AssertOpenConnectionCount(0);
+            ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
 
 
 
@@ -45,20 +45,20 @@ namespace ALE.ETLBoxTest {
 
         [TestMethod]
         public void TestOpeningConnectionTwice() {
-            SqlConnectionManager con = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter));
-            AssertOpenConnectionCount(0);
+            SqlConnectionManager con = new SqlConnectionManager(new SqlConnectionString(ConnectionStringParameter));
+            ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
             con.Open();
             con.Open();
-            AssertOpenConnectionCount(1);
+            ConnectionManagerHelper.AssertOpenConnectionCount(1, ConnectionStringParameter);
             con.Close();
-            AssertOpenConnectionCount(1);
+            ConnectionManagerHelper.AssertOpenConnectionCount(1, ConnectionStringParameter);
             SqlConnection.ClearAllPools();
-            AssertOpenConnectionCount(0);
+            ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
         }
 
         [TestMethod]
         public void TestOpeningConnectionsParallelOnSqlTask() {
-            AssertOpenConnectionCount(0);
+            ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
             List<int> array = new List<int>() { 1, 2, 3, 4 };
             Parallel.ForEach(array, new ParallelOptions { MaxDegreeOfParallelism = 2 },
                     curNr => new SqlTask($"Test statement {curNr}", $@"
@@ -73,27 +73,13 @@ namespace ALE.ETLBoxTest {
                             values('Lorem ipsum Lorem ipsum Lorem ipsum Lorem')
                     END
             ") {
-                        ConnectionManager = new SqlConnectionManager(new ConnectionString(ConnectionStringParameter)),
+                        ConnectionManager = new SqlConnectionManager(new SqlConnectionString(ConnectionStringParameter)),
                         DisableLogging = true
                     }.ExecuteNonQuery()
                  );
-            AssertOpenConnectionCount(2);
+            ConnectionManagerHelper.AssertOpenConnectionCount(2, ConnectionStringParameter);
             SqlConnection.ClearAllPools();
-            AssertOpenConnectionCount(0);
-        }
-
-        private void AssertOpenConnectionCount(int allowedOpenConnections) {
-            ConnectionString conString = new ConnectionString(ConnectionStringParameter);
-            SqlConnectionManager master = new SqlConnectionManager(conString.GetMasterConnection());
-            string dbName = conString.SqlConnectionString.InitialCatalog;
-            int? openConnections = 
-                new SqlTask("Count open connections", 
-                $@"SELECT COUNT(dbid) as NumberOfConnections FROM sys.sysprocesses
-                    WHERE dbid > 0 and DB_NAME(dbid) = '{dbName}'") 
-                { ConnectionManager = master, DisableLogging = true }
-                .ExecuteScalar<int>()
-                .Value;
-            Assert.AreEqual(allowedOpenConnections, openConnections);
+            ConnectionManagerHelper.AssertOpenConnectionCount(0, ConnectionStringParameter);
         }
     }
 }

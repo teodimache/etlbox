@@ -14,7 +14,7 @@ namespace ALE.ETLBox.ConnectionManager {
 
         public SqlConnectionManager() :base(){ } 
 
-        public SqlConnectionManager(ConnectionString connectionString) : base(connectionString) { }
+        public SqlConnectionManager(SqlConnectionString connectionString) : base(connectionString) { }
 
         public override void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName) {
             using (SqlBulkCopy bulkCopy = new SqlBulkCopy(DbConnection, SqlBulkCopyOptions.TableLock, null)) {
@@ -27,7 +27,7 @@ namespace ALE.ETLBox.ConnectionManager {
         }
 
         public override IDbConnectionManager Clone() {
-            SqlConnectionManager clone = new SqlConnectionManager(ConnectionString) {
+            SqlConnectionManager clone = new SqlConnectionManager((SqlConnectionString)ConnectionString) {
                 MaxLoginAttempts = this.MaxLoginAttempts
             };
             return clone;

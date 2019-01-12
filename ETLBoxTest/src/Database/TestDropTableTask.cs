@@ -15,7 +15,7 @@ namespace ALE.ETLBoxTest {
         [ClassInitialize]
         public static void TestInit(TestContext testContext) {
             TestHelper.RecreateDatabase(testContext);
-            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString(testContext.Properties["connectionString"].ToString()));
+            ControlFlow.CurrentDbConnection = new SqlConnectionManager(new SqlConnectionString(testContext.Properties["connectionString"].ToString()));
             CreateSchemaTask.Create("test");
         }
 
