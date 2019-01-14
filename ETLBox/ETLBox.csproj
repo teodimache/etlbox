@@ -13,10 +13,23 @@ ETLBox is a comprehensive C# class library that is able to manage your whole ETL
     <PackageProjectUrl>https://www.etlbox.net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/roadrunnerlenny/etlbox</RepositoryUrl>
     <PackageTags>ETL SSIS ELT Dataflow Controlflow</PackageTags>
-    <PackageReleaseNotes>Reorganization of namespace.
-See the API documentation for a whole list of all namespaces:
-http://etlbox.net/api/index.html</PackageReleaseNotes>
-    <Version>1.0.1</Version>
+    <PackageReleaseNotes># Release Notes
+
+## Version 1.0.0
+
+Initial release working on .NET Core. 
+
+## Version 1.0.1
+
+Reorganization of namespaces.
+
+## Version 1.1.0
+
+* `DropDatabaseTask`: static "convenience" method name changed from delete to drop 
+* `ConnectionManager` (general) improved:verified that the underlying ADO.NET connection pooling is working (see Issue#1)
+* `OdbcConnectionManager`: ETLBox now supports connection via Odbc. (64bit only)
+* `AccessOdbcConnectionManager`: ETLBox can now connect to access databases via ODBC (64bit ODBC driver required)</PackageReleaseNotes>
+    <Version>1.1.0-beta</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/roadrunnerlenny/etlbox/master/docs/images/logo_bw.ico</PackageIconUrl>
   </PropertyGroup>
 

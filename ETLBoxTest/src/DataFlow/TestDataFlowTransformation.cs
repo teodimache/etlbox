@@ -152,6 +152,8 @@ namespace ALE.ETLBoxTest {
             Assert.AreEqual(2, new SqlTask("Find log entry", "select count(*) from etl.Log where TaskType='DF_CSVSOURCE' group by TaskHash") { DisableLogging = true }.ExecuteScalar<int>());
             Assert.AreEqual(2, new SqlTask("Find log entry", "select count(*) from etl.Log where TaskType='DF_DBDEST' group by TaskHash") { DisableLogging = true }.ExecuteScalar<int>());
         }
+
+      
     }
 
 }
