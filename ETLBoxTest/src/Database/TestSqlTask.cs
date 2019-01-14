@@ -127,5 +127,25 @@ namespace ALE.ETLBoxTest {
             Assert.AreEqual(2, new SqlTask("Find log entry", "select count(*) from etl.Log where TaskType='SQL' group by TaskHash") { DisableLogging = true, ConnectionManager = connection }.ExecuteScalar<int>());
             ControlFlow.CurrentDbConnection = new SqlConnectionManager(ConnectionStringParameter);
         }
+
+        [TestMethod]
+        public void TestBulkInsertWithTableDefinition() {
+            TableDefinition tableDefinition = new TableDefinition("dbo.BulkInsert", new List<TableColumn>() {
+                new TableColumn("ID", "int", allowNulls: false,isPrimaryKey:true,isIdentity:true)   ,
+                new TableColumn("Col1", "nvarchar(4000)", allowNulls: true),
+                new TableColumn("Col2", "nvarchar(4000)", allowNulls: true)
+            });
+            tableDefinition.CreateTable();
+            TableData data = new TableData(tableDefinition);
+            string[] values = { "Value1", "Value2" };
+            data.Rows.Add(values);
+            string[] values2 = { "Value3", "Value4" };
+            data.Rows.Add(values2);
+            string[] values3 = { "Value5", "Value6" };
+            data.Rows.Add(values3);
+            SqlTask.BulkInsert("Bulk insert demo data", data, "dbo.BulkInsert");
+        }
+
+
     }
 }

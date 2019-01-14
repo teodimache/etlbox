@@ -6,7 +6,7 @@ using System.Data.Common;
 namespace ALE.ETLBox {
     public class TableData : TableData<object> {
         public TableData()  : base() { }
-        public TableData(TableDefinition definition) : base() { }
+        public TableData(TableDefinition definition) : base(definition) { }
         public TableData(TableDefinition definition, int estimatedBatchSize) : base() { }
     }
 
@@ -14,19 +14,29 @@ namespace ALE.ETLBox {
         public int? EstimatedBatchSize { get; set; }
         public IColumnMappingCollection ColumnMapping {
             get {
-                var mapping = new DataColumnMappingCollection();
-                foreach (var col in Definition.Columns)
-                    if (!col.IsIdentity)
-                        mapping.Add(new DataColumnMapping(col.SourceColumn, col.DataSetColumn));
-                return mapping;
+                if (HasDefinition) {
+                    return GetColumnMappingFromDefinition();
+                } else {
+                    throw new ETLBoxException("No table definition found. For Bulk insert a TableDefinition is always needed.");
+                }
             }
         }
+
+        private IColumnMappingCollection GetColumnMappingFromDefinition() {
+            var mapping = new DataColumnMappingCollection();
+            foreach (var col in Definition.Columns)
+                if (!col.IsIdentity)
+                    mapping.Add(new DataColumnMapping(col.SourceColumn, col.DataSetColumn));
+            return mapping;
+        }
+
         public bool HasIdentityColumn => IDColumnIndex != null;
         public List<T[]> Rows { get; set; }
 
         public T[] CurrentRow { get; set; }
         int ReadIndex { get; set; }
         TableDefinition Definition { get; set; }
+        public bool HasDefinition => Definition != null;
         int? IDColumnIndex { get; set; }
 
         public TableData() {
