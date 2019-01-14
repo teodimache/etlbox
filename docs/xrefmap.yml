@@ -13,6 +13,109 @@ references:
   commentId: N:ALE.ETLBox.ConnectionManager
   fullName: ALE.ETLBox.ConnectionManager
   nameWithType: ALE.ETLBox.ConnectionManager
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager
+  name: AccessOdbcConnectionManager
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html
+  commentId: T:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager
+  nameWithType: AccessOdbcConnectionManager
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.#ctor
+  name: AccessOdbcConnectionManager()
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager__ctor
+  commentId: M:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.#ctor
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AccessOdbcConnectionManager()
+  nameWithType: AccessOdbcConnectionManager.AccessOdbcConnectionManager()
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.#ctor(ALE.ETLBox.OdbcConnectionString)
+  name: AccessOdbcConnectionManager(OdbcConnectionString)
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager__ctor_ALE_ETLBox_OdbcConnectionString_
+  commentId: M:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.#ctor(ALE.ETLBox.OdbcConnectionString)
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AccessOdbcConnectionManager(ALE.ETLBox.OdbcConnectionString)
+  nameWithType: AccessOdbcConnectionManager.AccessOdbcConnectionManager(OdbcConnectionString)
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.#ctor*
+  name: AccessOdbcConnectionManager
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager__ctor_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.#ctor
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AccessOdbcConnectionManager
+  nameWithType: AccessOdbcConnectionManager.AccessOdbcConnectionManager
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AfterBulkInsert()
+  nameWithType: AccessOdbcConnectionManager.AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AfterBulkInsert
+  nameWithType: AccessOdbcConnectionManager.AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AlwaysUseSameConnection
+  name: AlwaysUseSameConnection
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_AlwaysUseSameConnection
+  commentId: P:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AlwaysUseSameConnection
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AlwaysUseSameConnection
+  nameWithType: AccessOdbcConnectionManager.AlwaysUseSameConnection
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AlwaysUseSameConnection*
+  name: AlwaysUseSameConnection
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_AlwaysUseSameConnection_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AlwaysUseSameConnection
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.AlwaysUseSameConnection
+  nameWithType: AccessOdbcConnectionManager.AlwaysUseSameConnection
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BeforeBulkInsert()
+  nameWithType: AccessOdbcConnectionManager.BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BeforeBulkInsert
+  nameWithType: AccessOdbcConnectionManager.BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: AccessOdbcConnectionManager.BulkInsert(ITableData, String)
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BulkInsert*
+  name: BulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_BulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.BulkInsert
+  nameWithType: AccessOdbcConnectionManager.BulkInsert
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.Clone
+  name: Clone()
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_Clone
+  commentId: M:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.Clone
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.Clone()
+  nameWithType: AccessOdbcConnectionManager.Clone()
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.Clone*
+  name: Clone
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_Clone_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.Clone
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.Clone
+  nameWithType: AccessOdbcConnectionManager.Clone
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.DummyTableName
+  name: DummyTableName
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_DummyTableName
+  commentId: P:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.DummyTableName
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.DummyTableName
+  nameWithType: AccessOdbcConnectionManager.DummyTableName
+- uid: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.DummyTableName*
+  name: DummyTableName
+  href: api/ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_AccessOdbcConnectionManager_DummyTableName_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.DummyTableName
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.DummyTableName
+  nameWithType: AccessOdbcConnectionManager.DummyTableName
 - uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager
   name: AdomdConnectionManager
   href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html
@@ -38,12 +141,38 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AdomdConnectionManager
   nameWithType: AdomdConnectionManager.AdomdConnectionManager
-- uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: AdomdConnectionManager.BulkInsert(IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert()
+  nameWithType: AdomdConnectionManager.AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert
+  nameWithType: AdomdConnectionManager.AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert()
+  nameWithType: AdomdConnectionManager.BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert
+  nameWithType: AdomdConnectionManager.BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: AdomdConnectionManager.BulkInsert(ITableData, String)
 - uid: ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html#ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_
@@ -81,14 +210,14 @@ references:
   fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).DbConnectionManager()
   nameWithType: DbConnectionManager<Connection, Command>.DbConnectionManager()
   nameWithType.vb: DbConnectionManager(Of Connection, Command).DbConnectionManager()
-- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.#ctor(ALE.ETLBox.ConnectionString)
-  name: DbConnectionManager(ConnectionString)
-  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2__ctor_ALE_ETLBox_ConnectionString_
-  commentId: M:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.#ctor(ALE.ETLBox.ConnectionString)
-  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.DbConnectionManager(ALE.ETLBox.ConnectionString)
-  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).DbConnectionManager(ALE.ETLBox.ConnectionString)
-  nameWithType: DbConnectionManager<Connection, Command>.DbConnectionManager(ConnectionString)
-  nameWithType.vb: DbConnectionManager(Of Connection, Command).DbConnectionManager(ConnectionString)
+- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.#ctor(ALE.ETLBox.IDbConnectionString)
+  name: DbConnectionManager(IDbConnectionString)
+  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2__ctor_ALE_ETLBox_IDbConnectionString_
+  commentId: M:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.#ctor(ALE.ETLBox.IDbConnectionString)
+  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.DbConnectionManager(ALE.ETLBox.IDbConnectionString)
+  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).DbConnectionManager(ALE.ETLBox.IDbConnectionString)
+  nameWithType: DbConnectionManager<Connection, Command>.DbConnectionManager(IDbConnectionString)
+  nameWithType.vb: DbConnectionManager(Of Connection, Command).DbConnectionManager(IDbConnectionString)
 - uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.#ctor*
   name: DbConnectionManager
   href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2__ctor_
@@ -98,14 +227,48 @@ references:
   fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).DbConnectionManager
   nameWithType: DbConnectionManager<Connection, Command>.DbConnectionManager
   nameWithType.vb: DbConnectionManager(Of Connection, Command).DbConnectionManager
-- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: DbConnectionManager<Connection, Command>.BulkInsert(IDataReader, IColumnMappingCollection, String)
-  nameWithType.vb: DbConnectionManager(Of Connection, Command).BulkInsert(IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.AfterBulkInsert()
+  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).AfterBulkInsert()
+  nameWithType: DbConnectionManager<Connection, Command>.AfterBulkInsert()
+  nameWithType.vb: DbConnectionManager(Of Connection, Command).AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.AfterBulkInsert
+  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).AfterBulkInsert
+  nameWithType: DbConnectionManager<Connection, Command>.AfterBulkInsert
+  nameWithType.vb: DbConnectionManager(Of Connection, Command).AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.BeforeBulkInsert()
+  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).BeforeBulkInsert()
+  nameWithType: DbConnectionManager<Connection, Command>.BeforeBulkInsert()
+  nameWithType.vb: DbConnectionManager(Of Connection, Command).BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.BeforeBulkInsert
+  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).BeforeBulkInsert
+  nameWithType: DbConnectionManager<Connection, Command>.BeforeBulkInsert
+  nameWithType.vb: DbConnectionManager(Of Connection, Command).BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.DbConnectionManager<Connection, Command>.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  fullName.vb: ALE.ETLBox.ConnectionManager.DbConnectionManager(Of Connection, Command).BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: DbConnectionManager<Connection, Command>.BulkInsert(ITableData, String)
+  nameWithType.vb: DbConnectionManager(Of Connection, Command).BulkInsert(ITableData, String)
 - uid: ALE.ETLBox.ConnectionManager.DbConnectionManager`2.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BulkInsert_
@@ -431,12 +594,38 @@ references:
   commentId: T:ALE.ETLBox.ConnectionManager.IDbConnectionManager
   fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager
   nameWithType: IDbConnectionManager
-- uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: IDbConnectionManager.BulkInsert(IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.IDbConnectionManager.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.AfterBulkInsert()
+  nameWithType: IDbConnectionManager.AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.IDbConnectionManager.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.AfterBulkInsert
+  nameWithType: IDbConnectionManager.AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.IDbConnectionManager.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BeforeBulkInsert()
+  nameWithType: IDbConnectionManager.BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.IDbConnectionManager.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BeforeBulkInsert
+  nameWithType: IDbConnectionManager.BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: IDbConnectionManager.BulkInsert(ITableData, String)
 - uid: ALE.ETLBox.ConnectionManager.IDbConnectionManager.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ConnectionManager.IDbConnectionManager.html#ALE_ETLBox_ConnectionManager_IDbConnectionManager_BulkInsert_
@@ -505,6 +694,83 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ConnectionManager.IDbConnectionManager.ExecuteScalar
   nameWithType: IDbConnectionManager.ExecuteScalar
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager
+  name: OdbcConnectionManager
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html
+  commentId: T:ALE.ETLBox.ConnectionManager.OdbcConnectionManager
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager
+  nameWithType: OdbcConnectionManager
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.#ctor
+  name: OdbcConnectionManager()
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager__ctor
+  commentId: M:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.#ctor
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.OdbcConnectionManager()
+  nameWithType: OdbcConnectionManager.OdbcConnectionManager()
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.#ctor(ALE.ETLBox.OdbcConnectionString)
+  name: OdbcConnectionManager(OdbcConnectionString)
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager__ctor_ALE_ETLBox_OdbcConnectionString_
+  commentId: M:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.#ctor(ALE.ETLBox.OdbcConnectionString)
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.OdbcConnectionManager(ALE.ETLBox.OdbcConnectionString)
+  nameWithType: OdbcConnectionManager.OdbcConnectionManager(OdbcConnectionString)
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.#ctor*
+  name: OdbcConnectionManager
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager__ctor_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.#ctor
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.OdbcConnectionManager
+  nameWithType: OdbcConnectionManager.OdbcConnectionManager
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.AfterBulkInsert()
+  nameWithType: OdbcConnectionManager.AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.AfterBulkInsert
+  nameWithType: OdbcConnectionManager.AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BeforeBulkInsert()
+  nameWithType: OdbcConnectionManager.BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BeforeBulkInsert
+  nameWithType: OdbcConnectionManager.BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: OdbcConnectionManager.BulkInsert(ITableData, String)
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BulkInsert*
+  name: BulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_BulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.BulkInsert
+  nameWithType: OdbcConnectionManager.BulkInsert
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.Clone
+  name: Clone()
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_Clone
+  commentId: M:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.Clone
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.Clone()
+  nameWithType: OdbcConnectionManager.Clone()
+- uid: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.Clone*
+  name: Clone
+  href: api/ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html#ALE_ETLBox_ConnectionManager_OdbcConnectionManager_Clone_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.OdbcConnectionManager.Clone
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.OdbcConnectionManager.Clone
+  nameWithType: OdbcConnectionManager.Clone
 - uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager
   name: SMOConnectionManager
   href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html
@@ -524,12 +790,38 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.SMOConnectionManager
   nameWithType: SMOConnectionManager.SMOConnectionManager
-- uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: SMOConnectionManager.BulkInsert(IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.SMOConnectionManager.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.AfterBulkInsert()
+  nameWithType: SMOConnectionManager.AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.SMOConnectionManager.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.AfterBulkInsert
+  nameWithType: SMOConnectionManager.AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.SMOConnectionManager.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BeforeBulkInsert()
+  nameWithType: SMOConnectionManager.BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.SMOConnectionManager.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BeforeBulkInsert
+  nameWithType: SMOConnectionManager.BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: SMOConnectionManager.BulkInsert(ITableData, String)
 - uid: ALE.ETLBox.ConnectionManager.SMOConnectionManager.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ConnectionManager.SMOConnectionManager.html#ALE_ETLBox_ConnectionManager_SMOConnectionManager_BulkInsert_
@@ -694,12 +986,38 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.SqlConnectionManager
   nameWithType: SqlConnectionManager.SqlConnectionManager
-- uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: SqlConnectionManager.BulkInsert(IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.AfterBulkInsert
+  name: AfterBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_AfterBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.SqlConnectionManager.AfterBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.AfterBulkInsert()
+  nameWithType: SqlConnectionManager.AfterBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.AfterBulkInsert*
+  name: AfterBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_AfterBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.SqlConnectionManager.AfterBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.AfterBulkInsert
+  nameWithType: SqlConnectionManager.AfterBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BeforeBulkInsert
+  name: BeforeBulkInsert()
+  href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_BeforeBulkInsert
+  commentId: M:ALE.ETLBox.ConnectionManager.SqlConnectionManager.BeforeBulkInsert
+  fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BeforeBulkInsert()
+  nameWithType: SqlConnectionManager.BeforeBulkInsert()
+- uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BeforeBulkInsert*
+  name: BeforeBulkInsert
+  href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_BeforeBulkInsert_
+  commentId: Overload:ALE.ETLBox.ConnectionManager.SqlConnectionManager.BeforeBulkInsert
+  isSpec: "True"
+  fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BeforeBulkInsert
+  nameWithType: SqlConnectionManager.BeforeBulkInsert
+- uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: SqlConnectionManager.BulkInsert(ITableData, String)
 - uid: ALE.ETLBox.ConnectionManager.SqlConnectionManager.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ConnectionManager.SqlConnectionManager.html#ALE_ETLBox_ConnectionManager_SqlConnectionManager_BulkInsert_
@@ -745,32 +1063,6 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ConnectionString.ConnectionString
   nameWithType: ConnectionString.ConnectionString
-- uid: ALE.ETLBox.ConnectionString.CatalogName
-  name: CatalogName
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_CatalogName
-  commentId: P:ALE.ETLBox.ConnectionString.CatalogName
-  fullName: ALE.ETLBox.ConnectionString.CatalogName
-  nameWithType: ConnectionString.CatalogName
-- uid: ALE.ETLBox.ConnectionString.CatalogName*
-  name: CatalogName
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_CatalogName_
-  commentId: Overload:ALE.ETLBox.ConnectionString.CatalogName
-  isSpec: "True"
-  fullName: ALE.ETLBox.ConnectionString.CatalogName
-  nameWithType: ConnectionString.CatalogName
-- uid: ALE.ETLBox.ConnectionString.ChangeCatalog(System.String)
-  name: ChangeCatalog(String)
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_ChangeCatalog_System_String_
-  commentId: M:ALE.ETLBox.ConnectionString.ChangeCatalog(System.String)
-  fullName: ALE.ETLBox.ConnectionString.ChangeCatalog(System.String)
-  nameWithType: ConnectionString.ChangeCatalog(String)
-- uid: ALE.ETLBox.ConnectionString.ChangeCatalog*
-  name: ChangeCatalog
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_ChangeCatalog_
-  commentId: Overload:ALE.ETLBox.ConnectionString.ChangeCatalog
-  isSpec: "True"
-  fullName: ALE.ETLBox.ConnectionString.ChangeCatalog
-  nameWithType: ConnectionString.ChangeCatalog
 - uid: ALE.ETLBox.ConnectionString.GetConnectionWithoutCatalog
   name: GetConnectionWithoutCatalog()
   href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_GetConnectionWithoutCatalog
@@ -797,19 +1089,6 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ConnectionString.GetMasterConnection
   nameWithType: ConnectionString.GetMasterConnection
-- uid: ALE.ETLBox.ConnectionString.IsValid
-  name: IsValid
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_IsValid
-  commentId: P:ALE.ETLBox.ConnectionString.IsValid
-  fullName: ALE.ETLBox.ConnectionString.IsValid
-  nameWithType: ConnectionString.IsValid
-- uid: ALE.ETLBox.ConnectionString.IsValid*
-  name: IsValid
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_IsValid_
-  commentId: Overload:ALE.ETLBox.ConnectionString.IsValid
-  isSpec: "True"
-  fullName: ALE.ETLBox.ConnectionString.IsValid
-  nameWithType: ConnectionString.IsValid
 - uid: ALE.ETLBox.ConnectionString.op_Implicit(System.String)~ALE.ETLBox.ConnectionString
   name: Implicit(String to ConnectionString)
   href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_op_Implicit_System_String__ALE_ETLBox_ConnectionString
@@ -829,19 +1108,19 @@ references:
   fullName.vb: ALE.ETLBox.ConnectionString.Widening
   nameWithType: ConnectionString.Implicit
   nameWithType.vb: ConnectionString.Widening
-- uid: ALE.ETLBox.ConnectionString.ServerName
-  name: ServerName
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_ServerName
-  commentId: P:ALE.ETLBox.ConnectionString.ServerName
-  fullName: ALE.ETLBox.ConnectionString.ServerName
-  nameWithType: ConnectionString.ServerName
-- uid: ALE.ETLBox.ConnectionString.ServerName*
-  name: ServerName
-  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_ServerName_
-  commentId: Overload:ALE.ETLBox.ConnectionString.ServerName
+- uid: ALE.ETLBox.ConnectionString.SqlConnectionStringBuilder
+  name: SqlConnectionStringBuilder
+  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_SqlConnectionStringBuilder
+  commentId: P:ALE.ETLBox.ConnectionString.SqlConnectionStringBuilder
+  fullName: ALE.ETLBox.ConnectionString.SqlConnectionStringBuilder
+  nameWithType: ConnectionString.SqlConnectionStringBuilder
+- uid: ALE.ETLBox.ConnectionString.SqlConnectionStringBuilder*
+  name: SqlConnectionStringBuilder
+  href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_SqlConnectionStringBuilder_
+  commentId: Overload:ALE.ETLBox.ConnectionString.SqlConnectionStringBuilder
   isSpec: "True"
-  fullName: ALE.ETLBox.ConnectionString.ServerName
-  nameWithType: ConnectionString.ServerName
+  fullName: ALE.ETLBox.ConnectionString.SqlConnectionStringBuilder
+  nameWithType: ConnectionString.SqlConnectionStringBuilder
 - uid: ALE.ETLBox.ConnectionString.ToString
   name: ToString()
   href: api/ALE.ETLBox.ConnectionString.html#ALE_ETLBox_ConnectionString_ToString
@@ -1973,6 +2252,19 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ControlFlow.CreateTableTask.TaskType
   nameWithType: CreateTableTask.TaskType
+- uid: ALE.ETLBox.ControlFlow.CreateTableTask.ThrowErrorIfTableExists
+  name: ThrowErrorIfTableExists
+  href: api/ALE.ETLBox.ControlFlow.CreateTableTask.html#ALE_ETLBox_ControlFlow_CreateTableTask_ThrowErrorIfTableExists
+  commentId: P:ALE.ETLBox.ControlFlow.CreateTableTask.ThrowErrorIfTableExists
+  fullName: ALE.ETLBox.ControlFlow.CreateTableTask.ThrowErrorIfTableExists
+  nameWithType: CreateTableTask.ThrowErrorIfTableExists
+- uid: ALE.ETLBox.ControlFlow.CreateTableTask.ThrowErrorIfTableExists*
+  name: ThrowErrorIfTableExists
+  href: api/ALE.ETLBox.ControlFlow.CreateTableTask.html#ALE_ETLBox_ControlFlow_CreateTableTask_ThrowErrorIfTableExists_
+  commentId: Overload:ALE.ETLBox.ControlFlow.CreateTableTask.ThrowErrorIfTableExists
+  isSpec: "True"
+  fullName: ALE.ETLBox.ControlFlow.CreateTableTask.ThrowErrorIfTableExists
+  nameWithType: CreateTableTask.ThrowErrorIfTableExists
 - uid: ALE.ETLBox.ControlFlow.CRUDProcedureTask
   name: CRUDProcedureTask
   href: api/ALE.ETLBox.ControlFlow.CRUDProcedureTask.html
@@ -2454,12 +2746,12 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ControlFlow.DbTask.BeforeRowReadAction
   nameWithType: DbTask.BeforeRowReadAction
-- uid: ALE.ETLBox.ControlFlow.DbTask.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ControlFlow.DbTask.html#ALE_ETLBox_ControlFlow_DbTask_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ControlFlow.DbTask.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ControlFlow.DbTask.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: DbTask.BulkInsert(IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ControlFlow.DbTask.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(ITableData, String)
+  href: api/ALE.ETLBox.ControlFlow.DbTask.html#ALE_ETLBox_ControlFlow_DbTask_BulkInsert_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ControlFlow.DbTask.BulkInsert(ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ControlFlow.DbTask.BulkInsert(ALE.ETLBox.ITableData, System.String)
+  nameWithType: DbTask.BulkInsert(ITableData, String)
 - uid: ALE.ETLBox.ControlFlow.DbTask.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ControlFlow.DbTask.html#ALE_ETLBox_ControlFlow_DbTask_BulkInsert_
@@ -2567,6 +2859,19 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ControlFlow.DbTask.FileConnection
   nameWithType: DbTask.FileConnection
+- uid: ALE.ETLBox.ControlFlow.DbTask.IsOdbcConnection
+  name: IsOdbcConnection
+  href: api/ALE.ETLBox.ControlFlow.DbTask.html#ALE_ETLBox_ControlFlow_DbTask_IsOdbcConnection
+  commentId: P:ALE.ETLBox.ControlFlow.DbTask.IsOdbcConnection
+  fullName: ALE.ETLBox.ControlFlow.DbTask.IsOdbcConnection
+  nameWithType: DbTask.IsOdbcConnection
+- uid: ALE.ETLBox.ControlFlow.DbTask.IsOdbcConnection*
+  name: IsOdbcConnection
+  href: api/ALE.ETLBox.ControlFlow.DbTask.html#ALE_ETLBox_ControlFlow_DbTask_IsOdbcConnection_
+  commentId: Overload:ALE.ETLBox.ControlFlow.DbTask.IsOdbcConnection
+  isSpec: "True"
+  fullName: ALE.ETLBox.ControlFlow.DbTask.IsOdbcConnection
+  nameWithType: DbTask.IsOdbcConnection
 - uid: ALE.ETLBox.ControlFlow.DbTask.Query*
   name: Query
   href: api/ALE.ETLBox.ControlFlow.DbTask.html#ALE_ETLBox_ControlFlow_DbTask_Query_
@@ -2669,19 +2974,19 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ControlFlow.DropDatabaseTask.DatabaseName
   nameWithType: DropDatabaseTask.DatabaseName
-- uid: ALE.ETLBox.ControlFlow.DropDatabaseTask.Delete(System.String)
-  name: Delete(String)
-  href: api/ALE.ETLBox.ControlFlow.DropDatabaseTask.html#ALE_ETLBox_ControlFlow_DropDatabaseTask_Delete_System_String_
-  commentId: M:ALE.ETLBox.ControlFlow.DropDatabaseTask.Delete(System.String)
-  fullName: ALE.ETLBox.ControlFlow.DropDatabaseTask.Delete(System.String)
-  nameWithType: DropDatabaseTask.Delete(String)
-- uid: ALE.ETLBox.ControlFlow.DropDatabaseTask.Delete*
-  name: Delete
-  href: api/ALE.ETLBox.ControlFlow.DropDatabaseTask.html#ALE_ETLBox_ControlFlow_DropDatabaseTask_Delete_
-  commentId: Overload:ALE.ETLBox.ControlFlow.DropDatabaseTask.Delete
+- uid: ALE.ETLBox.ControlFlow.DropDatabaseTask.Drop(System.String)
+  name: Drop(String)
+  href: api/ALE.ETLBox.ControlFlow.DropDatabaseTask.html#ALE_ETLBox_ControlFlow_DropDatabaseTask_Drop_System_String_
+  commentId: M:ALE.ETLBox.ControlFlow.DropDatabaseTask.Drop(System.String)
+  fullName: ALE.ETLBox.ControlFlow.DropDatabaseTask.Drop(System.String)
+  nameWithType: DropDatabaseTask.Drop(String)
+- uid: ALE.ETLBox.ControlFlow.DropDatabaseTask.Drop*
+  name: Drop
+  href: api/ALE.ETLBox.ControlFlow.DropDatabaseTask.html#ALE_ETLBox_ControlFlow_DropDatabaseTask_Drop_
+  commentId: Overload:ALE.ETLBox.ControlFlow.DropDatabaseTask.Drop
   isSpec: "True"
-  fullName: ALE.ETLBox.ControlFlow.DropDatabaseTask.Delete
-  nameWithType: DropDatabaseTask.Delete
+  fullName: ALE.ETLBox.ControlFlow.DropDatabaseTask.Drop
+  nameWithType: DropDatabaseTask.Drop
 - uid: ALE.ETLBox.ControlFlow.DropDatabaseTask.Execute
   name: Execute()
   href: api/ALE.ETLBox.ControlFlow.DropDatabaseTask.html#ALE_ETLBox_ControlFlow_DropDatabaseTask_Execute
@@ -3718,12 +4023,12 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ControlFlow.SqlTask.SqlTask
   nameWithType: SqlTask.SqlTask
-- uid: ALE.ETLBox.ControlFlow.SqlTask.BulkInsert(System.String,System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(String, IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ControlFlow.SqlTask.html#ALE_ETLBox_ControlFlow_SqlTask_BulkInsert_System_String_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ControlFlow.SqlTask.BulkInsert(System.String,System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ControlFlow.SqlTask.BulkInsert(System.String, System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: SqlTask.BulkInsert(String, IDataReader, IColumnMappingCollection, String)
+- uid: ALE.ETLBox.ControlFlow.SqlTask.BulkInsert(System.String,ALE.ETLBox.ITableData,System.String)
+  name: BulkInsert(String, ITableData, String)
+  href: api/ALE.ETLBox.ControlFlow.SqlTask.html#ALE_ETLBox_ControlFlow_SqlTask_BulkInsert_System_String_ALE_ETLBox_ITableData_System_String_
+  commentId: M:ALE.ETLBox.ControlFlow.SqlTask.BulkInsert(System.String,ALE.ETLBox.ITableData,System.String)
+  fullName: ALE.ETLBox.ControlFlow.SqlTask.BulkInsert(System.String, ALE.ETLBox.ITableData, System.String)
+  nameWithType: SqlTask.BulkInsert(String, ITableData, String)
 - uid: ALE.ETLBox.ControlFlow.SqlTask.BulkInsert*
   name: BulkInsert
   href: api/ALE.ETLBox.ControlFlow.SqlTask.html#ALE_ETLBox_ControlFlow_SqlTask_BulkInsert_
@@ -4114,19 +4419,6 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ControlFlow.XmlaTask.XmlaTask
   nameWithType: XmlaTask.XmlaTask
-- uid: ALE.ETLBox.ControlFlow.XmlaTask.BulkInsert(System.String,System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  name: BulkInsert(String, IDataReader, IColumnMappingCollection, String)
-  href: api/ALE.ETLBox.ControlFlow.XmlaTask.html#ALE_ETLBox_ControlFlow_XmlaTask_BulkInsert_System_String_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_
-  commentId: M:ALE.ETLBox.ControlFlow.XmlaTask.BulkInsert(System.String,System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)
-  fullName: ALE.ETLBox.ControlFlow.XmlaTask.BulkInsert(System.String, System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)
-  nameWithType: XmlaTask.BulkInsert(String, IDataReader, IColumnMappingCollection, String)
-- uid: ALE.ETLBox.ControlFlow.XmlaTask.BulkInsert*
-  name: BulkInsert
-  href: api/ALE.ETLBox.ControlFlow.XmlaTask.html#ALE_ETLBox_ControlFlow_XmlaTask_BulkInsert_
-  commentId: Overload:ALE.ETLBox.ControlFlow.XmlaTask.BulkInsert
-  isSpec: "True"
-  fullName: ALE.ETLBox.ControlFlow.XmlaTask.BulkInsert
-  nameWithType: XmlaTask.BulkInsert
 - uid: ALE.ETLBox.ControlFlow.XmlaTask.Execute
   name: Execute()
   href: api/ALE.ETLBox.ControlFlow.XmlaTask.html#ALE_ETLBox_ControlFlow_XmlaTask_Execute
@@ -6636,6 +6928,37 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.DataFlow.TypeInfo.PropertyLength
   nameWithType: TypeInfo.PropertyLength
+- uid: ALE.ETLBox.ETLBoxException
+  name: ETLBoxException
+  href: api/ALE.ETLBox.ETLBoxException.html
+  commentId: T:ALE.ETLBox.ETLBoxException
+  fullName: ALE.ETLBox.ETLBoxException
+  nameWithType: ETLBoxException
+- uid: ALE.ETLBox.ETLBoxException.#ctor
+  name: ETLBoxException()
+  href: api/ALE.ETLBox.ETLBoxException.html#ALE_ETLBox_ETLBoxException__ctor
+  commentId: M:ALE.ETLBox.ETLBoxException.#ctor
+  fullName: ALE.ETLBox.ETLBoxException.ETLBoxException()
+  nameWithType: ETLBoxException.ETLBoxException()
+- uid: ALE.ETLBox.ETLBoxException.#ctor(System.String)
+  name: ETLBoxException(String)
+  href: api/ALE.ETLBox.ETLBoxException.html#ALE_ETLBox_ETLBoxException__ctor_System_String_
+  commentId: M:ALE.ETLBox.ETLBoxException.#ctor(System.String)
+  fullName: ALE.ETLBox.ETLBoxException.ETLBoxException(System.String)
+  nameWithType: ETLBoxException.ETLBoxException(String)
+- uid: ALE.ETLBox.ETLBoxException.#ctor(System.String,System.Exception)
+  name: ETLBoxException(String, Exception)
+  href: api/ALE.ETLBox.ETLBoxException.html#ALE_ETLBox_ETLBoxException__ctor_System_String_System_Exception_
+  commentId: M:ALE.ETLBox.ETLBoxException.#ctor(System.String,System.Exception)
+  fullName: ALE.ETLBox.ETLBoxException.ETLBoxException(System.String, System.Exception)
+  nameWithType: ETLBoxException.ETLBoxException(String, Exception)
+- uid: ALE.ETLBox.ETLBoxException.#ctor*
+  name: ETLBoxException
+  href: api/ALE.ETLBox.ETLBoxException.html#ALE_ETLBox_ETLBoxException__ctor_
+  commentId: Overload:ALE.ETLBox.ETLBoxException.#ctor
+  isSpec: "True"
+  fullName: ALE.ETLBox.ETLBoxException.ETLBoxException
+  nameWithType: ETLBoxException.ETLBoxException
 - uid: ALE.ETLBox.ExtensionFile
   name: ExtensionFile
   href: api/ALE.ETLBox.ExtensionFile.html
@@ -7023,6 +7346,12 @@ references:
   commentId: F:ALE.ETLBox.Helper.DataTypeConverter.DefaultSmallIntegerLength
   fullName: ALE.ETLBox.Helper.DataTypeConverter.DefaultSmallIntegerLength
   nameWithType: DataTypeConverter.DefaultSmallIntegerLength
+- uid: ALE.ETLBox.Helper.DataTypeConverter.DefaultStringLength
+  name: DefaultStringLength
+  href: api/ALE.ETLBox.Helper.DataTypeConverter.html#ALE_ETLBox_Helper_DataTypeConverter_DefaultStringLength
+  commentId: F:ALE.ETLBox.Helper.DataTypeConverter.DefaultStringLength
+  fullName: ALE.ETLBox.Helper.DataTypeConverter.DefaultStringLength
+  nameWithType: DataTypeConverter.DefaultStringLength
 - uid: ALE.ETLBox.Helper.DataTypeConverter.DefaultTinyIntegerLength
   name: DefaultTinyIntegerLength
   href: api/ALE.ETLBox.Helper.DataTypeConverter.html#ALE_ETLBox_Helper_DataTypeConverter_DefaultTinyIntegerLength
@@ -7275,6 +7604,38 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.Helper.StringExtension.NullOrSqlString
   nameWithType: StringExtension.NullOrSqlString
+- uid: ALE.ETLBox.IDbConnectionString
+  name: IDbConnectionString
+  href: api/ALE.ETLBox.IDbConnectionString.html
+  commentId: T:ALE.ETLBox.IDbConnectionString
+  fullName: ALE.ETLBox.IDbConnectionString
+  nameWithType: IDbConnectionString
+- uid: ALE.ETLBox.IDbConnectionString.ToString
+  name: ToString()
+  href: api/ALE.ETLBox.IDbConnectionString.html#ALE_ETLBox_IDbConnectionString_ToString
+  commentId: M:ALE.ETLBox.IDbConnectionString.ToString
+  fullName: ALE.ETLBox.IDbConnectionString.ToString()
+  nameWithType: IDbConnectionString.ToString()
+- uid: ALE.ETLBox.IDbConnectionString.ToString*
+  name: ToString
+  href: api/ALE.ETLBox.IDbConnectionString.html#ALE_ETLBox_IDbConnectionString_ToString_
+  commentId: Overload:ALE.ETLBox.IDbConnectionString.ToString
+  isSpec: "True"
+  fullName: ALE.ETLBox.IDbConnectionString.ToString
+  nameWithType: IDbConnectionString.ToString
+- uid: ALE.ETLBox.IDbConnectionString.Value
+  name: Value
+  href: api/ALE.ETLBox.IDbConnectionString.html#ALE_ETLBox_IDbConnectionString_Value
+  commentId: P:ALE.ETLBox.IDbConnectionString.Value
+  fullName: ALE.ETLBox.IDbConnectionString.Value
+  nameWithType: IDbConnectionString.Value
+- uid: ALE.ETLBox.IDbConnectionString.Value*
+  name: Value
+  href: api/ALE.ETLBox.IDbConnectionString.html#ALE_ETLBox_IDbConnectionString_Value_
+  commentId: Overload:ALE.ETLBox.IDbConnectionString.Value
+  isSpec: "True"
+  fullName: ALE.ETLBox.IDbConnectionString.Value
+  nameWithType: IDbConnectionString.Value
 - uid: ALE.ETLBox.ITableColumn
   name: ITableColumn
   href: api/ALE.ETLBox.ITableColumn.html
@@ -7424,6 +7785,25 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.ITableColumn.Name
   nameWithType: ITableColumn.Name
+- uid: ALE.ETLBox.ITableData
+  name: ITableData
+  href: api/ALE.ETLBox.ITableData.html
+  commentId: T:ALE.ETLBox.ITableData
+  fullName: ALE.ETLBox.ITableData
+  nameWithType: ITableData
+- uid: ALE.ETLBox.ITableData.ColumnMapping
+  name: ColumnMapping
+  href: api/ALE.ETLBox.ITableData.html#ALE_ETLBox_ITableData_ColumnMapping
+  commentId: P:ALE.ETLBox.ITableData.ColumnMapping
+  fullName: ALE.ETLBox.ITableData.ColumnMapping
+  nameWithType: ITableData.ColumnMapping
+- uid: ALE.ETLBox.ITableData.ColumnMapping*
+  name: ColumnMapping
+  href: api/ALE.ETLBox.ITableData.html#ALE_ETLBox_ITableData_ColumnMapping_
+  commentId: Overload:ALE.ETLBox.ITableData.ColumnMapping
+  isSpec: "True"
+  fullName: ALE.ETLBox.ITableData.ColumnMapping
+  nameWithType: ITableData.ColumnMapping
 - uid: ALE.ETLBox.ITask
   name: ITask
   href: api/ALE.ETLBox.ITask.html
@@ -9669,6 +10049,89 @@ references:
   isSpec: "True"
   fullName: ALE.ETLBox.Logging.TransferCompletedForLoadProcessTask.TaskType
   nameWithType: TransferCompletedForLoadProcessTask.TaskType
+- uid: ALE.ETLBox.OdbcConnectionString
+  name: OdbcConnectionString
+  href: api/ALE.ETLBox.OdbcConnectionString.html
+  commentId: T:ALE.ETLBox.OdbcConnectionString
+  fullName: ALE.ETLBox.OdbcConnectionString
+  nameWithType: OdbcConnectionString
+- uid: ALE.ETLBox.OdbcConnectionString.#ctor
+  name: OdbcConnectionString()
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString__ctor
+  commentId: M:ALE.ETLBox.OdbcConnectionString.#ctor
+  fullName: ALE.ETLBox.OdbcConnectionString.OdbcConnectionString()
+  nameWithType: OdbcConnectionString.OdbcConnectionString()
+- uid: ALE.ETLBox.OdbcConnectionString.#ctor(System.String)
+  name: OdbcConnectionString(String)
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString__ctor_System_String_
+  commentId: M:ALE.ETLBox.OdbcConnectionString.#ctor(System.String)
+  fullName: ALE.ETLBox.OdbcConnectionString.OdbcConnectionString(System.String)
+  nameWithType: OdbcConnectionString.OdbcConnectionString(String)
+- uid: ALE.ETLBox.OdbcConnectionString.#ctor*
+  name: OdbcConnectionString
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString__ctor_
+  commentId: Overload:ALE.ETLBox.OdbcConnectionString.#ctor
+  isSpec: "True"
+  fullName: ALE.ETLBox.OdbcConnectionString.OdbcConnectionString
+  nameWithType: OdbcConnectionString.OdbcConnectionString
+- uid: ALE.ETLBox.OdbcConnectionString.OdbcConnectionStringBuilder
+  name: OdbcConnectionStringBuilder
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_OdbcConnectionStringBuilder
+  commentId: P:ALE.ETLBox.OdbcConnectionString.OdbcConnectionStringBuilder
+  fullName: ALE.ETLBox.OdbcConnectionString.OdbcConnectionStringBuilder
+  nameWithType: OdbcConnectionString.OdbcConnectionStringBuilder
+- uid: ALE.ETLBox.OdbcConnectionString.OdbcConnectionStringBuilder*
+  name: OdbcConnectionStringBuilder
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_OdbcConnectionStringBuilder_
+  commentId: Overload:ALE.ETLBox.OdbcConnectionString.OdbcConnectionStringBuilder
+  isSpec: "True"
+  fullName: ALE.ETLBox.OdbcConnectionString.OdbcConnectionStringBuilder
+  nameWithType: OdbcConnectionString.OdbcConnectionStringBuilder
+- uid: ALE.ETLBox.OdbcConnectionString.op_Implicit(System.String)~ALE.ETLBox.OdbcConnectionString
+  name: Implicit(String to OdbcConnectionString)
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_op_Implicit_System_String__ALE_ETLBox_OdbcConnectionString
+  commentId: M:ALE.ETLBox.OdbcConnectionString.op_Implicit(System.String)~ALE.ETLBox.OdbcConnectionString
+  name.vb: Widening(String to OdbcConnectionString)
+  fullName: ALE.ETLBox.OdbcConnectionString.Implicit(System.String to ALE.ETLBox.OdbcConnectionString)
+  fullName.vb: ALE.ETLBox.OdbcConnectionString.Widening(System.String to ALE.ETLBox.OdbcConnectionString)
+  nameWithType: OdbcConnectionString.Implicit(String to OdbcConnectionString)
+  nameWithType.vb: OdbcConnectionString.Widening(String to OdbcConnectionString)
+- uid: ALE.ETLBox.OdbcConnectionString.op_Implicit*
+  name: Implicit
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_op_Implicit_
+  commentId: Overload:ALE.ETLBox.OdbcConnectionString.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: ALE.ETLBox.OdbcConnectionString.Implicit
+  fullName.vb: ALE.ETLBox.OdbcConnectionString.Widening
+  nameWithType: OdbcConnectionString.Implicit
+  nameWithType.vb: OdbcConnectionString.Widening
+- uid: ALE.ETLBox.OdbcConnectionString.ToString
+  name: ToString()
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_ToString
+  commentId: M:ALE.ETLBox.OdbcConnectionString.ToString
+  fullName: ALE.ETLBox.OdbcConnectionString.ToString()
+  nameWithType: OdbcConnectionString.ToString()
+- uid: ALE.ETLBox.OdbcConnectionString.ToString*
+  name: ToString
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_ToString_
+  commentId: Overload:ALE.ETLBox.OdbcConnectionString.ToString
+  isSpec: "True"
+  fullName: ALE.ETLBox.OdbcConnectionString.ToString
+  nameWithType: OdbcConnectionString.ToString
+- uid: ALE.ETLBox.OdbcConnectionString.Value
+  name: Value
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_Value
+  commentId: P:ALE.ETLBox.OdbcConnectionString.Value
+  fullName: ALE.ETLBox.OdbcConnectionString.Value
+  nameWithType: OdbcConnectionString.Value
+- uid: ALE.ETLBox.OdbcConnectionString.Value*
+  name: Value
+  href: api/ALE.ETLBox.OdbcConnectionString.html#ALE_ETLBox_OdbcConnectionString_Value_
+  commentId: Overload:ALE.ETLBox.OdbcConnectionString.Value
+  isSpec: "True"
+  fullName: ALE.ETLBox.OdbcConnectionString.Value
+  nameWithType: OdbcConnectionString.Value
 - uid: ALE.ETLBox.ProcedureDefinition
   name: ProcedureDefinition
   href: api/ALE.ETLBox.ProcedureDefinition.html
@@ -10737,6 +11200,23 @@ references:
   fullName.vb: ALE.ETLBox.TableData(Of T).GetValues
   nameWithType: TableData<T>.GetValues
   nameWithType.vb: TableData(Of T).GetValues
+- uid: ALE.ETLBox.TableData`1.HasDefinition
+  name: HasDefinition
+  href: api/ALE.ETLBox.TableData-1.html#ALE_ETLBox_TableData_1_HasDefinition
+  commentId: P:ALE.ETLBox.TableData`1.HasDefinition
+  fullName: ALE.ETLBox.TableData<T>.HasDefinition
+  fullName.vb: ALE.ETLBox.TableData(Of T).HasDefinition
+  nameWithType: TableData<T>.HasDefinition
+  nameWithType.vb: TableData(Of T).HasDefinition
+- uid: ALE.ETLBox.TableData`1.HasDefinition*
+  name: HasDefinition
+  href: api/ALE.ETLBox.TableData-1.html#ALE_ETLBox_TableData_1_HasDefinition_
+  commentId: Overload:ALE.ETLBox.TableData`1.HasDefinition
+  isSpec: "True"
+  fullName: ALE.ETLBox.TableData<T>.HasDefinition
+  fullName.vb: ALE.ETLBox.TableData(Of T).HasDefinition
+  nameWithType: TableData<T>.HasDefinition
+  nameWithType.vb: TableData(Of T).HasDefinition
 - uid: ALE.ETLBox.TableData`1.HasIdentityColumn
   name: HasIdentityColumn
   href: api/ALE.ETLBox.TableData-1.html#ALE_ETLBox_TableData_1_HasIdentityColumn

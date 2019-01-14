@@ -126,7 +126,13 @@
       <a class="xref" href="ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_ExecuteReader_System_String_System_Collections_Generic_IEnumerable_ALE_ETLBox_QueryParameter__">DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;.ExecuteReader(String, IEnumerable&lt;QueryParameter&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;.BulkInsert(IDataReader, IColumnMappingCollection, String)</a>
+      <a class="xref" href="ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BulkInsert_ALE_ETLBox_ITableData_System_String_">DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;.BulkInsert(ITableData, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_BeforeBulkInsert">DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;.BeforeBulkInsert()</a>
+    </div>
+    <div>
+      <a class="xref" href="ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_AfterBulkInsert">DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;.AfterBulkInsert()</a>
     </div>
     <div>
       <a class="xref" href="ALE.ETLBox.ConnectionManager.DbConnectionManager-2.html#ALE_ETLBox_ConnectionManager_DbConnectionManager_2_Dispose_System_Boolean_">DbConnectionManager&lt;AdomdConnection, AdomdCommand&gt;.Dispose(Boolean)</a>
@@ -224,18 +230,52 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader%2CSystem.Data.IColumnMappingCollection%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_AfterBulkInsert.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L25">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_AfterBulkInsert_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert*"></a>
+  <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_AfterBulkInsert" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.AfterBulkInsert">AfterBulkInsert()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void AfterBulkInsert()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ALE.ETLBox.ConnectionManager.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdCommand&gt;.AfterBulkInsert()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BeforeBulkInsert.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L24">View Source</a>
+  </span>
+  <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BeforeBulkInsert_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert*"></a>
+  <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BeforeBulkInsert" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BeforeBulkInsert">BeforeBulkInsert()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void BeforeBulkInsert()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">ALE.ETLBox.ConnectionManager.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdCommand&gt;.BeforeBulkInsert()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(ALE.ETLBox.ITableData%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L20">View Source</a>
   </span>
   <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert*"></a>
-  <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_System_Data_IDataReader_System_Data_IColumnMappingCollection_System_String_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(System.Data.IDataReader,System.Data.IColumnMappingCollection,System.String)">BulkInsert(IDataReader, IColumnMappingCollection, String)</h4>
+  <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_BulkInsert_ALE_ETLBox_ITableData_System_String_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.BulkInsert(ALE.ETLBox.ITableData,System.String)">BulkInsert(ITableData, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void BulkInsert(ITableData data, string tableName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -248,13 +288,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Data.IDataReader</span></td>
+        <td><a class="xref" href="ALE.ETLBox.ITableData.html">ITableData</a></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Data.IColumnMappingCollection</span></td>
-        <td><span class="parametername">columnMapping</span></td>
         <td></td>
       </tr>
       <tr>
@@ -265,13 +300,13 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">ALE.ETLBox.ConnectionManager.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdCommand&gt;.BulkInsert(System.Data.IDataReader, System.Data.IColumnMappingCollection, System.String)</span></div>
+  <div><span class="xref">ALE.ETLBox.ConnectionManager.DbConnectionManager&lt;Microsoft.AnalysisServices.AdomdClient.AdomdConnection, Microsoft.AnalysisServices.AdomdClient.AdomdCommand&gt;.BulkInsert(ALE.ETLBox.ITableData, System.String)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/roadrunnerlenny/etlbox/new/master/apiSpec/new?filename=ALE_ETLBox_ConnectionManager_AdomdConnectionManager_Clone.md&amp;value=---%0Auid%3A%20ALE.ETLBox.ConnectionManager.AdomdConnectionManager.Clone%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L24">View Source</a>
+    <a href="https://github.com/roadrunnerlenny/etlbox/blob/master/ETLBox/src/Toolbox/ConnectionManager/AdomdConnectionManager.cs/#L27">View Source</a>
   </span>
   <a id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_Clone_" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.Clone*"></a>
   <h4 id="ALE_ETLBox_ConnectionManager_AdomdConnectionManager_Clone" data-uid="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.Clone">Clone()</h4>
