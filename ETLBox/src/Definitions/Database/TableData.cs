@@ -10,9 +10,9 @@ namespace ALE.ETLBox {
         public TableData(TableDefinition definition, int estimatedBatchSize) : base() { }
     }
 
-    public class TableData<T> : IDisposable, IDataReader  {
+    public class TableData<T> : ITableData  {
         public int? EstimatedBatchSize { get; set; }
-        public DataColumnMappingCollection ColumnMapping {
+        public IColumnMappingCollection ColumnMapping {
             get {
                 var mapping = new DataColumnMappingCollection();
                 foreach (var col in Definition.Columns)

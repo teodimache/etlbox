@@ -54,8 +54,13 @@ namespace ALE.ETLBox.ConnectionManager {
             return OpenedContext.ExecuteReader(command);
         }
 
-        public void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName)
-    => SqlConnectionManager.BulkInsert(data, columnMapping, tableName);
+        public void BulkInsert(ITableData data, string tableName)
+            => SqlConnectionManager.BulkInsert(data, tableName);
+
+        public void BeforeBulkInsert() => SqlConnectionManager.BeforeBulkInsert();
+
+        public void AfterBulkInsert() => SqlConnectionManager.AfterBulkInsert();
+ 
 
         private bool disposedValue = false; // To detect redundant calls
         protected void Dispose(bool disposing) {

@@ -86,7 +86,7 @@ namespace ALE.ETLBox.DataFlow {
                 data = BeforeBatchWrite.Invoke(data);
             TableData<object> td = new TableData<object>(DestinationTableDefinition, DEFAULT_BATCH_SIZE);
             td.Rows = ConvertRows(data);
-            new SqlTask(this, $"Execute Bulk insert into {DestinationTableDefinition.Name}").BulkInsert(td, td.ColumnMapping, DestinationTableDefinition.Name);
+            new SqlTask(this, $"Execute Bulk insert into {DestinationTableDefinition.Name}").BulkInsert(td, DestinationTableDefinition.Name);
             NLogFinish();
         }
 

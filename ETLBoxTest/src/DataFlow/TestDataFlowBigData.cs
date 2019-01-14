@@ -29,7 +29,7 @@ namespace ALE.ETLBoxTest {
         /*
         * CSVSource (out: string[]) -> DBDestination (in: string[])
         * Table without key columns (HEAP)
-        * 1.000.000 Rows with 8007 bytes per Row (8000 bytes data + 7 bytes for sql server) 
+        * X Rows with 8007 bytes per Row (8000 bytes data + 7 bytes for sql server) 
         */
         [TestMethod]
         public void BigData_CSV_DB() {

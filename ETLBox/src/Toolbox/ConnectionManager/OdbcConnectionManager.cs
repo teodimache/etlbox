@@ -5,57 +5,41 @@ using System.Linq;
 using System.Collections.Generic;
 using System;
 
-namespace ALE.ETLBox.ConnectionManager
-{
+namespace ALE.ETLBox.ConnectionManager {
     /// <summary>
     /// Connection manager for an ODBC connection based on ADO.NET. ODBC can be used to connect to any ODBC able endpoint.
-    /// ODBC by default does not support a Bulk Insert - inserting big amoutns of data is translated into 
+    /// ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a
+    /// <code>
     /// insert into (...) values (..),(..),(..) statementes.
+    /// </code>
+    /// Be careful with the batch size - some databases have limitations regarding the length of sql statements. 
+    /// Reduce the batch if encounter issues here.
     /// </summary>
     /// <example>
     /// <code>
-    /// ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;"));
+    /// ControlFlow.CurrentDbConnection = 
+    ///   new OdbcConnectionManager(new ObdcConnectionString(
+    ///     "Driver={SQL Server};Server=.;Database=ETLBox;Trusted_Connection=Yes;"));
     /// </code>
     /// </example>
-    public class OdbcConnectionManager : DbConnectionManager<OdbcConnection, OdbcCommand>
-    {
-
+    public class OdbcConnectionManager : DbConnectionManager<OdbcConnection, OdbcCommand> {
         public OdbcConnectionManager() : base() { }
 
         public OdbcConnectionManager(OdbcConnectionString connectionString) : base(connectionString) { }
 
-        public override void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName)
-        {
-
-            List<string> sourceColumnNames = columnMapping.Cast<IColumnMapping>().Select(cm => cm.SourceColumn).ToList();
-            List<string> destColumnNames = columnMapping.Cast<IColumnMapping>().Select(cm => cm.DataSetColumn).ToList();
-            StringBuilder sb = new StringBuilder();
-            sb.Append($"insert into {tableName} ({string.Join(",",sourceColumnNames)}) values ");
-            while (data.Read()) {
-                List<string> values = new List<string>();
-                foreach (string destColumnName in destColumnNames) {
-                    int colIndex = data.GetOrdinal(destColumnName);
-                    string dataTypeName = data.GetDataTypeName(colIndex);
-                    if (data.IsDBNull(colIndex))
-                        values.Add("NULL");
-                    else
-                        values.Add($"'{data.GetString(colIndex)}'");
-
-                }              
-                sb.Append("("+string.Join(",", values)+")" );
-                if (data.NextResult())
-                    sb.Append("," + Environment.NewLine);
-            }
-
+        public override void BulkInsert(ITableData data, string tableName) {
+            OdbcBulkInsertString bulkInsert = new OdbcBulkInsertString() { };
+            string sql = bulkInsert.CreateBulkInsertStatement(data, tableName);
             var cmd = DbConnection.CreateCommand();
-            cmd.CommandText = sb.ToString();
-            cmd.ExecuteNonQuery(); 
+            cmd.CommandText = sql;
+            cmd.ExecuteNonQuery();
         }
 
-        public override IDbConnectionManager Clone()
-        {
-            OdbcConnectionManager clone = new OdbcConnectionManager((OdbcConnectionString)ConnectionString)
-            {
+        public override void BeforeBulkInsert() { }
+        public override void AfterBulkInsert() { }
+
+        public override IDbConnectionManager Clone() {
+            OdbcConnectionManager clone = new OdbcConnectionManager((OdbcConnectionString)ConnectionString) {
                 MaxLoginAttempts = this.MaxLoginAttempts
             };
             return clone;

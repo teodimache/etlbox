@@ -15,17 +15,17 @@ namespace ALE.ETLBoxTest {
         public TestContext TestContext { get; set; }
         public string ConnectionStringParameter => TestContext?.Properties["connectionString"].ToString();
         public string OdbcConnectionStringParameter => TestContext?.Properties["odbcConnectionString"].ToString();
+        public string AccessConnectionStringParameter => TestContext?.Properties["accessConnectionString"].ToString();
+
         public string DBNameParameter => TestContext?.Properties["dbName"].ToString();
 
         [ClassInitialize]
         public static void TestInit(TestContext testContext) {
             TestHelper.RecreateDatabase(testContext);
-            ControlFlow.CurrentDbConnection = new OdbcConnectionManager(new OdbcConnectionString(testContext.Properties["odbcConnectionString"].ToString()));
-        }
+       }
 
         [TestMethod]
-        public void TestSqlTaskWithOdbcConnection() {
-
+        public void TestSqlTaskWithOdbcConnection() { 
             OdbcConnectionManager con = new OdbcConnectionManager(new OdbcConnectionString(OdbcConnectionStringParameter));
             new SqlTask($"Test statement", $@"
                     CREATE TABLE dbo.test (
@@ -39,6 +39,8 @@ namespace ALE.ETLBoxTest {
 
         [TestMethod]
         public void CSV_DB_WithOdbcConnection() {
+            ControlFlow.CurrentDbConnection = new OdbcConnectionManager(new OdbcConnectionString(OdbcConnectionStringParameter));
+
             CreateSchemaTask.Create("test");
             TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {
                 new TableColumn("ID", "int", allowNulls: false,isPrimaryKey:true,isIdentity:true),
@@ -63,16 +65,18 @@ namespace ALE.ETLBoxTest {
 
             source.Execute();
             dest.Wait();
+          
 
             Assert.AreEqual(3, RowCountTask.Count(stagingTable.Name));
         }
 
         [TestMethod]
+        [Ignore("nlog does not support odbc connections within .net core")]
         public void TestLoggingWithOdbc() {
-            //Logging currently not supported in nlog with .net core and odbc
+            ControlFlow.CurrentDbConnection = new OdbcConnectionManager(new OdbcConnectionString(OdbcConnectionStringParameter));
             CreateLogTablesTask.CreateLog();
             LogTask.Info("Info");
-            //Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check if default log works", "select count(*) from etl.Log where Message in ('Error','Warn','Info')"));
+            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check if default log works", "select count(*) from etl.Log where Message in ('Error','Warn','Info')"));
         }
 
 

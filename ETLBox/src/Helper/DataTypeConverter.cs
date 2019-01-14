@@ -11,6 +11,7 @@ namespace ALE.ETLBox.Helper {
         public const int DefaultDateTime2Length = 41;
         public const int DefaultDateTimeLength = 27;
         public const int DefaultDecimalLength = 41;
+        public const int DefaultStringLength = 255;
 
         public const string _REGEX = @"(.*?)char\((\d*)\)(.*?)";
 
@@ -36,8 +37,13 @@ namespace ALE.ETLBox.Helper {
         }
 
         public static int GetStringLengthFromCharString(string value) {
-            string result = Regex.Replace(value, _REGEX, "${2}");
-            return int.Parse(result);
+            string possibleResult = Regex.Replace(value, _REGEX, "${2}");
+            int  result=0;
+            if (int.TryParse(possibleResult, out result)) {
+                return result;
+            } else {
+                return DefaultStringLength;
+            }
         }
 
         public static string GetObjectTypeString(string dataTypeString) {
