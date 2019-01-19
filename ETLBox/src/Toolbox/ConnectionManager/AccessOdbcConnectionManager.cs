@@ -12,6 +12,7 @@ namespace ALE.ETLBox.ConnectionManager {
     /// This connection manager also is based on ADO.NET. 
     /// ODBC by default does not support a Bulk Insert - and Access does not supoport the insert into (...) values (...),(...),(...) 
     /// syntax. So the following syntax is used
+    /// <code>
     /// insert into (Col1, Col2,...) 
     /// select * from (
     ///   select 'Val1' as Col1 from dummytable
@@ -19,8 +20,10 @@ namespace ALE.ETLBox.ConnectionManager {
     ///   select 'Val2' as Col2 from dummytable
     ///   ...
     /// ) a;
+    /// </code>
     /// 
     /// The dummytable is a special helper table containing only one record. 
+    /// 
     /// </summary>
     /// <example>
     /// <code>

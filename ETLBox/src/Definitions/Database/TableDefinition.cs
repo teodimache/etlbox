@@ -1,4 +1,5 @@
-﻿using ALE.ETLBox.ControlFlow;
+﻿using ALE.ETLBox.ConnectionManager;
+using ALE.ETLBox.ControlFlow;
 using ALE.ETLBox.Helper;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace ALE.ETLBox {
             CreateTableTask.Create(this);
         }
 
-        public static TableDefinition GetDefinitionFromTableName(string tableName) {
+        internal static TableDefinition GetDefinitionFromTableName(string tableName, IConnectionManager connection) {
             TableDefinition result = new TableDefinition(tableName);
             TableColumn curCol = null;
             var readMetaSql = new SqlTask($"Read column meta data for table {tableName}",
@@ -59,7 +60,10 @@ namespace ALE.ETLBox {
             , is_nullable => curCol.AllowNulls = (bool)is_nullable
             , is_identity => curCol.IsIdentity = (bool)is_identity
              ) 
-            { DisableLogging = true };
+            { DisableLogging = true,
+            DisableExtension = true,
+            ConnectionManager = connection
+            };
             readMetaSql.ExecuteReader();
             return result;
         }

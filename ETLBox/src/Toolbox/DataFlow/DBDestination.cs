@@ -23,6 +23,9 @@ namespace ALE.ETLBox.DataFlow {
 
         /* Public properties */
         public TableDefinition DestinationTableDefinition { get; set; }
+        public bool HasDestinationTableDefinition => DestinationTableDefinition != null;
+        public string TableName { get; set; }
+        public bool HasTableName => !String.IsNullOrWhiteSpace(TableName);
         public Func<TInput[], TInput[]> BeforeBatchWrite { get; set; }
         
         public ITargetBlock<TInput> TargetBlock => Buffer;
@@ -50,12 +53,12 @@ namespace ALE.ETLBox.DataFlow {
         }
 
         public DBDestination(string tableName) {
-            DestinationTableDefinition = TableDefinition.GetDefinitionFromTableName(tableName);
+            TableName = tableName;
             InitObjects(DEFAULT_BATCH_SIZE);
         }
 
         public DBDestination(string tableName, int batchSize) {
-            DestinationTableDefinition = TableDefinition.GetDefinitionFromTableName(tableName);
+            TableName = tableName;
             InitObjects(batchSize);
         }
 
@@ -81,6 +84,7 @@ namespace ALE.ETLBox.DataFlow {
         }      
 
         private void WriteBatch(TInput[] data) {
+            if (!HasDestinationTableDefinition) LoadTableDefinitionFromTableName();
             NLogStart();
             if (BeforeBatchWrite != null)
                 data = BeforeBatchWrite.Invoke(data);
@@ -90,7 +94,14 @@ namespace ALE.ETLBox.DataFlow {
             NLogFinish();
         }
 
-      
+        private void LoadTableDefinitionFromTableName() {
+            if (HasTableName)
+                DestinationTableDefinition = TableDefinition.GetDefinitionFromTableName(TableName, this.DbConnectionManager);
+            else if (!HasDestinationTableDefinition && !HasTableName)
+                throw new ETLBoxException("No Table definition or table name found! You must provide a table name or a table definition.");
+        }
+
+
         private List<object[]> ConvertRows(TInput[] data) {
             List<object[]> result = new List<object[]>();
             foreach (var CurrentRow in data) {
