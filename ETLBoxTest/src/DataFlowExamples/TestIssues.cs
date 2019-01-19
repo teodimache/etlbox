@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace ALE.ETLBoxTest {
     [TestClass]
-    public class TestIssue3 {
+    public class TestIssues {
         public TestContext TestContext { get; set; }
         public string ConnectionStringParameter => TestContext?.Properties["connectionString"].ToString();
         public string DBNameParameter => TestContext?.Properties["dbName"].ToString();
@@ -24,7 +24,7 @@ namespace ALE.ETLBoxTest {
         }
 
         [TestMethod]
-        public void Issue3() {
+        public void DataflowExample_Issue3() {
             SqlTask.ExecuteNonQuery("Create test table", 
                 @"CREATE TABLE dbo.test 
                 (Col1 int null, Col2 int null, Col3 int null)"
