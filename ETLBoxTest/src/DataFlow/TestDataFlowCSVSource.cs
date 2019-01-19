@@ -41,7 +41,7 @@ namespace ALE.ETLBoxTest {
             source.Execute();
             dest.Wait(); 
 
-            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
+            Assert.AreEqual(3, RowCountTask.Count("test.Staging","Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
 
         /*
@@ -77,7 +77,7 @@ namespace ALE.ETLBoxTest {
             source.Execute();
             dest.Wait(); 
 
-            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging{keyPosition} where Col1 Like '%ValueRow%' and Col2 <> 1"));
+            Assert.AreEqual(3, RowCountTask.Count($"test.Staging{keyPosition}","Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
 
         /*
@@ -104,8 +104,29 @@ namespace ALE.ETLBoxTest {
             source.Execute();
             dest.Wait(); 
 
-            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
-            Assert.AreEqual(2, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 = 'NewValue'"));
+            Assert.AreEqual(1, RowCountTask.Count("test.Staging","Col1 Like '%ValueRow%' and Col2 <> 1"));
+            Assert.AreEqual(2, RowCountTask.Count("test.Staging","Col1 = 'NewValue'"));
+        }
+
+        public class CSVData {
+            public string Col1 { get; set; }
+            public int Col2 { get; set; }
+        }
+        [TestMethod]
+        public void CSVGeneric_DB() {
+            TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {
+                new TableColumn("Col1", "nvarchar(100)", allowNulls: false),
+                new TableColumn("Col2", "int", allowNulls: true)
+            });
+            stagingTable.CreateTable();
+            CSVSource<CSVData> source = new CSVSource<CSVData>("src/DataFlow/Simple_CSV2DB.csv");
+            DBDestination<CSVData> dest = new DBDestination<CSVData>() { DestinationTableDefinition = stagingTable };
+            source.LinkTo(dest);
+
+            source.Execute();
+            dest.Wait();
+
+            Assert.AreEqual(3, RowCountTask.Count("test.Staging","Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
     }
 

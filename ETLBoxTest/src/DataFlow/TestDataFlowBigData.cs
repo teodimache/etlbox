@@ -36,7 +36,12 @@ namespace ALE.ETLBoxTest {
             BigData_CSV_DB(100000);                        
         }
 
-        public void BigData_CSV_DB(int numberOfRows) {
+        [TestMethod]
+        public void BigData_CSVGeneric_DB() {
+            BigData_CSV_DB(100000, useGenericCSVSource: true);
+        }
+
+        public void BigData_CSV_DB(int numberOfRows, bool useGenericCSVSource = false) {
             Stopwatch watch = new Stopwatch();                        
             TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {
                 new TableColumn("Col1", "nchar(1000)", allowNulls: false),
@@ -56,21 +61,48 @@ namespace ALE.ETLBoxTest {
             bigData.CreateBigDataCSV();
             LogTask.Info($"Needed {watch.Elapsed.TotalMinutes} to create .csv file");
             watch.Reset();
-            
-            CSVSource source = new CSVSource(fileName);
-            DBDestination<string[]> dest = new DBDestination<string[]>(1000) { DestinationTableDefinition = stagingTable };
-            source.LinkTo(dest);
 
-            watch.Start();
-            source.Execute();
-            LogTask.Info($"Needed {watch.Elapsed.TotalMinutes} to read everything into memory (while constantly writing)");
-            LogTask.Info($"Already {RowCountTask.Count("test.Staging", RowCountOptions.QuickQueryMode)} inserted into table");
-            dest.Wait(); //TODO Wait should be part of source
+            if (useGenericCSVSource) {
+                StartGenericCSVLoad(watch, stagingTable, fileName);
+            } else {
+                StartDefaultCSVLoad(watch, stagingTable, fileName);
+            }
+
             LogTask.Info($"Needed {watch.Elapsed.TotalMinutes} to write everything into database");
 
             Assert.AreEqual(numberOfRows, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging"));
         }
 
+        private static void StartDefaultCSVLoad(Stopwatch watch, TableDefinition stagingTable, string fileName) {
+            CSVSource source = new CSVSource(fileName);
+            DBDestination<string[]> dest = new DBDestination<string[]>(1000) { DestinationTableDefinition = stagingTable };
+            source.LinkTo(dest);
+            watch.Start();
+            source.Execute();
+            LogTask.Info($"Needed {watch.Elapsed.TotalMinutes} to read everything into memory (while constantly writing)");
+            LogTask.Info($"Already {RowCountTask.Count("test.Staging", RowCountOptions.QuickQueryMode)} inserted into table");
+            dest.Wait();
+        }
+
+        private static void StartGenericCSVLoad(Stopwatch watch, TableDefinition stagingTable, string fileName) {
+            CSVSource<CSVData> source = new CSVSource<CSVData>(fileName);
+            DBDestination<CSVData> dest = new DBDestination<CSVData>(1000) { DestinationTableDefinition = stagingTable };
+            source.LinkTo(dest);
+            watch.Start();
+            source.Execute();
+            LogTask.Info($"Needed {watch.Elapsed.TotalMinutes} to read everything into memory (while constantly writing)");
+            LogTask.Info($"Already {RowCountTask.Count("test.Staging", RowCountOptions.QuickQueryMode)} inserted into table");
+            dest.Wait();
+        }
+
+        public class CSVData {
+            public string Col1 { get; set; }
+            public string Col2 { get; set; }
+            public string Col3 { get; set; }
+            public string Col4 { get; set; }
+        }
+   
+        
     }
 
 }

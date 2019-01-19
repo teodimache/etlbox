@@ -29,10 +29,8 @@ namespace ALE.ETLBoxTest {
             public string Col2 { get; set; }
             public decimal Col3 { get; set; }
         }
-        /*
-         * CSVSource (out: string[]) -> DBDestination (in: string[])
-         * Table without key columns
-         */
+
+
         [TestMethod]
         public void Excel_DB() {
             TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {

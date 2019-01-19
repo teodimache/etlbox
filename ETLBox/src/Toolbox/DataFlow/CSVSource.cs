@@ -9,6 +9,8 @@ using System.Threading.Tasks.Dataflow;
 namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
+    /// CSVSource as a nongeneric types always return a string array as output. If you need typed output, use
+    /// the CSVSource&lt;TOutput&gt; object instead.
     /// </summary>
     /// <example>
     /// <code>
@@ -17,7 +19,24 @@ namespace ALE.ETLBox.DataFlow {
     /// source.Execute(); //Start the dataflow
     /// </code>
     /// </example>
-    public class CSVSource : GenericTask, ITask, IDataFlowSource<string[]> {
+    public class CSVSource : CSVSource<string[]> {
+        public CSVSource() : base() { }
+        public CSVSource(string fileName) : base(fileName) { }
+    }
+
+    /// <summary>
+    /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
+    /// Data is read a as string from the source and dynamically converted into the corresponding data format.
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// CSVSource&lt;CSVData&gt; source = new CSVSource&lt;CSVData&gt;("Demo.csv") {
+    ///    Delimiter = ";",
+    ///    SourceCommentRows = 2
+    /// }
+    /// </code>
+    /// </example>
+    public class CSVSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_CSVSOURCE";
         public override string TaskName => $"Dataflow: Read CSV Source data from file: {FileName}";
@@ -37,17 +56,19 @@ namespace ALE.ETLBox.DataFlow {
         public string[] FieldHeaders { get; private set; }
 
         public bool IsHeaderRead => FieldHeaders != null;
-        public ISourceBlock<string[]> SourceBlock => this.Buffer;
+        public ISourceBlock<TOutput> SourceBlock => this.Buffer;
 
         /* Private stuff */
         CsvReader CsvReader { get; set; }
         StreamReader StreamReader { get; set; }
-        BufferBlock<string[]> Buffer { get; set; }
+        BufferBlock<TOutput> Buffer { get; set; }
         NLog.Logger NLogger { get; set; }
+        TypeInfo TypeInfo { get; set; }
 
         public CSVSource() {
             NLogger = NLog.LogManager.GetLogger("ETL");
-            Buffer = new BufferBlock<string[]>();
+            Buffer = new BufferBlock<TOutput>();
+            TypeInfo = new TypeInfo(typeof(TOutput));
         }
 
         public CSVSource(string fileName) : this() {
@@ -85,8 +106,23 @@ namespace ALE.ETLBox.DataFlow {
             FieldHeaders = CsvReader.Context.HeaderRecord;
             while (CsvReader.Read()) {
                 string[] line = CsvReader.Context.Record;
-                await Buffer.SendAsync(line);
+                await SendIntoBuffer(line);
             }
+        }
+
+        private async Task SendIntoBuffer(string[] line) {
+            if (TypeInfo.IsArray) {
+                await Buffer.SendAsync((TOutput)(object)line);
+            } else {
+                TOutput bufferObject = (TOutput)Activator.CreateInstance(typeof(TOutput));
+                for (int col=0;col < line.Length;col++) {
+                    if (col > TypeInfo.PropertyLength) break;
+                    TypeInfo.PropertyInfos[col].SetValue(bufferObject, TypeInfo.CastPropertyValue(TypeInfo.PropertyInfos[col], line[col]));
+                }
+                await Buffer.SendAsync(bufferObject);
+            }
+                
+            
         }
 
         private void ConfigureCSVReader() {
@@ -106,12 +142,12 @@ namespace ALE.ETLBox.DataFlow {
             StreamReader = null;
         }
 
-        public void LinkTo(IDataFlowLinkTarget<string[]> target) {
+        public void LinkTo(IDataFlowLinkTarget<TOutput> target) {
             Buffer.LinkTo(target.TargetBlock, new DataflowLinkOptions() { PropagateCompletion = true });
             NLogger.Debug(TaskName + " was linked to Target!", TaskType, "LOG", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
 
-        public void LinkTo(IDataFlowLinkTarget<string[]> target, Predicate<string[]> predicate) {
+        public void LinkTo(IDataFlowLinkTarget<TOutput> target, Predicate<TOutput> predicate) {
             Buffer.LinkTo(target.TargetBlock, new DataflowLinkOptions() { PropagateCompletion = true }, predicate);
             NLogger.Debug(TaskName + " was linked to Target!", TaskType, "LOG", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }

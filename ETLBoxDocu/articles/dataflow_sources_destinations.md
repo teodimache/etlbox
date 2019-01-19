@@ -77,14 +77,21 @@ ControlFlow.CurrentDbConnection = new AccessOdbcConnectionManager(new OdbcConnec
 ## CSVSource
 
 A CSV source simple reads data from a CSV file. Under the hood is the 3rd party library `CSVHelper`. There are several configuration options for the Reader. 
-The output data type of the CSVReader is always `string[]`. Use a `RowTransformation` to transform it into the data type you need. 
+The default output data type of the CSVReader is a string array. You can either use a `RowTransformation` to transform it into the data type you need, or use
+the generic implementation CSVSource.
 
 ```C#
+//Returns string[] as output type for other compoments
 CSVSource source = new CSVSource("Demo.csv") {
     Delimiter = ";",
     SourceCommentRows = 2
 }
 ```
+
+```C#
+CSVSource<CSVData> source = new CSVSource<CSVData>("Demo.csv");
+```
+
 
 ## ExcelSource
 
