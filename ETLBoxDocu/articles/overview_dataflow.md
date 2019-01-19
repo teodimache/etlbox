@@ -19,7 +19,7 @@ All Data Flow taks reside in the 'ALE.ETLBox.DataFlow' namespace.
 All dataflow pipelines will need at least one or more sources. Sources are basically everything that can read data from someplace 
 (e.g. CSV file or a database table) and then post this data into the pipeline. All sources should be able to read data asynchronously. 
 That means, while the component reads data from the source, it simultanously sends the already processed data to components that are connected to source.
-There are currently two build-in data sources: `CSVSource` and `DBSource`. If you are in need of another source component, you can either extend the 
+There are different build-in data sources, e.g.: `CSVSource`, `DBSource` or `ExelSource`. If you are in need of another source component, you can either extend the 
 `CustomSource` or you [open an issue in github](https://github.com/roadrunnerlenny/etlbox/issues) describing your needs. 
 
 Once a source starts reading data, it will start sending data to its connected components. These could be either a Transoformation or Destination.
