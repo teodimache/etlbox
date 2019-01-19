@@ -15,3 +15,4 @@ Reorganization of namespaces.
 * `OdbcConnectionManager`: ETLBox now supports connection via Odbc. (64bit only)
 * `AccessOdbcConnectionManager`: ETLBox can now connect to access databases via ODBC (64bit ODBC driver required)
 * `DBSource`: now accepts table name (instead of full table definition)
+* `ExcelSource`: ETLBox can now read from excel files. 
