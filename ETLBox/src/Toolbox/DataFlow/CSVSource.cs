@@ -23,7 +23,7 @@ namespace ALE.ETLBox.DataFlow {
         public override string TaskName => $"Dataflow: Read CSV Source data from file: {FileName}";
         public override void Execute() => ExecuteAsync();
 
-        /* Public properties */        
+        /* Public properties */
         public int SourceCommentRows { get; set; } = 0;
         public bool TrimFields { get; set; } = true;
         public bool TrimHeaders { get; set; } = true;
@@ -33,33 +33,38 @@ namespace ALE.ETLBox.DataFlow {
         public char Comment { get; set; } = '/';
         public bool SkipEmptyRecords { get; set; } = true;
         public bool IgnoreBlankLines { get; set; } = true;
-        string FileName { get; set; }
+        public string FileName { get; set; }
         public string[] FieldHeaders { get; private set; }
-        
+
         public bool IsHeaderRead => FieldHeaders != null;
         public ISourceBlock<string[]> SourceBlock => this.Buffer;
 
         /* Private stuff */
         CsvReader CsvReader { get; set; }
-        StreamReader StreamReader { get; set; }     
+        StreamReader StreamReader { get; set; }
         BufferBlock<string[]> Buffer { get; set; }
         NLog.Logger NLogger { get; set; }
 
         public CSVSource() {
             NLogger = NLog.LogManager.GetLogger("ETL");
+            Buffer = new BufferBlock<string[]>();
         }
 
-        public CSVSource(string fileName) : this(){
+        public CSVSource(string fileName) : this() {
             FileName = fileName;
-            Buffer = new BufferBlock<string[]>();
         }
 
         public void ExecuteAsync() {
             NLogStart();
             Open();
-            ReadAll().Wait();
-            Buffer.Complete();
-            Close();
+            try {
+                ReadAll().Wait();
+                Buffer.Complete();
+            } catch (Exception e) {
+                throw new ETLBoxException("Error during reading data from csv file - see inner exception for details.", e);
+            } finally {
+                Close();
+            }
             NLogFinish();
         }
 
@@ -88,10 +93,10 @@ namespace ALE.ETLBox.DataFlow {
             CsvReader.Configuration.Delimiter = Delimiter;
             CsvReader.Configuration.Quote = Quote;
             CsvReader.Configuration.AllowComments = AllowComments;
-            CsvReader.Configuration.Comment = Comment;            
-            CsvReader.Configuration.IgnoreBlankLines = IgnoreBlankLines;            
+            CsvReader.Configuration.Comment = Comment;
+            CsvReader.Configuration.IgnoreBlankLines = IgnoreBlankLines;
             CsvReader.Configuration.TrimOptions = CsvHelper.Configuration.TrimOptions.Trim;
-            CsvReader.Configuration.Encoding = Encoding.UTF8;            
+            CsvReader.Configuration.Encoding = Encoding.UTF8;
         }
 
         private void Close() {
