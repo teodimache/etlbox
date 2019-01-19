@@ -97,6 +97,27 @@ namespace ALE.ETLBoxTest {
             Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check destination table", "select count(*) from test.Destination"));
         }
 
+        /*
+* DSBSource (out: object) -> DBDestination (in: object)
+*/
+        [TestMethod]
+        public void TableName_Tablename() {
+            SqlTask.ExecuteNonQuery("Create source table", @"CREATE TABLE test.Source 
+                (Col1 nvarchar(109) null, Col2 int null)");
+            SqlTask.ExecuteNonQuery("Insert demo data", "insert into test.Source values('Test1',1)");
+            SqlTask.ExecuteNonQuery("Insert demo data", "insert into test.Source values('Test2',2)");
+            SqlTask.ExecuteNonQuery("Insert demo data", "insert into test.Source values('Test3',3)");
+            SqlTask.ExecuteNonQuery("Create destination table", @"CREATE TABLE test.Destination 
+                (Col1 nvarchar(30) null, Col2 bigint null)");
+
+            DBSource<MySimpleRow> source = new DBSource<MySimpleRow>() { TableName = "test.Source" };
+            DBDestination<MySimpleRow> dest = new DBDestination<MySimpleRow>("test.Destination");
+            source.LinkTo(dest);
+            source.Execute();
+            dest.Wait();
+            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check destination table", "select count(*) from test.Destination"));
+        }
+
 
     }
 

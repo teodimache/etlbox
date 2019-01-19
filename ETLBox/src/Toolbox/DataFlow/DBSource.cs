@@ -22,11 +22,43 @@ namespace ALE.ETLBox.DataFlow {
         public override string TaskName => $"Dataflow: Read DB data from {SourceDescription}";
         public override void Execute() => ExecuteAsync();
 
-        /* Public Properties */       
-        public TableDefinition SourceTableDefinition { get; set; }        
+        /* Public Properties */
+        public TableDefinition SourceTableDefinition { get; set; }
+        public bool HasSourceTableDefinition => SourceTableDefinition != null;
+        public string TableName { get; set; }
+        public bool HasTableName => !String.IsNullOrWhiteSpace(TableName);
         public string Sql { get; set; }
-        public string SqlForRead => String.IsNullOrWhiteSpace(Sql) ? $"select {SourceTableDefinition.Columns.AsString()} from " + SourceTableDefinition.Name : Sql;
-        public string SourceDescription => String.IsNullOrWhiteSpace(Sql) ? "table " + SourceTableDefinition.Name : "custom sql";
+        public bool HasSql => !String.IsNullOrWhiteSpace(Sql);
+        public string SqlForRead {
+            get {
+                if (HasSql)
+                    return Sql;
+                else {
+                    if (!HasSourceTableDefinition)
+                        LoadTableDefinition();
+                    return $"select {SourceTableDefinition.Columns.AsString()} from " + SourceTableDefinition.Name;
+                }
+
+            }
+        }
+
+        public void LoadTableDefinition() {
+            if (HasTableName)
+                SourceTableDefinition = TableDefinition.GetDefinitionFromTableName(TableName, this.ConnectionManager);
+            else if (!HasSourceTableDefinition && !HasTableName)
+                throw new ETLBoxException("No Table definition or table name found! You must provide a table name or a table definition.");
+        }
+
+        public string SourceDescription {
+            get {
+                if (HasSourceTableDefinition)
+                    return $"table {SourceTableDefinition.Name}";
+                if (HasTableName)
+                    return $"table {TableName}";
+                else
+                    return "custom sql";
+            }
+        }
         public ISourceBlock<TOutput> SourceBlock => this.Buffer;
 
         /* Private stuff */
@@ -41,6 +73,7 @@ namespace ALE.ETLBox.DataFlow {
         public DBSource(TableDefinition sourceTableDefinition) : this() {
             SourceTableDefinition = sourceTableDefinition;
         }
+
         public DBSource(string sql) : this() {
             Sql = sql;
         }
@@ -59,7 +92,7 @@ namespace ALE.ETLBox.DataFlow {
                 Sql = SqlForRead,
             }.Query<TOutput>(row => Buffer.Post(row));
         }
-         
+
         public void LinkTo(IDataFlowLinkTarget<TOutput> target) {
             Buffer.LinkTo(target.TargetBlock, new DataflowLinkOptions() { PropagateCompletion = true });
             NLogger.Debug(TaskName + " was linked to Target!", TaskType, "LOG", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
