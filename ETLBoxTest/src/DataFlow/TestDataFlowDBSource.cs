@@ -103,7 +103,7 @@ namespace ALE.ETLBoxTest {
         [TestMethod]
         public void TableName_Tablename() {
             SqlTask.ExecuteNonQuery("Create source table", @"CREATE TABLE test.Source 
-                (Col1 nvarchar(109) null, Col2 int null)");
+                (Col1 nvarchar(100) null, Col2 int null)");
             SqlTask.ExecuteNonQuery("Insert demo data", "insert into test.Source values('Test1',1)");
             SqlTask.ExecuteNonQuery("Insert demo data", "insert into test.Source values('Test2',2)");
             SqlTask.ExecuteNonQuery("Insert demo data", "insert into test.Source values('Test3',3)");

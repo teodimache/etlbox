@@ -9,23 +9,6 @@ using System.Threading.Tasks.Dataflow;
 namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
-    /// CSVSource as a nongeneric types always return a string array as output. If you need typed output, use
-    /// the CSVSource&lt;TOutput&gt; object instead.
-    /// </summary>
-    /// <example>
-    /// <code>
-    /// CSVSource source = new CSVSource("demodata.csv");
-    /// source.LinkTo(dest); //Link to transformation or destination
-    /// source.Execute(); //Start the dataflow
-    /// </code>
-    /// </example>
-    public class CSVSource : CSVSource<string[]> {
-        public CSVSource() : base() { }
-        public CSVSource(string fileName) : base(fileName) { }
-    }
-
-    /// <summary>
-    /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
     /// Data is read a as string from the source and dynamically converted into the corresponding data format.
     /// </summary>
     /// <example>
@@ -161,5 +144,23 @@ namespace ALE.ETLBox.DataFlow {
             if (!DisableLogging)
                 NLogger.Info(TaskName, TaskType, "END", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
+    }
+
+    /// <summary>
+    /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
+    /// CSVSource as a nongeneric type always return a string array as output. If you need typed output, use
+    /// the CSVSource&lt;TOutput&gt; object instead.
+    /// </summary>
+    /// <see cref="CSVSource{TOutput}"/>
+    /// <example>
+    /// <code>
+    /// CSVSource source = new CSVSource("demodata.csv");
+    /// source.LinkTo(dest); //Link to transformation or destination
+    /// source.Execute(); //Start the dataflow
+    /// </code>
+    /// </example>
+    public class CSVSource : CSVSource<string[]> {
+        public CSVSource() : base() { }
+        public CSVSource(string fileName) : base(fileName) { }
     }
 }

@@ -17,3 +17,5 @@ Reorganization of namespaces.
 * `DBSource`: now accepts table name (instead of full table definition)
 * `ExcelSource`: ETLBox can now read from excel files. 
 * `CSVSource<CSVData>`: Adding a generic implementation for the CSVSource.
+* `RowTransformation`: Adding a non generic implementation (same as `RowTansformation<string[],string[]`>)
+* `DBDestination`: Adding a non generic implemnetation. (same as `DBDestination<string[]`>)

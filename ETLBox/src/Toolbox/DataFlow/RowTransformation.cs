@@ -8,6 +8,7 @@ namespace ALE.ETLBox.DataFlow {
     /// </summary>
     /// <typeparam name="TInput">Type of input data.</typeparam>
     /// <typeparam name="TOutput">Type of output data.</typeparam>
+    /// <see cref="RowTransformation"/>
     /// <example>
     /// <code>
     /// RowTransformation&lt;string[], MyDataRow&gt; trans = new RowTransformation&lt;string[], MyDataRow&gt;(
@@ -17,12 +18,12 @@ namespace ALE.ETLBox.DataFlow {
     /// trans.LinkTo(dest);    
     /// </code>
     /// </example>
-    public class RowTransformation<TInput, TOutput> : GenericTask, ITask, IDataFlowTransformation<TInput, TOutput> {        
+    public class RowTransformation<TInput, TOutput> : GenericTask, ITask, IDataFlowTransformation<TInput, TOutput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_ROWTRANSFORMATION";
         public override string TaskName { get; set; } = "Row Transformation (unnamed)";
         public override void Execute() { throw new Exception("Transformations can't be executed directly"); }
-        
+
         /* Public Properties */
         public Func<TInput, TOutput> RowTransformationFunc {
             get {
@@ -42,7 +43,7 @@ namespace ALE.ETLBox.DataFlow {
 
         /* Private stuff */
         Func<TInput, TOutput> _rowTransformationFunc;
-        internal TransformBlock<TInput, TOutput> TransformBlock { get; set; }        
+        internal TransformBlock<TInput, TOutput> TransformBlock { get; set; }
 
         NLog.Logger NLogger { get; set; }
         public RowTransformation() {
@@ -54,7 +55,7 @@ namespace ALE.ETLBox.DataFlow {
         }
 
         public RowTransformation(string name, Func<TInput, TOutput> rowTransformationFunc) : this(rowTransformationFunc) {
-            this.TaskName = name;            
+            this.TaskName = name;
         }
 
         public RowTransformation(string name, Func<TInput, TOutput> rowTransformationFunc, Action initAction) : this(rowTransformationFunc) {
@@ -81,5 +82,32 @@ namespace ALE.ETLBox.DataFlow {
             }
             return RowTransformationFunc.Invoke(row);
         }
+    }
+
+    /// <summary>
+    /// Transforms the data row-by-row with the help of the transformation function.
+    /// The non generic RowTransformation accepts a string array as input and returns a string array as output. 
+    /// If you need other data types, use the generic RowTransformation instead.
+    /// </summary>
+    /// <see cref="RowTransformation{TInput, TOutput}"/>
+    /// <example>
+    /// <code>
+    /// //Non generic RowTransformation works with string[] as input and output
+    /// //use RowTransformation&lt;TInput,TOutput&gt; for generic usage!
+    /// RowTransformation trans = new RowTransformation(
+    ///     csvdata => {
+    ///       return new string[] { csvdata[0],  int.Parse(csvdata[1]) };
+    /// });    
+    /// trans.LinkTo(dest);    
+    /// </code>
+    /// </example>
+    public class RowTransformation : RowTransformation<string[],string[]> {
+        public RowTransformation() : base() { }
+
+        public RowTransformation(Func<string[], string[]> rowTransformationFunc) : base(rowTransformationFunc) { }
+
+        public RowTransformation(string name, Func<string[], string[]> rowTransformationFunc) : base(name, rowTransformationFunc) { }
+
+        public RowTransformation(string name, Func<string[], string[]> rowTransformationFunc, Action initAction) : base(name, rowTransformationFunc, initAction) { }
     }
 }

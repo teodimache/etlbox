@@ -8,6 +8,7 @@ namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).
     /// </summary>
+    /// <see cref="DBDestination"/>
     /// <typeparam name="TInput">Type of data input.</typeparam>
     /// <example>
     /// <code>
@@ -27,7 +28,7 @@ namespace ALE.ETLBox.DataFlow {
         public string TableName { get; set; }
         public bool HasTableName => !String.IsNullOrWhiteSpace(TableName);
         public Func<TInput[], TInput[]> BeforeBatchWrite { get; set; }
-        
+
         public ITargetBlock<TInput> TargetBlock => Buffer;
 
         /* Private stuff */
@@ -39,7 +40,7 @@ namespace ALE.ETLBox.DataFlow {
         TypeInfo TypeInfo { get; set; }
         public DBDestination() {
             InitObjects(DEFAULT_BATCH_SIZE);
-            
+
         }
 
         public DBDestination(int batchSize) {
@@ -64,7 +65,7 @@ namespace ALE.ETLBox.DataFlow {
 
         public DBDestination(TableDefinition tableDefinition, int batchSize) {
             DestinationTableDefinition = tableDefinition;
-            BatchSize = batchSize;            
+            BatchSize = batchSize;
             InitObjects(batchSize);
         }
 
@@ -81,7 +82,7 @@ namespace ALE.ETLBox.DataFlow {
             TargetAction = new ActionBlock<TInput[]>(d => WriteBatch(d));
             Buffer.LinkTo(TargetAction, new DataflowLinkOptions() { PropagateCompletion = true });
             TypeInfo = new TypeInfo(typeof(TInput));
-        }      
+        }
 
         private void WriteBatch(TInput[] data) {
             if (!HasDestinationTableDefinition) LoadTableDefinitionFromTableName();
@@ -118,10 +119,10 @@ namespace ALE.ETLBox.DataFlow {
                 }
                 result.Add(rowResult);
             }
-            return result;          
+            return result;
         }
 
-        public void Wait() =>  TargetAction.Completion.Wait();
+        public void Wait() => TargetAction.Completion.Wait();
 
         void NLogStart() {
             if (!DisableLogging)
@@ -132,6 +133,35 @@ namespace ALE.ETLBox.DataFlow {
             if (!DisableLogging)
                 NLogger.Debug(TaskName, TaskType, "END", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
+    }
+
+    /// <summary>
+    /// A database destination defines a table where data from the flow is inserted. Inserts are done in batches (using Bulk insert).
+    /// The DBDestination access a string array as input type. If you need other data types, use the generic DBDestination instead.
+    /// </summary>
+    /// <see cref="DBDestination{TInput}"/>
+    /// <example>
+    /// <code>
+    /// //Non generic DBDestination works with string[] as input
+    /// //use DBDestination&lt;TInput&gt; for generic usage!
+    /// DBDestination dest = new DBDestination("dbo.table");
+    /// dest.Wait(); //Wait for all data to arrive
+    /// </code>
+    /// </example>
+    public class DBDestination : DBDestination<string[]> {
+        public DBDestination() : base() { }
+
+        public DBDestination(int batchSize) : base(batchSize) { }
+
+        public DBDestination(TableDefinition tableDefinition) : base(tableDefinition) { }
+
+        public DBDestination(string tableName) : base(tableName) { }
+
+        public DBDestination(string tableName, int batchSize) : base(tableName, batchSize) { }
+
+        public DBDestination(TableDefinition tableDefinition, int batchSize) : base(tableDefinition, batchSize) { }
+
+        public DBDestination(string name, TableDefinition tableDefinition, int batchSize) : base(name, tableDefinition, batchSize) { }
     }
 
 }
