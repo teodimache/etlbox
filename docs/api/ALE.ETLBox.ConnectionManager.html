@@ -95,14 +95,14 @@
       <section><p>Connection manager for an ODBC connection to Acccess databases.
 This connection manager also is based on ADO.NET.
 ODBC by default does not support a Bulk Insert - and Access does not supoport the insert into (...) values (...),(...),(...)
-syntax. So the following syntax is used
-insert into (Col1, Col2,...)
+syntax. So the following syntax is used</p>
+<pre><code>insert into (Col1, Col2,...) 
 select * from (
-select 'Val1' as Col1 from dummytable
-union all
-select 'Val2' as Col2 from dummytable
-...
-) a;</p>
+  select &apos;Val1&apos; as Col1 from dummytable
+  union all
+  select &apos;Val2&apos; as Col2 from dummytable
+  ...
+) a;</code></pre>
 <p>The dummytable is a special helper table containing only one record.</p>
 </section>
       <h4><a class="xref" href="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html">AdomdConnectionManager</a></h4>
