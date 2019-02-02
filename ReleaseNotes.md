@@ -19,3 +19,6 @@ Reorganization of namespaces.
 * `CSVSource<CSVData>`: Adding a generic implementation for the CSVSource.
 * `RowTransformation`: Adding a non generic implementation (same as `RowTansformation<string[],string[]`>)
 * `DBDestination`: Adding a non generic implemnetation. (same as `DBDestination<string[]`>)
+
+## Version 1.1.1
+* `DBDestination`: Fixed issue (#4) when destination table has more columns than input type.

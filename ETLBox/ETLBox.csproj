@@ -13,17 +13,8 @@ ETLBox is a comprehensive C# class library that is able to manage your whole ETL
     <PackageProjectUrl>https://www.etlbox.net</PackageProjectUrl>
     <RepositoryUrl>https://github.com/roadrunnerlenny/etlbox</RepositoryUrl>
     <PackageTags>ETL SSIS ELT Dataflow Controlflow</PackageTags>
-    <PackageReleaseNotes>
-DropDatabaseTask: static "convenience" method name changed from delete to drop 
-ConnectionManager: (general) improved:verified that the underlying ADO.NET connection pooling is working (see Issue#1)
-OdbcConnectionManager: ETLBox now supports connection via Odbc. (64bit only)
-AccessOdbcConnectionManager: ETLBox can now connect to access databases via ODBC (64bit ODBC driver required)
-DBSource: now accepts table name (instead of full table definition)
-ExcelSource: ETLBox can now read from excel files. 
-CSVSource&lt;CSVData&gt;: Adding a generic implementation for the CSVSource.
-RowTransformation: Adding a non generic implementation (same as RowTansformation&lt;string[],string[]&gt;)
-DBDestination: Adding a non generic implemnetation. (same as DBDestination&lt;string[]&gt;)</PackageReleaseNotes>
-    <Version>1.1.0</Version>
+    <PackageReleaseNotes>DBDestination: Fixed issue (#4) when destination table has more columns than input type.</PackageReleaseNotes>
+    <Version>1.1.1</Version>
     <PackageIconUrl>https://raw.githubusercontent.com/roadrunnerlenny/etlbox/master/docs/images/logo_bw.ico</PackageIconUrl>
     <Authors>Andreas Lennartz</Authors>
     <Company>ALE</Company>
