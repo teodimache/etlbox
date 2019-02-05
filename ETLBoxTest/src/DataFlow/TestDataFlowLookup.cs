@@ -62,9 +62,9 @@ namespace ALE.ETLBoxTest {
             lookup.LinkTo(dest);            
             source.Execute();
             dest.Wait();
-            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check destination table", "select count(*) from test.Destination where Col1 = 'Test1' and Col2 = 'Lookup for 1'"));
-            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check destination table", "select count(*) from test.Destination where Col1 = 'Test2' and Col2 = 'Lookup for 2'"));
-            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check destination table", "select count(*) from test.Destination where Col1 = 'Test3' and Col2 = 'Lookup for 3'"));
+            Assert.AreEqual(1, RowCountTask.Count("test.Destination","Col1 = 'Test1' and Col2 = 'Lookup for 1'"));
+            Assert.AreEqual(1, RowCountTask.Count("test.Destination","Col1 = 'Test2' and Col2 = 'Lookup for 2'"));
+            Assert.AreEqual(1, RowCountTask.Count("test.Destination","Col1 = 'Test3' and Col2 = 'Lookup for 3'"));
         }
 
         internal TableDefinition CreateDBSourceTableForInputRow() {

@@ -91,6 +91,20 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="ALE.ETLBox.ConnectionManager.AccessOdbcConnectionManager.html">AccessOdbcConnectionManager</a></h4>
+      <section><p>Connection manager for an ODBC connection to Acccess databases.
+This connection manager also is based on ADO.NET.
+ODBC by default does not support a Bulk Insert - and Access does not supoport the insert into (...) values (...),(...),(...)
+syntax. So the following syntax is used</p>
+<pre><code>insert into (Col1, Col2,...) 
+select * from (
+  select &apos;Val1&apos; as Col1 from dummytable
+  union all
+  select &apos;Val2&apos; as Col2 from dummytable
+  ...
+) a;</code></pre>
+<p>The dummytable is a special helper table containing only one record.</p>
+</section>
       <h4><a class="xref" href="ALE.ETLBox.ConnectionManager.AdomdConnectionManager.html">AdomdConnectionManager</a></h4>
       <section><p>Connection manager for Adomd connection to a sql server analysis server.</p>
 </section>
@@ -98,6 +112,13 @@
       <section></section>
       <h4><a class="xref" href="ALE.ETLBox.ConnectionManager.FileConnectionManager.html">FileConnectionManager</a></h4>
       <section><p>Connection manager to a file</p>
+</section>
+      <h4><a class="xref" href="ALE.ETLBox.ConnectionManager.OdbcConnectionManager.html">OdbcConnectionManager</a></h4>
+      <section><p>Connection manager for an ODBC connection based on ADO.NET. ODBC can be used to connect to any ODBC able endpoint.
+ODBC by default does not support a Bulk Insert - inserting big amounts of data is translated into a</p>
+<pre><code>insert into (...) values (..),(..),(..) statementes.</code></pre>
+<p>Be careful with the batch size - some databases have limitations regarding the length of sql statements.
+Reduce the batch if encounter issues here.</p>
 </section>
       <h4><a class="xref" href="ALE.ETLBox.ConnectionManager.SMOConnectionManager.html">SMOConnectionManager</a></h4>
       <section><p>Connection manager for Sql Server Managed Objects (SMO) connection to a sql server.</p>

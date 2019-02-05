@@ -9,21 +9,23 @@ using System.Threading.Tasks.Dataflow;
 namespace ALE.ETLBox.DataFlow {
     /// <summary>
     /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
+    /// Data is read a as string from the source and dynamically converted into the corresponding data format.
     /// </summary>
     /// <example>
     /// <code>
-    /// CSVSource source = new CSVSource("demodata.csv");
-    /// source.LinkTo(dest); //Link to transformation or destination
-    /// source.Execute(); //Start the dataflow
+    /// CSVSource&lt;CSVData&gt; source = new CSVSource&lt;CSVData&gt;("Demo.csv") {
+    ///    Delimiter = ";",
+    ///    SourceCommentRows = 2
+    /// }
     /// </code>
     /// </example>
-    public class CSVSource : GenericTask, ITask, IDataFlowSource<string[]> {
+    public class CSVSource<TOutput> : GenericTask, ITask, IDataFlowSource<TOutput> {
         /* ITask Interface */
         public override string TaskType { get; set; } = "DF_CSVSOURCE";
         public override string TaskName => $"Dataflow: Read CSV Source data from file: {FileName}";
         public override void Execute() => ExecuteAsync();
 
-        /* Public properties */        
+        /* Public properties */
         public int SourceCommentRows { get; set; } = 0;
         public bool TrimFields { get; set; } = true;
         public bool TrimHeaders { get; set; } = true;
@@ -33,33 +35,40 @@ namespace ALE.ETLBox.DataFlow {
         public char Comment { get; set; } = '/';
         public bool SkipEmptyRecords { get; set; } = true;
         public bool IgnoreBlankLines { get; set; } = true;
-        string FileName { get; set; }
+        public string FileName { get; set; }
         public string[] FieldHeaders { get; private set; }
-        
+
         public bool IsHeaderRead => FieldHeaders != null;
-        public ISourceBlock<string[]> SourceBlock => this.Buffer;
+        public ISourceBlock<TOutput> SourceBlock => this.Buffer;
 
         /* Private stuff */
         CsvReader CsvReader { get; set; }
-        StreamReader StreamReader { get; set; }     
-        BufferBlock<string[]> Buffer { get; set; }
+        StreamReader StreamReader { get; set; }
+        BufferBlock<TOutput> Buffer { get; set; }
         NLog.Logger NLogger { get; set; }
+        TypeInfo TypeInfo { get; set; }
 
         public CSVSource() {
             NLogger = NLog.LogManager.GetLogger("ETL");
+            Buffer = new BufferBlock<TOutput>();
+            TypeInfo = new TypeInfo(typeof(TOutput));
         }
 
-        public CSVSource(string fileName) : this(){
+        public CSVSource(string fileName) : this() {
             FileName = fileName;
-            Buffer = new BufferBlock<string[]>();
         }
 
         public void ExecuteAsync() {
             NLogStart();
             Open();
-            ReadAll().Wait();
-            Buffer.Complete();
-            Close();
+            try {
+                ReadAll().Wait();
+                Buffer.Complete();
+            } catch (Exception e) {
+                throw new ETLBoxException("Error during reading data from csv file - see inner exception for details.", e);
+            } finally {
+                Close();
+            }
             NLogFinish();
         }
 
@@ -80,18 +89,33 @@ namespace ALE.ETLBox.DataFlow {
             FieldHeaders = CsvReader.Context.HeaderRecord;
             while (CsvReader.Read()) {
                 string[] line = CsvReader.Context.Record;
-                await Buffer.SendAsync(line);
+                await SendIntoBuffer(line);
             }
+        }
+
+        private async Task SendIntoBuffer(string[] line) {
+            if (TypeInfo.IsArray) {
+                await Buffer.SendAsync((TOutput)(object)line);
+            } else {
+                TOutput bufferObject = (TOutput)Activator.CreateInstance(typeof(TOutput));
+                for (int col=0;col < line.Length;col++) {
+                    if (col > TypeInfo.PropertyLength) break;
+                    TypeInfo.PropertyInfos[col].SetValue(bufferObject, TypeInfo.CastPropertyValue(TypeInfo.PropertyInfos[col], line[col]));
+                }
+                await Buffer.SendAsync(bufferObject);
+            }
+                
+            
         }
 
         private void ConfigureCSVReader() {
             CsvReader.Configuration.Delimiter = Delimiter;
             CsvReader.Configuration.Quote = Quote;
             CsvReader.Configuration.AllowComments = AllowComments;
-            CsvReader.Configuration.Comment = Comment;            
-            CsvReader.Configuration.IgnoreBlankLines = IgnoreBlankLines;            
+            CsvReader.Configuration.Comment = Comment;
+            CsvReader.Configuration.IgnoreBlankLines = IgnoreBlankLines;
             CsvReader.Configuration.TrimOptions = CsvHelper.Configuration.TrimOptions.Trim;
-            CsvReader.Configuration.Encoding = Encoding.UTF8;            
+            CsvReader.Configuration.Encoding = Encoding.UTF8;
         }
 
         private void Close() {
@@ -101,12 +125,12 @@ namespace ALE.ETLBox.DataFlow {
             StreamReader = null;
         }
 
-        public void LinkTo(IDataFlowLinkTarget<string[]> target) {
+        public void LinkTo(IDataFlowLinkTarget<TOutput> target) {
             Buffer.LinkTo(target.TargetBlock, new DataflowLinkOptions() { PropagateCompletion = true });
             NLogger.Debug(TaskName + " was linked to Target!", TaskType, "LOG", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
 
-        public void LinkTo(IDataFlowLinkTarget<string[]> target, Predicate<string[]> predicate) {
+        public void LinkTo(IDataFlowLinkTarget<TOutput> target, Predicate<TOutput> predicate) {
             Buffer.LinkTo(target.TargetBlock, new DataflowLinkOptions() { PropagateCompletion = true }, predicate);
             NLogger.Debug(TaskName + " was linked to Target!", TaskType, "LOG", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
@@ -120,5 +144,23 @@ namespace ALE.ETLBox.DataFlow {
             if (!DisableLogging)
                 NLogger.Info(TaskName, TaskType, "END", TaskHash, ControlFlow.ControlFlow.STAGE, ControlFlow.ControlFlow.CurrentLoadProcess?.LoadProcessKey);
         }
+    }
+
+    /// <summary>
+    /// Reads data from a csv source. While reading the data from the file, data is also asnychronously posted into the targets.
+    /// CSVSource as a nongeneric type always return a string array as output. If you need typed output, use
+    /// the CSVSource&lt;TOutput&gt; object instead.
+    /// </summary>
+    /// <see cref="CSVSource{TOutput}"/>
+    /// <example>
+    /// <code>
+    /// CSVSource source = new CSVSource("demodata.csv");
+    /// source.LinkTo(dest); //Link to transformation or destination
+    /// source.Execute(); //Start the dataflow
+    /// </code>
+    /// </example>
+    public class CSVSource : CSVSource<string[]> {
+        public CSVSource() : base() { }
+        public CSVSource(string fileName) : base(fileName) { }
     }
 }

@@ -17,12 +17,14 @@ namespace ALE.ETLBox.ControlFlow {
         Action InternalAfterRowReadAction { get; set; }        
         public long ReadTopX { get; set; } = long.MaxValue;
         public int? RowsAffected { get; private set; }
+        public bool IsOdbcConnection => DbConnectionManager.GetType() == typeof(OdbcConnectionManager)
+            || DbConnectionManager.GetType() == typeof(AccessOdbcConnectionManager);
 
         public bool DisableExtension { get; set; }
         public string Command {
             get {
                 if (HasSql)
-                    return HasName ? NameAsComment + Sql : Sql;
+                    return HasName && !IsOdbcConnection ? NameAsComment + Sql : Sql;
                 else if (HasFileConnection) {
                     if (FileConnection.FileExists)
                         return HasName ? NameAsComment + FileConnection.ReadContent() : FileConnection.ReadContent();
@@ -163,11 +165,13 @@ namespace ALE.ETLBox.ControlFlow {
         public void Query<T>(Action<T> doWithRowAction) where T : new() => Query<T>(doWithRowAction, false);
 
 
-        public void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName) {
+        public void BulkInsert(ITableData data, string tableName) {
             using (var conn = DbConnectionManager.Clone()) {
                 conn.Open();
                 QueryStart(LogType.Bulk);
-                conn.BulkInsert(data, columnMapping, tableName);
+                conn.BeforeBulkInsert();
+                conn.BulkInsert(data, tableName);
+                conn.AfterBulkInsert();
                 RowsAffected = data.RecordsAffected;
                 QueryFinish(LogType.Bulk);
             }

@@ -26,11 +26,11 @@ namespace ALE.ETLBox.ControlFlow {
         public string TableName { get; set; }
         public string TableWithoutSchema => TableName.IndexOf('.') > 0 ? TableName.Substring(TableName.LastIndexOf('.') + 1) : TableName;
         public IList<ITableColumn> Columns { get; set; }
+        public bool ThrowErrorIfTableExists { get; set; }
 
         public bool OnlyNVarCharColumns { get; set; }
-        public string Sql => $@"
-if object_id('{TableName}', 'U') is null
-  create table {TableName} (
+        public string Sql => (!ThrowErrorIfTableExists ? $@"if object_id('{TableName}', 'U') is null " + Environment.NewLine : "") +
+$@"create table {TableName} (
   {ColumnsDefinitionSql}
   )
 ";

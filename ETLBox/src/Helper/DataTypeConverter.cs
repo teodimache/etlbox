@@ -11,6 +11,7 @@ namespace ALE.ETLBox.Helper {
         public const int DefaultDateTime2Length = 41;
         public const int DefaultDateTimeLength = 27;
         public const int DefaultDecimalLength = 41;
+        public const int DefaultStringLength = 255;
 
         public const string _REGEX = @"(.*?)char\((\d*)\)(.*?)";
 
@@ -36,20 +37,30 @@ namespace ALE.ETLBox.Helper {
         }
 
         public static int GetStringLengthFromCharString(string value) {
-            string result = Regex.Replace(value, _REGEX, "${2}");
-            return int.Parse(result);
+            string possibleResult = Regex.Replace(value, _REGEX, "${2}");
+            int  result=0;
+            if (int.TryParse(possibleResult, out result)) {
+                return result;
+            } else {
+                return DefaultStringLength;
+            }
         }
 
         public static string GetObjectTypeString(string dataTypeString) {
-            switch (dataTypeString) {
-
+            if (dataTypeString.IndexOf("(") > 0)
+                dataTypeString = dataTypeString.Substring(0, dataTypeString.IndexOf("("));
+            dataTypeString = dataTypeString.Trim().ToLower();
+            switch (dataTypeString) {      
+                case "bit": return "System.Boolean";
                 case "tinyint": return "System.UInt16";
                 case "smallint": return "System.Int16";
                 case "int": return "System.Int32";
                 case "bigint": return "System.Int64";
                 case "decimal": return "System.Decimal";
+                case "number": return "System.Decimal";
                 case "datetime": return "System.DateTime";
                 case "datetime2": return "System.DateTime";
+                case "uniqueidentifier": return "System.Guid";
                 default: return "System.String";
             }
         }

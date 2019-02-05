@@ -25,7 +25,7 @@ namespace ALE.ETLBoxTest {
 
             Assert.IsTrue(sqlTask.ExecuteScalarAsBool());
 
-            DropDatabaseTask.Delete(dbName);
+            DropDatabaseTask.Drop(dbName);
 
             Assert.IsFalse(sqlTask.ExecuteScalarAsBool());
         }
@@ -37,7 +37,7 @@ namespace ALE.ETLBoxTest {
             string dbName = TestContext.Properties["dbName"].ToString();
             var sqlTask = new SqlTask("Get assert data", $"select cast(db_id('{dbName}') as int)");
 
-            DropDatabaseTask.Delete(dbName);
+            DropDatabaseTask.Drop(dbName);
             
             Assert.IsFalse(sqlTask.ExecuteScalarAsBool());
 

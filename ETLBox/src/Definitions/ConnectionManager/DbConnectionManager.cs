@@ -7,43 +7,44 @@ namespace ALE.ETLBox.ConnectionManager {
     public abstract class DbConnectionManager<Connection, Command> : IDisposable, IDbConnectionManager
         where Connection : class, IDbConnection, new()
         where Command : class, IDbCommand, new() {
-        public int MaxLoginAttempts { get; set; } = 20;
+        public int MaxLoginAttempts { get; set; } = 3;
 
-        public ConnectionString ConnectionString { get; set; }
+        public IDbConnectionString ConnectionString { get; set; }
 
         internal Connection DbConnection { get; set; }
 
-        internal bool IsConnectionOpen => DbConnection?.State == ConnectionState.Open;
+        //internal bool IsConnectionOpen => DbConnection?.State == ConnectionState.Open;
 
         public DbConnectionManager() { }
 
-        public DbConnectionManager(ConnectionString connectionString) : this() {
+        public DbConnectionManager(IDbConnectionString connectionString) : this() {
             this.ConnectionString = connectionString;
         }
 
         public void Open() {
-            DbConnection = new Connection();
-            if (!IsConnectionOpen) {
-                DbConnection.ConnectionString = ConnectionString.Value;
-                bool successfullyConnected = false;
-                Exception lastException = null;
-                for (int i = 1; i <= MaxLoginAttempts; i++) {
-                    try {
-                        DbConnection.Open();
-                        successfullyConnected = true;
-                    } catch (Exception e) {
-                        successfullyConnected = false;
-                        lastException = e;
-                        Task.Delay(500 * i).Wait();
-                    }
-                    if (successfullyConnected) break;
+            DbConnection?.Close();
+            DbConnection = new Connection {
+                ConnectionString = ConnectionString.Value
+            };
+            bool successfullyConnected = false;
+            Exception lastException = null;
+            for (int i = 1; i <= MaxLoginAttempts; i++) {
+                try {
+                    DbConnection.Open();
+                    successfullyConnected = true;
+                } catch (Exception e) {
+                    successfullyConnected = false;
+                    lastException = e;
+                    Task.Delay(1000 * i).Wait();
                 }
-                if (!successfullyConnected)
-                    throw lastException ?? new Exception("Could not connect to database!");
+                if (successfullyConnected) {
+                    break;
+                }
+            }
+            if (!successfullyConnected) {
+                throw lastException ?? new Exception("Could not connect to database!");
             }
         }
-
-        //public void CloseConnection() => Close();
 
         public Command CreateCommand(string commandText, IEnumerable<QueryParameter> parameterList = null) {
             var cmd = DbConnection.CreateCommand();
@@ -72,12 +73,14 @@ namespace ALE.ETLBox.ConnectionManager {
         }
 
         public IDataReader ExecuteReader(string commandText, IEnumerable<QueryParameter> parameterList = null) {
-            Command cmd = CreateCommand(commandText, parameterList);            
+            Command cmd = CreateCommand(commandText, parameterList);
             return cmd.ExecuteReader();
 
         }
 
-        public abstract void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName);
+        public abstract void BulkInsert(ITableData data, string tableName);
+        public abstract void BeforeBulkInsert();
+        public abstract void AfterBulkInsert();
 
         #region IDisposable Support
         private bool disposedValue = false; // To detect redundant calls
@@ -85,16 +88,23 @@ namespace ALE.ETLBox.ConnectionManager {
         protected void Dispose(bool disposing) {
             if (!disposedValue) {
                 if (disposing) {
-                    if (DbConnection != null)
+                    if (DbConnection != null) {
                         DbConnection.Close();
+                    }
+
                     DbConnection = null;
                 }
                 disposedValue = true;
             }
         }
 
-        public void Dispose() => Dispose(true);
-        public void Close() => Dispose();
+        public void Dispose() {
+            Dispose(true);
+        }
+
+        public void Close() {
+            Dispose();
+        }
 
         public abstract IDbConnectionManager Clone();
         #endregion

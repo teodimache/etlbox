@@ -2,16 +2,16 @@
 using System.Reflection;
 
 namespace ALE.ETLBox.DataFlow {
-    public class TypeInfo {
-        public PropertyInfo[] PropertyInfos { get; set; }
-        public int PropertyLength { get; set; }
-        public bool IsArray { get; set; } = true;
+    internal class TypeInfo {
+        internal PropertyInfo[] PropertyInfos { get; set; }
+        internal int PropertyLength { get; set; }
+        internal bool IsArray { get; set; } = true;
 
-        public TypeInfo() {
+        internal TypeInfo() {
 
         }
 
-        public TypeInfo(Type typ) {
+        internal TypeInfo(Type typ) {
             GatherTypeInfos(typ);
         }
         private void GatherTypeInfos(Type typ) {            
@@ -20,6 +20,15 @@ namespace ALE.ETLBox.DataFlow {
                 PropertyInfos = typ.GetProperties();
                 PropertyLength = PropertyInfos.Length;
             }
+        }
+
+        public static object CastPropertyValue(PropertyInfo property, string value) {
+            if (property == null || String.IsNullOrEmpty(value))
+                return null;
+            if (property.PropertyType == typeof(bool))
+                return value == "1" || value == "true" || value == "on" || value == "checked";
+            else
+                return Convert.ChangeType(value, property.PropertyType);
         }
     }
 }

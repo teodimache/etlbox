@@ -35,7 +35,7 @@ namespace ALE.ETLBoxDemo {
 
         public void Preparation() {
             ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;"));
-            DropDatabaseTask.Delete("DemoDB");
+            DropDatabaseTask.Drop("DemoDB");
             CreateDatabaseTask.Create("DemoDB");
             ControlFlow.CurrentDbConnection = new SqlConnectionManager(new ConnectionString("Data Source=.;Integrated Security=SSPI;Initial Catalog=DemoDB"));
             CreateSchemaTask.Create("demo");

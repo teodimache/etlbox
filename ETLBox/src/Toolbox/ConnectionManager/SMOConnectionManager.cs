@@ -15,7 +15,7 @@ namespace ALE.ETLBox.ConnectionManager {
     /// </code>
     /// </example>
     public class SMOConnectionManager : IDbConnectionManager, IDisposable {
-        public ConnectionString ConnectionString { get; set; }
+        public IDbConnectionString ConnectionString { get; set; }
         public bool IsConnectionOpen => SqlConnectionManager.DbConnection?.State == ConnectionState.Open;
 
         public SMOConnectionManager(ConnectionString connectionString) {
@@ -36,7 +36,7 @@ namespace ALE.ETLBox.ConnectionManager {
         }
 
         public void Open() {
-            SqlConnectionManager = new SqlConnectionManager(ConnectionString);
+            SqlConnectionManager = new SqlConnectionManager((ConnectionString)ConnectionString);
             SqlConnectionManager.Open();
             Server = new Server(new ServerConnection(SqlConnectionManager.DbConnection));
             Context.StatementTimeout = 0;
@@ -54,8 +54,13 @@ namespace ALE.ETLBox.ConnectionManager {
             return OpenedContext.ExecuteReader(command);
         }
 
-        public void BulkInsert(IDataReader data, IColumnMappingCollection columnMapping, string tableName)
-    => SqlConnectionManager.BulkInsert(data, columnMapping, tableName);
+        public void BulkInsert(ITableData data, string tableName)
+            => SqlConnectionManager.BulkInsert(data, tableName);
+
+        public void BeforeBulkInsert() => SqlConnectionManager.BeforeBulkInsert();
+
+        public void AfterBulkInsert() => SqlConnectionManager.AfterBulkInsert();
+ 
 
         private bool disposedValue = false; // To detect redundant calls
         protected void Dispose(bool disposing) {
@@ -75,7 +80,7 @@ namespace ALE.ETLBox.ConnectionManager {
         public void Close() => Dispose();
 
         public IDbConnectionManager Clone() {
-            SMOConnectionManager clone = new SMOConnectionManager(ConnectionString) { };
+            SMOConnectionManager clone = new SMOConnectionManager((ConnectionString)ConnectionString) { };
             return clone;
         }
 

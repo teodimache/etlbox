@@ -59,7 +59,7 @@ namespace ALE.ETLBoxTest {
             source.LinkTo(dest);
             source.Execute();
             dest.Wait();
-            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check destination table", "select count(*) from test.Destination"));
+            Assert.AreEqual(3, RowCountTask.Count("test.Destination"));
         }
 
         private static TableDefinition CreateDestinationTable(string tableName) {

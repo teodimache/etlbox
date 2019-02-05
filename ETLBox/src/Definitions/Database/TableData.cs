@@ -6,26 +6,37 @@ using System.Data.Common;
 namespace ALE.ETLBox {
     public class TableData : TableData<object> {
         public TableData()  : base() { }
-        public TableData(TableDefinition definition) : base() { }
+        public TableData(TableDefinition definition) : base(definition) { }
         public TableData(TableDefinition definition, int estimatedBatchSize) : base() { }
     }
 
-    public class TableData<T> : IDisposable, IDataReader  {
+    public class TableData<T> : ITableData  {
         public int? EstimatedBatchSize { get; set; }
-        public DataColumnMappingCollection ColumnMapping {
+        public IColumnMappingCollection ColumnMapping {
             get {
-                var mapping = new DataColumnMappingCollection();
-                foreach (var col in Definition.Columns)
-                    mapping.Add(new DataColumnMapping(col.SourceColumn, col.DataSetColumn));
-                return mapping;
+                if (HasDefinition) {
+                    return GetColumnMappingFromDefinition();
+                } else {
+                    throw new ETLBoxException("No table definition found. For Bulk insert a TableDefinition is always needed.");
+                }
             }
         }
+
+        private IColumnMappingCollection GetColumnMappingFromDefinition() {
+            var mapping = new DataColumnMappingCollection();
+            foreach (var col in Definition.Columns)
+                if (!col.IsIdentity)
+                    mapping.Add(new DataColumnMapping(col.SourceColumn, col.DataSetColumn));
+            return mapping;
+        }
+
         public bool HasIdentityColumn => IDColumnIndex != null;
         public List<T[]> Rows { get; set; }
 
         public T[] CurrentRow { get; set; }
         int ReadIndex { get; set; }
         TableDefinition Definition { get; set; }
+        public bool HasDefinition => Definition != null;
         int? IDColumnIndex { get; set; }
 
         public TableData() {
@@ -76,7 +87,7 @@ namespace ALE.ETLBox {
             throw new NotImplementedException();
         }
         public string GetString(int i) => Convert.ToString(CurrentRow[ShiftIndexAroundIDColumn(i)]);
-        public object GetValue(int i) => CurrentRow[ShiftIndexAroundIDColumn(i)];
+        public object GetValue(int i) => CurrentRow.Length > ShiftIndexAroundIDColumn(i) ? CurrentRow[ShiftIndexAroundIDColumn(i)] : (object)null;
 
         int ShiftIndexAroundIDColumn(int i) {            
             if (IDColumnIndex != null) {                
@@ -99,7 +110,7 @@ namespace ALE.ETLBox {
         }
 
         public bool NextResult() {
-            return Rows?.Count > (ReadIndex + 1);
+            return (ReadIndex + 1) <= Rows?.Count;
         }
 
         public bool Read() {

@@ -25,6 +25,11 @@ namespace ALE.ETLBoxTest {
             CleanUpSchemaTask.CleanUp("test");
         }
 
+        public class MySimpleRow {
+            public string Value1 { get; set; }
+            public int Value2 { get; set; }
+        }
+
         /*
          * CSVSource (out: string[]) -> RowTransformation (in: string[], out: object)-> DBDestination (in: object)
          */
@@ -49,12 +54,28 @@ namespace ALE.ETLBoxTest {
             trans.LinkTo(dest);
             source.Execute();
             dest.Wait();
-            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", "select count(*) from test.Staging"));
+            Assert.AreEqual(3, RowCountTask.Count("test.Staging"));
         }
 
-        public class MySimpleRow {
-            public string Value1 { get; set; }
-            public int Value2 { get; set; }
+        /*
+        * CSVSource (out: string[]) -> RowTransformation (in: string[], out: string[])-> DBDestination (in: string[])
+        */
+        [TestMethod]
+        public void CSV_RowTrans_DB_NonGeneric() {
+            SqlTask.ExecuteNonQuery("Create source table", @"CREATE TABLE test.Staging 
+                (Col1 int null, Col2 nvarchar(100) null)");
+
+            CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
+            RowTransformation trans = new RowTransformation(
+                csvdata => {
+                    return new string[] { csvdata[1], csvdata[0] };
+                });
+            DBDestination dest = new DBDestination("test.Staging");
+            source.LinkTo(trans);
+            trans.LinkTo(dest);
+            source.Execute();
+            dest.Wait();
+            Assert.AreEqual(3, RowCountTask.Count("test.Staging"));
         }
 
 
@@ -152,6 +173,8 @@ namespace ALE.ETLBoxTest {
             Assert.AreEqual(2, new SqlTask("Find log entry", "select count(*) from etl.Log where TaskType='DF_CSVSOURCE' group by TaskHash") { DisableLogging = true }.ExecuteScalar<int>());
             Assert.AreEqual(2, new SqlTask("Find log entry", "select count(*) from etl.Log where TaskType='DF_DBDEST' group by TaskHash") { DisableLogging = true }.ExecuteScalar<int>());
         }
+
+      
     }
 
 }

@@ -23,25 +23,57 @@ namespace ALE.ETLBoxTest {
         public void TestInit() {
             CleanUpSchemaTask.CleanUp("test");
         }
+        
         /*
          * CSVSource (out: string[]) -> DBDestination (in: string[])
          * Table without key columns
          */
         [TestMethod]
         public void CSV_DB() {
-            TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {
+            List<TableColumn> columns = new List<TableColumn>() {
                 new TableColumn("Col1", "nvarchar(100)", allowNulls: false),
                 new TableColumn("Col2", "int", allowNulls: true)
-            });
+            };
+            Load_CSV_DB(columns);
+        }
+
+        /*
+         * CSVSource (out: string[]) -> DBDestination (in: string[])
+         * Table without key columns, number of columns do not match
+         * (there are more columns in Datbase than in CSV file)
+         */
+        [TestMethod]
+        public void CSV_DB_MoreColumnsInDB() {
+            List<TableColumn> columns = new List<TableColumn>() {
+                new TableColumn("Col1", "nvarchar(100)", allowNulls: false),
+                new TableColumn("Col2", "int", allowNulls: false),
+                new TableColumn("Col3", "nvarchar(100)", allowNulls: true)
+            };
+            Load_CSV_DB(columns);
+        }
+
+        /*
+         * CSVSource (out: string[]) -> DBDestination (in: string[])
+         * Table without key columns, number of columns do not match
+         * (there are more columns in CSV than in Database)
+         */
+        [TestMethod]
+        public void CSV_DB_MoreColumnsInCSV() {
+            List<TableColumn> columns = new List<TableColumn>() {
+                new TableColumn("Col1", "nvarchar(100)", allowNulls: false)
+            };
+            Load_CSV_DB(columns);
+        }
+
+        private static void Load_CSV_DB(List<TableColumn> columnsInStageTable) {
+            TableDefinition stagingTable = new TableDefinition("test.Staging", columnsInStageTable);
             stagingTable.CreateTable();
             CSVSource source = new CSVSource("src/DataFlow/Simple_CSV2DB.csv");
             DBDestination<string[]> dest = new DBDestination<string[]>() { DestinationTableDefinition = stagingTable };
             source.LinkTo(dest);
-
             source.Execute();
-            dest.Wait(); 
-
-            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
+            dest.Wait();
+            Assert.AreEqual(3, RowCountTask.Count("test.Staging", "Col1 Like '%ValueRow%'"));
         }
 
         /*
@@ -77,7 +109,7 @@ namespace ALE.ETLBoxTest {
             source.Execute();
             dest.Wait(); 
 
-            Assert.AreEqual(3, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging{keyPosition} where Col1 Like '%ValueRow%' and Col2 <> 1"));
+            Assert.AreEqual(3, RowCountTask.Count($"test.Staging{keyPosition}","Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
 
         /*
@@ -104,8 +136,29 @@ namespace ALE.ETLBoxTest {
             source.Execute();
             dest.Wait(); 
 
-            Assert.AreEqual(1, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 Like '%ValueRow%' and Col2 <> 1"));
-            Assert.AreEqual(2, SqlTask.ExecuteScalar<int>("Check staging table", $"select count(*) from test.Staging where Col1 = 'NewValue'"));
+            Assert.AreEqual(1, RowCountTask.Count("test.Staging","Col1 Like '%ValueRow%' and Col2 <> 1"));
+            Assert.AreEqual(2, RowCountTask.Count("test.Staging","Col1 = 'NewValue'"));
+        }
+
+        public class CSVData {
+            public string Col1 { get; set; }
+            public int Col2 { get; set; }
+        }
+        [TestMethod]
+        public void CSVGeneric_DB() {
+            TableDefinition stagingTable = new TableDefinition("test.Staging", new List<TableColumn>() {
+                new TableColumn("Col1", "nvarchar(100)", allowNulls: false),
+                new TableColumn("Col2", "int", allowNulls: true)
+            });
+            stagingTable.CreateTable();
+            CSVSource<CSVData> source = new CSVSource<CSVData>("src/DataFlow/Simple_CSV2DB.csv");
+            DBDestination<CSVData> dest = new DBDestination<CSVData>() { DestinationTableDefinition = stagingTable };
+            source.LinkTo(dest);
+
+            source.Execute();
+            dest.Wait();
+
+            Assert.AreEqual(3, RowCountTask.Count("test.Staging","Col1 Like '%ValueRow%' and Col2 <> 1"));
         }
     }
 

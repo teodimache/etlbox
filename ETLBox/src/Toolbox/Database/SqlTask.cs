@@ -77,8 +77,8 @@ namespace ALE.ETLBox.ControlFlow {
         public static void ExecuteReader(string name, string sql, IEnumerable<QueryParameter> parameterList, params Action<object>[] actions) => new SqlTask(name, sql, parameterList, actions).ExecuteReader();
         public static void ExecuteReader(string name, string sql, IEnumerable<QueryParameter> parameterList, Action beforeRowReadAction, Action afterRowReadAction, params Action<object>[] actions) =>
             new SqlTask(name, sql, parameterList, beforeRowReadAction, afterRowReadAction, actions).ExecuteReader();
-        public static void BulkInsert(string name, IDataReader data, IColumnMappingCollection columnMapping, string tableName) =>
-            new SqlTask(name).BulkInsert(data, columnMapping, tableName);
+        public static void BulkInsert(string name, ITableData data, string tableName) =>
+            new SqlTask(name).BulkInsert(data, tableName);
     }
 
 }
